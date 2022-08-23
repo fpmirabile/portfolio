@@ -1,2 +1,2 @@
 # portfolio
-My personal portfolio on Astro
+My personal portfolio built in Astro framework
