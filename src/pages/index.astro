@@ -1,0 +1,170 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Portfolio">
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">Resumen</a></li>
+        <li><a href="#">Trabajos</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <div>
+      <button>Descargar CV</button>
+      <button>Contactar</button>
+    </div>
+  </aside>
+  <main>
+    <section class="intro">
+      <img src="path/to/tony-ryan-image.jpg" alt="Tony Ryan" />
+      <h1>Tony Ryan</h1>
+      <p>Programador</p>
+    </section>
+    <section class="about">
+      <h2>Acerca de mí</h2>
+      <p>
+        ¡Hola! Soy Donald Wellborn. Desarrollador Back-end & Front-end de
+        Londres, UK. Tengo una rica experiencia en Wordpress y también soy bueno
+        con Magento. Me encantaría hablar contigo sobre nuestra única.
+      </p>
+      <ul>
+        <li>Edad: 45</li>
+        <li>Freelance: Disponible</li>
+        <li>Residencia: UK</li>
+        <li>Dirección: Londres, UK</li>
+      </ul>
+    </section>
+    <section class="services">
+      <h2>Mis Servicios</h2>
+      <div class="service">
+        <img src="path/to/frontend-icon.jpg" alt="Front-end" />
+        <h3>Front-end</h3>
+        <p>
+          Website moderno y listo para móviles que te ayudará a alcanzar todos
+          tus objetivos de marketing.
+        </p>
+      </div>
+      <div class="service">
+        <img src="path/to/backend-icon.jpg" alt="Back-end" />
+        <h3>Back-end</h3>
+        <p>
+          Enfoque UI/UX en el usuario, enfoque en las configuraciones del
+          usuario y enfoque en los datos en el backend.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  aside {
+    width: 15%;
+    height: 70vh;
+    background-color: #333;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  nav li {
+    margin: 20px 0;
+  }
+
+  nav a {
+    color: #e6e6e6;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  button {
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    margin-left: 5%;
+    width: 70%;
+    height: 70vh;
+    background-color: #444;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .intro {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .intro img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #fff;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 20px;
+  }
+
+  .about ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .service img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
