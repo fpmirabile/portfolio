@@ -1,0 +1,33 @@
+{
+  "lang": {
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "navbar": {
+    "brand": "Desarrollador X",
+    "links": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "myWork": "Mi trabajo",
+      "contact": "Contacto"
+    }
+  },
+  "hero": {
+    "title": "Soy el Desarrollador X, un desarrollador Full stack",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "aboutMe": {
+    "title": "Acerca de mí",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "myWork": {
+    "title": "Mi trabajo"
+  },
+  "contact": {
+    "title": "Contáctame",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "footer": {
+    "contact": "Contáctame a través de mis redes sociales o enviando un correo electrónico a ejemplo@email.com"
+  }
+}

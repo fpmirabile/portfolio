@@ -1,0 +1,33 @@
+{
+  "lang": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "navbar": {
+    "brand": "Developer X",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "myWork": "My work",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "I'm Developer X, a Full stack developer",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "aboutMe": {
+    "title": "About me",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "myWork": {
+    "title": "My work"
+  },
+  "contact": {
+    "title": "Contact me",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  "footer": {
+    "contact": "Contact me through my social networks or sending an email to example@email.com"
+  }
+}
