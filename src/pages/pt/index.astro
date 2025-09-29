@@ -1,0 +1,59 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import FloatingMenu from "../../components/FloatingMenu.astro";
+// import PersonalInfoBar from "../../components/PersonalInfoBar.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import TechStack from "../../components/TechStack.astro";
+import TechJourney from "../../components/TechJourney.astro";
+import Education from "../../components/Education.astro";
+import Footer from "../../components/Footer.astro";
+import ThemeLanguageManager from "../../components/ThemeLanguageManager.astro";
+import LanguageSelector from "../../components/LanguageSelector.astro";
+
+import ptTranslations from "../../i18n/pt.json";
+import commonData from "../../i18n/data.json";
+
+const t = ptTranslations;
+const { technologies, certifications } = commonData;
+---
+
+<Layout
+  title={t.meta.title}
+  description={t.meta.description}
+  lang={t.meta.lang}
+>
+  <FloatingMenu texts={{
+    cvText: t.menu.cvText,
+    themeText: t.menu.themeText,
+    currentTheme: t.menu.currentTheme
+  }} />
+
+  <main class="min-h-screen">
+    <section class="relative py-20 lg:py-32 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6">
+        <HeroSection texts={t.hero}>
+          <LanguageSelector
+            slot="language-selector"
+            currentLang={t.meta.lang}
+            languageText={t.menu.languageText}
+          />
+          <TechStack
+            technologies={technologies}
+            title={t.techStack.title}
+            clickHint={t.techStack.clickHint}
+          />
+        </HeroSection>
+      </div>
+    </section>
+
+    <TechJourney
+      journeyTitle={t.journey.title}
+      journeyDesc={t.journey.description}
+      journeyItems={t.journey.items}
+    />
+    <Education texts={t.education} certifications={certifications} />
+  </main>
+
+  <Footer footerText={t.footer.text} />
+  <ThemeLanguageManager />
+</Layout>
