@@ -1,0 +1,55 @@
+---
+export interface Props {
+  as?: "a" | "button";
+  href?: string;
+  target?: string;
+  id?: string;
+  titleId?: string;
+  subtitleId?: string;
+  title: string;
+  subtitle?: string;
+  class?: string;
+}
+
+const {
+  as: Component = "a",
+  href,
+  target,
+  id,
+  titleId,
+  subtitleId,
+  title,
+  subtitle,
+  class: className,
+} = Astro.props;
+
+const baseClasses =
+  "flex items-center gap-3 bg-card border border-border rounded-lg p-3 shadow-lg hover:shadow-xl hover:border-accent/50 transition-all duration-200 min-w-[200px]";
+---
+
+<div class="menu-item">
+  <Component
+    id={id}
+    href={href}
+    target={target}
+    class:list={[baseClasses, className]}
+  >
+    <div
+      class="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center"
+    >
+      <slot name="icon" />
+    </div>
+    <div class="text-left">
+      <div id={titleId} class="font-medium text-card-foreground text-sm">
+        {title}
+      </div>
+      {
+        subtitle && (
+          <div id={subtitleId} class="text-xs text-muted-foreground">
+            {subtitle}
+          </div>
+        )
+      }
+    </div>
+  </Component>
+</div>
