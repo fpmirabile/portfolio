@@ -1,0 +1,105 @@
+---
+export interface HeroTexts {
+  roleText: string;
+  descriptionText: string;
+  downloadCVText: string;
+  contactText: string;
+  yearsExpText: string;
+  countriesText: string;
+}
+
+export interface Props {
+  texts: HeroTexts;
+}
+
+const { texts } = Astro.props;
+---
+
+<div>
+  <slot name="language-selector" />
+  <div class="grid lg:grid-cols-2 gap-12 items-start">
+    <!-- Left Column -->
+    <div class="animate-fade-in-up">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6"
+      >
+        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <span id="roleText">{texts.roleText}</span>
+      </div>
+
+      <h1 class="text-4xl lg:text-6xl font-bold text-primary mb-6">
+        Fernando
+        <span class="gradient-text">Mirabile</span>
+      </h1>
+
+      <p
+        class="text-xl text-muted-foreground mb-8 leading-relaxed"
+        id="descriptionText"
+      >
+        {texts.descriptionText}
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mb-8">
+        <button
+          id="heroDownloadCV"
+          class="inline-flex items-center justify-center px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-all duration-200 shadow-lg hover:shadow-xl"
+        >
+          <svg
+            class="w-4 h-4 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            ></path>
+          </svg>
+          <span id="downloadCVText">{texts.downloadCVText}</span>
+        </button>
+        <a
+          href="mailto:fpmirabile@gmail.com"
+          class="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground rounded-lg font-semibold hover:border-accent hover:text-accent transition-all duration-200"
+        >
+          <span id="contactText">{texts.contactText}</span>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-6 pt-8 border-t border-border">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-primary">10+</div>
+          <div class="text-sm text-muted-foreground" id="yearsExpText">
+            {texts.yearsExpText}
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-primary">3</div>
+          <div class="text-sm text-muted-foreground" id="countriesText">
+            {texts.countriesText}
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-primary">C2</div>
+          <div class="text-sm text-muted-foreground">English Level</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column - TechStack will be inserted here -->
+    <div class="animate-fade-in-up animate-delay-200">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const heroDownloadCV = document.getElementById("heroDownloadCV");
+    heroDownloadCV?.addEventListener("click", () => {
+      document.dispatchEvent(new CustomEvent("downloadCV"));
+    });
+  });
+</script>

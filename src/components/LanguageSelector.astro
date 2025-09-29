@@ -1,0 +1,39 @@
+---
+// src/components/LanguageSelector.astro
+
+const { currentLang, languageText } = Astro.props;
+
+const languages = [
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "en", name: "English", flag: "🇬🇧" },
+  { code: "pt", name: "Português", flag: "🇵🇹" },
+];
+---
+
+<div class="relative z-20 flex justify-start items-center gap-x-4 mb-6">
+  <span class="text-sm font-medium text-muted-foreground mr-2"
+    >{languageText}:</span
+  >
+  <div class="flex items-center gap-x-3">
+    {
+      languages.map((lang) =>
+        currentLang === lang.code ? (
+          <span
+            class="flex items-center gap-x-2 opacity-100 cursor-default"
+            aria-label={`Current language: ${lang.name}`}
+          >
+            <span class="text-2xl">{lang.flag}</span>
+          </span>
+        ) : (
+          <a
+            href={`/${lang.code}`}
+            class="flex items-center gap-x-2 transition-opacity duration-300 opacity-50 hover:opacity-100"
+            aria-label={`Switch to ${lang.name}`}
+          >
+            <span class="text-2xl">{lang.flag}</span>
+          </a>
+        )
+      )
+    }
+  </div>
+</div>

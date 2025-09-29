@@ -1,0 +1,156 @@
+---
+// This component handles global theme and language management
+// It should be included once in the main layout
+---
+
+<script>
+  class ThemeLanguageManager {
+    private isDark: boolean = false;
+    private currentLanguage: string = "es";
+
+    constructor() {
+      this.initializeTheme();
+      this.initializeLanguage();
+      this.setupEventListeners();
+    }
+
+    private initializeTheme() {
+      // Check for saved theme preference or default to system preference
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        this.isDark = savedTheme === "dark";
+      } else {
+        this.isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      }
+      this.updateTheme();
+    }
+
+    private initializeLanguage() {
+      const pathLang = window.location.pathname.split("/")[1];
+      if (["es", "en", "pt"].includes(pathLang)) {
+        this.currentLanguage = pathLang;
+        localStorage.setItem("language", this.currentLanguage);
+        return;
+      }
+
+      // Fallback to saved language preference
+      const savedLanguage = localStorage.getItem("language");
+      if (savedLanguage) {
+        this.currentLanguage = savedLanguage;
+      }
+    }
+
+    private updateTheme() {
+      document.documentElement.classList.toggle("dark", this.isDark);
+
+      // Update theme icon and text
+      const themeIcon = document.getElementById("themeIcon");
+      const currentTheme = document.getElementById("currentTheme");
+
+      if (themeIcon && currentTheme) {
+        if (this.isDark) {
+          themeIcon.innerHTML =
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />';
+          // Theme text will be updated by the parent component based on current language
+        } else {
+          themeIcon.innerHTML =
+            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />';
+        }
+      }
+    }
+
+    private setupEventListeners() {
+      // Listen for theme toggle events
+      document.addEventListener("toggleTheme", () => {
+        this.toggleTheme();
+      });
+
+      // Listen for language toggle events
+      document.addEventListener("toggleLanguage", () => {
+        this.toggleLanguage();
+      });
+
+      // Listen for CV download events
+      document.addEventListener("downloadCV", () => {
+        this.downloadCV();
+      });
+
+      // System theme change detection
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (!localStorage.getItem("theme")) {
+            this.isDark = e.matches;
+            this.updateTheme();
+          }
+        });
+    }
+
+    public toggleTheme() {
+      this.isDark = !this.isDark;
+      this.updateTheme();
+      localStorage.setItem("theme", this.isDark ? "dark" : "light");
+
+      // Dispatch event to notify other components
+      document.dispatchEvent(
+        new CustomEvent("themeChanged", {
+          detail: { isDark: this.isDark },
+        })
+      );
+    }
+
+    public toggleLanguage() {
+      const languages = ["es", "en", "pt"];
+      const currentIndex = languages.indexOf(this.currentLanguage);
+      const nextIndex = (currentIndex + 1) % languages.length;
+      const newLang = languages[nextIndex];
+      localStorage.setItem("language", newLang);
+      window.location.href = `/${newLang}`;
+    }
+
+    private downloadCV() {
+      // This would typically link to a PDF file
+      // For now, it's a placeholder that could be connected to actual CV file
+      const cvUrl = "/cv-fernando-mirabile.pdf"; // Adjust path as needed
+
+      try {
+        // Try to download the file
+        const link = document.createElement("a");
+        link.href = cvUrl;
+        link.download = `Fernando-Mirabile-CV-${this.currentLanguage.toUpperCase()}.pdf`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch (error) {
+        // Fallback: show alert if file doesn't exist
+        const message =
+          this.currentLanguage === "es"
+            ? "CV no disponible en este momento. Por favor, contacta por email."
+            : "CV not available at the moment. Please contact via email.";
+        alert(message);
+      }
+    }
+
+    // Getter methods for other components
+    public get theme() {
+      return this.isDark ? "dark" : "light";
+    }
+
+    public get language() {
+      return this.currentLanguage;
+    }
+  }
+
+  // Initialize the manager when DOM is loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    // Make sure we only initialize once
+    if (!(window as any).themeLanguageManager) {
+      (window as any).themeLanguageManager = new ThemeLanguageManager();
+    }
+  });
+
+  // Export for potential use in other scripts
+  if (typeof window !== "undefined") {
+    (window as any).ThemeLanguageManager = ThemeLanguageManager;
+  }
+</script>

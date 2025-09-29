@@ -1,0 +1,122 @@
+---
+export interface JourneyItem {
+  year: string;
+  title: string;
+  description: string;
+  tech: string[];
+}
+
+export interface Props {
+  journeyTitle: string;
+  journeyDesc: string;
+  journeyItems: JourneyItem[];
+}
+
+const { journeyTitle, journeyDesc, journeyItems } = Astro.props;
+---
+
+<section class="py-20 bg-muted">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16 animate-fade-in-up">
+      <h2
+        class="text-3xl lg:text-4xl font-bold text-primary mb-4"
+        id="journeyTitle"
+      >
+        {journeyTitle}
+      </h2>
+      <p
+        class="text-xl text-muted-foreground max-w-2xl mx-auto"
+        id="journeyDesc"
+      >
+        {journeyDesc}
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Timeline Line -->
+      <div
+        class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-border"
+      >
+      </div>
+
+      <div class="space-y-12" id="journeyTimeline">
+        {
+          journeyItems.map((item, i) => (
+            <div
+              class="animate-fade-in-up"
+              style={`animation-delay: ${i * 0.1}s`}
+            >
+              <div class="grid lg:grid-cols-2 gap-8 items-center">
+                {i % 2 === 0 ? (
+                  <>
+                    {/* Left Side */}
+                    <div class="lg:text-right">
+                      <div class="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                        <div class="text-2xl font-bold text-accent mb-2">
+                          {item.year}
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-3">
+                          {item.title}
+                        </h3>
+                        <p class="text-muted-foreground mb-4 leading-relaxed">
+                          {item.description}
+                        </p>
+                        <div class="flex flex-wrap gap-2 lg:justify-end">
+                          {item.tech.map((tech) => (
+                            <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-mono">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Timeline Dot */}
+                    <div class="flex justify-center">
+                      <div class="w-4 h-4 bg-accent rounded-full border-4 border-background shadow-lg" />
+                    </div>
+
+                    {/* Empty Right Side */}
+                    <div />
+                  </>
+                ) : (
+                  <>
+                    {/* Empty Left Side */}
+                    <div />
+
+                    {/* Timeline Dot */}
+                    <div class="flex justify-center">
+                      <div class="w-4 h-4 bg-accent rounded-full border-4 border-background shadow-lg" />
+                    </div>
+
+                    {/* Right Side */}
+                    <div>
+                      <div class="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                        <div class="text-2xl font-bold text-accent mb-2">
+                          {item.year}
+                        </div>
+                        <h3 class="text-xl font-semibold text-card-foreground mb-3">
+                          {item.title}
+                        </h3>
+                        <p class="text-muted-foreground mb-4 leading-relaxed">
+                          {item.description}
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                          {item.tech.map((tech) => (
+                            <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-mono">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

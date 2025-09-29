@@ -1,0 +1,20 @@
+---
+export interface Props {
+  footerText: string;
+}
+
+const { footerText } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="py-12 border-t border-border bg-muted">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center">
+      <p class="text-muted-foreground">
+        {currentYear} Fernando Mirabile — <span id="footerText"
+          >{footerText}</span
+        >
+      </p>
+    </div>
+  </div>
+</footer>

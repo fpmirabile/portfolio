@@ -1,0 +1,91 @@
+---
+export interface Technology {
+  name: string;
+  category: string;
+  years: string;
+}
+
+export interface Props {
+  technologies: Technology[];
+  title: string;
+  clickHint: string;
+}
+
+const { technologies, title, clickHint } = Astro.props;
+---
+
+<div class="relative">
+  <div class="glass-effect rounded-2xl p-8 relative overflow-hidden">
+    <h3 class="text-lg font-semibold text-primary mb-4" id="techStackText">
+      {title}
+    </h3>
+
+    <!-- Interactive Demo Overlay -->
+    <div
+      id="skillDemo"
+      class="absolute inset-0 bg-accent/10 backdrop-blur-sm rounded-2xl flex items-center justify-center z-10 hidden"
+    >
+      <div class="text-center">
+        <div class="text-2xl font-bold text-accent mb-2" id="activeSkill"></div>
+        <div class="text-sm text-muted-foreground" id="clickTechText">
+          {clickHint}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3" id="technologiesGrid">
+      {
+        technologies.map((tech) => (
+          <button
+            data-skill={tech.name}
+            class="tech-button flex items-center justify-between p-3 bg-secondary rounded-lg hover:bg-secondary/80 transition-all duration-200 cursor-pointer"
+          >
+            <div>
+              <div class="font-medium text-secondary-foreground text-sm">
+                {tech.name}
+              </div>
+              <div class="text-xs text-muted-foreground">{tech.category}</div>
+            </div>
+            <div class="text-xs font-mono text-accent">{tech.years}</div>
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="mt-4 text-xs text-muted-foreground text-center">
+      💡 <span id="clickTechHint">{clickHint}</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const techButtons = document.querySelectorAll(".tech-button");
+
+    techButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const skill = button.getAttribute("data-skill");
+        if (skill) {
+          showSkillDemo(skill);
+        }
+      });
+    });
+  });
+
+  function showSkillDemo(skill: string) {
+    const demo = document.getElementById("skillDemo");
+    const activeSkill = document.getElementById("activeSkill");
+
+    if (activeSkill) {
+      activeSkill.textContent = skill;
+    }
+
+    if (demo) {
+      demo.classList.remove("hidden");
+    }
+
+    setTimeout(() => {
+      if (demo) demo.classList.add("hidden");
+    }, 3000);
+  }
+</script>
