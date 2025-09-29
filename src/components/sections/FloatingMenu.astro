@@ -80,7 +80,7 @@ const { texts } = Astro.props;
     <!-- LinkedIn -->
     <div class="menu-item">
       <a
-        href="https://linkedin.com/in/fernando-mirabile"
+        href="https://www.linkedin.com/in/fernando-pablo-mirabile-viola-85a64a52"
         target="_blank"
         class="flex items-center gap-3 bg-card border border-border rounded-lg p-3 shadow-lg hover:shadow-xl hover:border-accent/50 transition-all duration-200 min-w-[200px]"
       >
@@ -99,7 +99,6 @@ const { texts } = Astro.props;
         </div>
         <div class="text-left">
           <div class="font-medium text-card-foreground text-sm">LinkedIn</div>
-          <div class="text-xs text-muted-foreground">/in/fernando-mirabile</div>
         </div>
       </a>
     </div>
@@ -107,7 +106,7 @@ const { texts } = Astro.props;
     <!-- GitHub -->
     <div class="menu-item">
       <a
-        href="https://github.com/fmirabile"
+        href="https://github.com/fpmirabile"
         target="_blank"
         class="flex items-center gap-3 bg-card border border-border rounded-lg p-3 shadow-lg hover:shadow-xl hover:border-accent/50 transition-all duration-200 min-w-[200px]"
       >
@@ -126,11 +125,10 @@ const { texts } = Astro.props;
         </div>
         <div class="text-left">
           <div class="font-medium text-card-foreground text-sm">GitHub</div>
-          <div class="text-xs text-muted-foreground">/fmirabile</div>
+          <div class="text-xs text-muted-foreground">/fpmirabile</div>
         </div>
       </a>
     </div>
-
 
     <!-- Theme Toggle -->
     <div class="menu-item">
@@ -237,8 +235,34 @@ const { texts } = Astro.props;
       document.dispatchEvent(new CustomEvent("downloadCV"));
     });
 
-
     const themeButton = document.getElementById("themeButton");
+    const themeTexts = {
+      es: { light: "Claro", dark: "Oscuro" },
+      en: { light: "Light", dark: "Dark" },
+      pt: { light: "Claro", dark: "Escuro" },
+    };
+
+    function getCurrentLanguage() {
+      const pathLang = window.location.pathname.split("/")[1];
+      if (["es", "en", "pt"].includes(pathLang)) {
+        return pathLang;
+      }
+      return localStorage.getItem("language") || "es";
+    }
+
+    const currentLang = getCurrentLanguage();
+    const currentThemeEl = document.getElementById("currentTheme");
+
+    document.addEventListener("themeChanged", (event) => {
+      const { isDark } = (event as CustomEvent).detail;
+      if (currentThemeEl) {
+        const langKey = currentLang as keyof typeof themeTexts;
+        currentThemeEl.innerText = isDark
+          ? themeTexts[langKey].dark
+          : themeTexts[langKey].light;
+      }
+    });
+
     themeButton?.addEventListener("click", () => {
       document.dispatchEvent(new CustomEvent("toggleTheme"));
     });
