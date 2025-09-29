@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Fernando Mirabile - Full Stack Developer",
+    "description": "Engenheiro de Software Sénior com mais de 10 anos de experiência em React, Svelte, Node.js e Spring Boot. Atualmente na Jampp, baseado no Porto, Portugal.",
+    "lang": "pt"
+  },
+  "menu": {
+    "cvText": "Descarregar CV",
+    "languageText": "Idioma",
+    "themeText": "Tema",
+    "currentLang": "PT",
+    "currentTheme": "Claro"
+  },
+  "personalInfo": {
+    "email": "fpmirabile@gmail.com",
+    "location": "Porto, Portugal",
+    "languages": "ES, EN, PT",
+    "emailLabel": "Email",
+    "locationLabel": "Localização",
+    "languagesLabel": "Idiomas"
+  },
+  "hero": {
+    "roleText": "Engenheiro de Software Full Stack",
+    "descriptionText": "Full Stack Developer com mais de 10 anos de experiência. Especializado em React, Svelte, Node.js e Spring Boot. Argentino a viver no Porto, Portugal.",
+    "downloadCVText": "Descarregar CV",
+    "contactText": "Contacto",
+    "yearsExpText": "Anos de Experiência",
+    "countriesText": "Países"
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "clickHint": "Clique em qualquer tecnologia para interagir"
+  },
+  "journey": {
+    "title": "A Minha Jornada",
+    "description": "Uma jornada de mais de 10 anos a construir soluções que importam",
+    "items": [
+      {
+        "year": "2015",
+        "title": "Comecei no Desenvolvimento Web",
+        "description": "Comecei com Java e JavaScript vanilla, construindo as minhas primeiras aplicações web.",
+        "tech": ["Java", "JavaScript", "HTML/CSS"]
+      },
+      {
+        "year": "2017",
+        "title": "Frameworks Frontend",
+        "description": "Mergulhei no Angular e React, descobrindo o poder da arquitetura baseada em componentes.",
+        "tech": ["Angular", "React", "TypeScript"]
+      },
+      {
+        "year": "2020",
+        "title": "Liderança Full Stack",
+        "description": "Tornei-me Tech Lead na Mural, gerindo equipas e arquitetando soluções escaláveis.",
+        "tech": ["Node.js", "GraphQL", "AWS", "Team Leadership"]
+      },
+      {
+        "year": "2022",
+        "title": "Especialista em Stack Moderno",
+        "description": "Adotei frameworks modernos como Svelte e arquiteturas cloud avançadas.",
+        "tech": ["Svelte", "Spring Boot", "Microservices", "Docker"]
+      },
+      {
+        "year": "2024",
+        "title": "Engenheiro Sénior",
+        "description": "Atualmente na Jampp, focado na modernização de sistemas e segurança.",
+        "tech": ["System Architecture", "Security", "Legacy Modernization"]
+      }
+    ]
+  },
+  "education": {
+    "educationTitle": "Educação",
+    "educationDesc": "Formação académica e certificações profissionais",
+    "academicTitle": "Formação Académica",
+    "certificationsTitle": "Certificações"
+  },
+  "footer": {
+    "text": "Feito com paixão desde Portugal 🇵🇹"
+  }
+}

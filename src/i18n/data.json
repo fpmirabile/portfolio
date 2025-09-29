@@ -1,0 +1,50 @@
+{
+  "technologies": [
+    { "name": "JavaScript", "category": "Language", "years": "10+" },
+    { "name": "TypeScript", "category": "Language", "years": "6+" },
+    { "name": "Java", "category": "Language", "years": "8+" },
+    { "name": "Python", "category": "Language", "years": "5+" },
+    { "name": "React", "category": "Frontend", "years": "6+" },
+    { "name": "Svelte", "category": "Frontend", "years": "3+" },
+    { "name": "Angular", "category": "Frontend", "years": "4+" },
+    { "name": "Node.js", "category": "Backend", "years": "6+" },
+    { "name": "Spring Boot", "category": "Backend", "years": "5+" },
+    { "name": "GraphQL", "category": "API", "years": "3+" },
+    { "name": "PostgreSQL", "category": "Database", "years": "5+" },
+    { "name": "MongoDB", "category": "Database", "years": "4+" },
+    { "name": "AWS", "category": "Cloud", "years": "4+" },
+    { "name": "Docker", "category": "DevOps", "years": "3+" }
+  ],
+  "certifications": [
+    {
+      "name": "Supervised Machine Learning: Regression and Classification",
+      "issuer": "Coursera",
+      "type": "Certificate",
+      "year": "2024"
+    },
+    {
+      "name": "Design Solutions for Securing Applications",
+      "issuer": "Microsoft",
+      "type": "Certificate",
+      "year": "2023"
+    },
+    {
+      "name": "AWS Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "type": "Certificate",
+      "year": "2022"
+    },
+    {
+      "name": "Advanced React Patterns",
+      "issuer": "Frontend Masters",
+      "type": "Certificate",
+      "year": "2021"
+    },
+    {
+      "name": "Spring Framework Certification",
+      "issuer": "Pivotal",
+      "type": "Certificate",
+      "year": "2020"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Fernando Mirabile - Full Stack Developer",
+    "description": "Senior Software Engineer with 10+ years of experience in React, Svelte, Node.js, and Spring Boot. Currently at Jampp, based in Porto, Portugal.",
+    "lang": "en"
+  },
+  "menu": {
+    "cvText": "Download CV",
+    "languageText": "Language",
+    "themeText": "Theme",
+    "currentLang": "EN",
+    "currentTheme": "Light"
+  },
+  "personalInfo": {
+    "email": "fpmirabile@gmail.com",
+    "location": "Porto, Portugal",
+    "languages": "ES, EN, PT",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "languagesLabel": "Languages"
+  },
+  "hero": {
+    "roleText": "Full Stack Software Engineer",
+    "descriptionText": "Full Stack Developer with 10+ years of experience in React, Svelte, Node.js, and Spring Boot. Currently at Jampp, based in Porto, Portugal.",
+    "downloadCVText": "Download CV",
+    "contactText": "Contact",
+    "yearsExpText": "Years Experience",
+    "countriesText": "Countries"
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "clickHint": "Click on any technology to interact"
+  },
+  "journey": {
+    "title": "My Journey",
+    "description": "A 10+ year journey building solutions that matter",
+    "items": [
+      {
+        "year": "2015",
+        "title": "Started Web Development",
+        "description": "Began with Java and vanilla JavaScript, building my first web applications.",
+        "tech": ["Java", "JavaScript", "HTML/CSS"]
+      },
+      {
+        "year": "2017",
+        "title": "Frontend Frameworks",
+        "description": "Dove into Angular and React, discovering the power of component-based architecture.",
+        "tech": ["Angular", "React", "TypeScript"]
+      },
+      {
+        "year": "2020",
+        "title": "Full Stack Leadership",
+        "description": "Became Tech Lead at Mural, managing teams and architecting scalable solutions.",
+        "tech": ["Node.js", "GraphQL", "AWS", "Team Leadership"]
+      },
+      {
+        "year": "2022",
+        "title": "Modern Stack Expert",
+        "description": "Embraced modern frameworks like Svelte and advanced cloud architectures.",
+        "tech": ["Svelte", "Spring Boot", "Microservices", "Docker"]
+      },
+      {
+        "year": "2024",
+        "title": "Senior Engineer",
+        "description": "Currently at Jampp, focusing on system modernization and security.",
+        "tech": ["System Architecture", "Security", "Legacy Modernization"]
+      }
+    ]
+  },
+  "education": {
+    "educationTitle": "Education",
+    "educationDesc": "Academic background and professional certifications",
+    "academicTitle": "Academic Background",
+    "certificationsTitle": "Certifications"
+  },
+  "footer": {
+    "text": "Made with passion from Portugal 🇵🇹"
+  }
+}
