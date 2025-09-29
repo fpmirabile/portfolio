@@ -5,10 +5,10 @@
     "lang": "en"
   },
   "menu": {
-    "cvText": "Download CV",
+    "cvText": "Download Resume",
     "languageText": "Language",
     "themeText": "Theme",
-    "currentLang": "EN",
+    "currentLang": "English",
     "currentTheme": "Light"
   },
   "personalInfo": {
@@ -22,7 +22,7 @@
   "hero": {
     "roleText": "Full Stack Software Engineer",
     "descriptionText": "Full Stack Developer with 10+ years of experience in React, Svelte, Node.js, and Spring Boot. Currently at Jampp, based in Porto, Portugal.",
-    "downloadCVText": "Download CV",
+    "downloadCVText": "Download Resume",
     "contactText": "Contact",
     "yearsExpText": "Years Experience",
     "countriesText": "Countries"
