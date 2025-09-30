@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import type { Certification } from "../../types";
   import CarouselButton from "./CarouselButton.svelte";
+  import InfoCard from "./InfoCard.svelte";
 
   interface Props {
     certifications: Certification[];
@@ -94,29 +95,13 @@
   <!-- Carousel Content -->
   <div class="absolute inset-6 flex items-center justify-center">
     {#key currentIndex}
-      <div class="text-center animate-fade-in">
-        <div class="flex items-center justify-center mb-3">
-          <span
-            class="px-2 py-1 bg-secondary text-secondary-foreground rounded text-xs font-medium"
-          >
-            {currentCert.type}
-          </span>
-        </div>
-
-        <h4
-          class="font-semibold text-card-foreground mb-2 text-sm leading-tight"
-        >
-          {currentCert.name}
-        </h4>
-
-        <p class="text-sm text-muted-foreground mb-2">
-          {currentCert.issuer}
-        </p>
-
-        <p class="text-xs text-accent">
-          {currentCert.year}
-        </p>
-      </div>
+      <InfoCard
+        badge={currentCert.type}
+        title={currentCert.name}
+        subtitle={currentCert.issuer}
+        footer={currentCert.year}
+        animate={true}
+      />
     {/key}
   </div>
 

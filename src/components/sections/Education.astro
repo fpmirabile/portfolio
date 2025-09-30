@@ -1,6 +1,6 @@
 ---
 import type { Certification, EducationTexts } from "../../types";
-import InfoCard from "../common/InfoCard.astro";
+import InfoCard from "../common/InfoCard.svelte";
 import CertificationCarousel from "../common/CertificationCarousel.svelte";
 
 export interface Props {
@@ -45,6 +45,7 @@ const { texts, certifications } = Astro.props;
             title={texts.degree.name}
             subtitle={texts.degree.institution}
             footer={texts.degree.graduationDate}
+            client:load
           />
         </div>
       </div>

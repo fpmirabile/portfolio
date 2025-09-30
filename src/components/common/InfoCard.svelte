@@ -1,16 +1,16 @@
----
-export interface Props {
-  badge: string;
-  title: string;
-  subtitle: string;
-  footer: string;
-  animate?: boolean;
-}
+<script lang="ts">
+  interface Props {
+    badge: string;
+    title: string;
+    subtitle: string;
+    footer: string;
+    animate?: boolean;
+  }
 
-const { badge, title, subtitle, footer, animate = false } = Astro.props;
----
+  let { badge, title, subtitle, footer, animate = false }: Props = $props();
+</script>
 
-<div class:list={["text-center", { "animate-fade-in": animate }]}>
+<div class="text-center {animate ? 'animate-fade-in' : ''}">
   <div class="flex items-center justify-center mb-3">
     <span
       class="px-2 py-1 bg-secondary text-secondary-foreground rounded text-xs font-medium"
