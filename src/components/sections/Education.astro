@@ -45,7 +45,7 @@ const { texts, certifications } = Astro.props;
             title={texts.degree.name}
             subtitle={texts.degree.institution}
             footer={texts.degree.graduationDate}
-            client:load
+            client:visible
           />
         </div>
       </div>
@@ -61,7 +61,7 @@ const { texts, certifications } = Astro.props;
         <CertificationCarousel
           certifications={certifications}
           counterText={texts.counterText}
-          client:load
+          client:visible
         />
       </div>
     </div>

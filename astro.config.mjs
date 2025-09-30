@@ -11,5 +11,25 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      cssCodeSplit: true,
+      minify: "esbuild",
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            lucide: ["lucide-svelte", "lucide-astro"],
+          },
+        },
+      },
+    },
+    ssr: {
+      noExternal: ["lucide-svelte", "lucide-astro"],
+    },
   },
+
+  build: {
+    inlineStylesheets: "auto",
+  },
+
+  compressHTML: true,
 });

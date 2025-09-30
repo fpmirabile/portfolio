@@ -23,7 +23,7 @@ const { technologies, certifications } = commonData;
   lang={t.meta.lang}
 >
   <FloatingMenu
-    client:load
+    client:idle
     texts={{
       cvText: t.menu.cvText,
       cvSubtitle: t.menu.cvSubtitle,
@@ -56,6 +56,7 @@ const { technologies, certifications } = commonData;
             clickHint={t.techStack.clickHint}
             overlayTexts={t.techStack.overlay}
             levels={t.techStack.levels}
+            client:visible
           />
         </HeroSection>
       </div>
