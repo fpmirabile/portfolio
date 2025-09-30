@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { ChevronLeft, ChevronRight } from "lucide-svelte";
+
   interface Props {
     direction: "prev" | "next";
     onclick?: () => void;
@@ -19,22 +21,8 @@
   aria-label={ariaLabel || defaultLabel}
 >
   {#if direction === "prev"}
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M15 19l-7-7 7-7"
-      />
-    </svg>
+    <ChevronLeft class="w-4 h-4" aria-hidden="true" />
   {:else}
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M9 5l7 7-7 7"
-      />
-    </svg>
+    <ChevronRight class="w-4 h-4" aria-hidden="true" />
   {/if}
 </button>
