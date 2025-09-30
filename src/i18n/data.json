@@ -1,19 +1,121 @@
 {
   "technologies": [
-    { "name": "JavaScript", "category": "Language", "years": "10+" },
-    { "name": "TypeScript", "category": "Language", "years": "6+" },
-    { "name": "Java", "category": "Language", "years": "8+" },
-    { "name": "Python", "category": "Language", "years": "5+" },
-    { "name": "React", "category": "Frontend", "years": "6+" },
-    { "name": "Svelte", "category": "Frontend", "years": "3+" },
-    { "name": "Angular", "category": "Frontend", "years": "4+" },
-    { "name": "Node.js", "category": "Backend", "years": "6+" },
-    { "name": "Spring Boot", "category": "Backend", "years": "5+" },
-    { "name": "GraphQL", "category": "API", "years": "3+" },
-    { "name": "PostgreSQL", "category": "Database", "years": "5+" },
-    { "name": "MongoDB", "category": "Database", "years": "4+" },
-    { "name": "AWS", "category": "Cloud", "years": "4+" },
-    { "name": "Docker", "category": "DevOps", "years": "3+" }
+    {
+      "name": "JavaScript",
+      "category": "Language",
+      "years": "10+",
+      "level": "expert",
+      "description": "Core language for web development, used across frontend and backend",
+      "projects": [
+        "Jampp Platform",
+        "Mural Collaboration Tools",
+        "Multiple Web Apps"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "category": "Language",
+      "years": "6+",
+      "level": "expert",
+      "description": "Type-safe JavaScript for large-scale applications",
+      "projects": ["Jampp Modernization", "Mural Backend Services"]
+    },
+    {
+      "name": "Java",
+      "category": "Language",
+      "years": "8+",
+      "level": "advanced",
+      "description": "Enterprise backend development with Spring ecosystem",
+      "projects": ["Legacy System Modernization", "Microservices Architecture"]
+    },
+    {
+      "name": "Python",
+      "category": "Language",
+      "years": "5+",
+      "level": "advanced",
+      "description": "Data processing, automation, and machine learning",
+      "projects": ["ML Models", "Data Pipeline Automation"]
+    },
+    {
+      "name": "React",
+      "category": "Frontend",
+      "years": "6+",
+      "level": "expert",
+      "description": "Building modern, interactive user interfaces",
+      "projects": ["Mural Dashboard", "Multiple SPA Applications"]
+    },
+    {
+      "name": "Svelte",
+      "category": "Frontend",
+      "years": "3+",
+      "level": "advanced",
+      "description": "Modern framework for fast, reactive web applications",
+      "projects": ["Jampp UI Components", "Performance-Critical Features"]
+    },
+    {
+      "name": "Angular",
+      "category": "Frontend",
+      "years": "4+",
+      "level": "advanced",
+      "description": "Enterprise-scale frontend applications",
+      "projects": ["Corporate Dashboards", "Admin Panels"]
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend",
+      "years": "6+",
+      "level": "expert",
+      "description": "Scalable backend services and APIs",
+      "projects": ["Mural Backend", "Real-time Services", "REST APIs"]
+    },
+    {
+      "name": "Spring Boot",
+      "category": "Backend",
+      "years": "5+",
+      "level": "advanced",
+      "description": "Java-based microservices and enterprise applications",
+      "projects": ["Jampp Services", "Legacy System Migration"]
+    },
+    {
+      "name": "GraphQL",
+      "category": "API",
+      "years": "3+",
+      "level": "advanced",
+      "description": "Efficient API design and data fetching",
+      "projects": ["Mural API Layer", "Client-Server Communication"]
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Database",
+      "years": "5+",
+      "level": "advanced",
+      "description": "Relational database for complex data models",
+      "projects": ["Jampp Data Layer", "Transactional Systems"]
+    },
+    {
+      "name": "MongoDB",
+      "category": "Database",
+      "years": "4+",
+      "level": "advanced",
+      "description": "NoSQL database for flexible data structures",
+      "projects": ["Document Storage", "Real-time Data"]
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud",
+      "years": "4+",
+      "level": "advanced",
+      "description": "Cloud infrastructure and serverless solutions",
+      "projects": ["Mural Infrastructure", "Scalable Deployments"]
+    },
+    {
+      "name": "Docker",
+      "category": "DevOps",
+      "years": "3+",
+      "level": "advanced",
+      "description": "Containerization for consistent deployments",
+      "projects": ["Microservices Deployment", "Development Environments"]
+    }
   ],
   "certifications": [
     {

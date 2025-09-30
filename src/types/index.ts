@@ -1,10 +1,13 @@
 export type SupportedLanguage = "es" | "en" | "pt";
+export type SkillLevel = "beginner" | "intermediate" | "advanced" | "expert";
 
-// Technology types
 export interface Technology {
   name: string;
   category: string;
   years: string;
+  description?: string;
+  level?: SkillLevel;
+  projects?: string[];
 }
 
 // Certification types
@@ -51,11 +54,31 @@ export interface EducationTexts {
   educationDesc: string;
   academicTitle: string;
   certificationsTitle: string;
+  degree: {
+    type: string;
+    name: string;
+    institution: string;
+    location: string;
+    graduationDate: string;
+  };
 }
 
 export interface TechStackTexts {
   title: string;
   clickHint: string;
+  overlay: {
+    levelLabel: string;
+    descriptionLabel: string;
+    projectsLabel: string;
+    closeButton: string;
+    yearsText: string;
+  };
+  levels: {
+    beginner: string;
+    intermediate: string;
+    advanced: string;
+    expert: string;
+  };
 }
 
 export interface JourneyTexts {

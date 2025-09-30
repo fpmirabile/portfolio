@@ -1,7 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import FloatingMenu from "../../components/sections/FloatingMenu.astro";
-// import PersonalInfoBar from "../../components/PersonalInfoBar.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
 import TechStack from "../../components/sections/TechStack.astro";
 import TechJourney from "../../components/sections/TechJourney.astro";
@@ -9,6 +8,7 @@ import Education from "../../components/sections/Education.astro";
 import Footer from "../../components/sections/Footer.astro";
 import LanguageSelector from "../../components/sections/LanguageSelector.astro";
 import ThemeLanguageManager from "../../components/ThemeLanguageManager.astro";
+import type { Technology } from "../../types";
 
 import esTranslations from "../../i18n/es.json";
 import commonData from "../../i18n/data.json";
@@ -26,7 +26,7 @@ const { technologies, certifications } = commonData;
     texts={{
       cvText: t.menu.cvText,
       themeText: t.menu.themeText,
-      currentTheme: t.menu.currentTheme,
+      themes: t.menu.themes,
     }}
   />
 
@@ -36,13 +36,15 @@ const { technologies, certifications } = commonData;
         <HeroSection texts={t.hero}>
           <LanguageSelector
             slot="language-selector"
-            currentLang={t.meta.lang}
+            currentLang="es"
             languageText={t.menu.languageText}
           />
           <TechStack
-            technologies={technologies}
+            technologies={technologies as Technology[]}
             title={t.techStack.title}
             clickHint={t.techStack.clickHint}
+            overlayTexts={t.techStack.overlay}
+            levels={t.techStack.levels}
           />
         </HeroSection>
       </div>

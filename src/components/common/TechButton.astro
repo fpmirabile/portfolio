@@ -1,0 +1,22 @@
+---
+export interface Props {
+  name: string;
+  category: string;
+  years: string;
+}
+
+const { name, category, years } = Astro.props;
+---
+
+<button
+  data-skill={name}
+  class="tech-button flex items-center justify-between p-3 bg-secondary rounded-lg hover:bg-secondary/80 transition-all duration-200 cursor-pointer"
+>
+  <div class="flex-1 min-w-0">
+    <div class="font-medium text-secondary-foreground text-sm">
+      {name}
+    </div>
+    <div class="text-xs text-muted-foreground">{category}</div>
+  </div>
+  <div class="text-xs font-mono text-accent ml-2 flex-shrink-0">{years}</div>
+</button>

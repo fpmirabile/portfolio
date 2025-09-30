@@ -8,6 +8,7 @@ import Education from "../../components/sections/Education.astro";
 import Footer from "../../components/sections/Footer.astro";
 import ThemeLanguageManager from "../../components/ThemeLanguageManager.astro";
 import LanguageSelector from "../../components/sections/LanguageSelector.astro";
+import type { Technology } from "../../types";
 
 import ptTranslations from "../../i18n/pt.json";
 import commonData from "../../i18n/data.json";
@@ -21,11 +22,13 @@ const { technologies, certifications } = commonData;
   description={t.meta.description}
   lang={t.meta.lang}
 >
-  <FloatingMenu texts={{
-    cvText: t.menu.cvText,
-    themeText: t.menu.themeText,
-    currentTheme: t.menu.currentTheme
-  }} />
+  <FloatingMenu
+    texts={{
+      cvText: t.menu.cvText,
+      themeText: t.menu.themeText,
+      themes: t.menu.themes,
+    }}
+  />
 
   <main class="min-h-screen">
     <section class="relative py-20 lg:py-32 overflow-hidden">
@@ -33,13 +36,15 @@ const { technologies, certifications } = commonData;
         <HeroSection texts={t.hero}>
           <LanguageSelector
             slot="language-selector"
-            currentLang={t.meta.lang}
+            currentLang="pt"
             languageText={t.menu.languageText}
           />
           <TechStack
-            technologies={technologies}
+            technologies={technologies as Technology[]}
             title={t.techStack.title}
             clickHint={t.techStack.clickHint}
+            overlayTexts={t.techStack.overlay}
+            levels={t.techStack.levels}
           />
         </HeroSection>
       </div>

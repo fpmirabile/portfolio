@@ -32,7 +32,20 @@
   },
   "techStack": {
     "title": "Tech Stack",
-    "clickHint": "Click en cualquier tecnología para interactuar"
+    "clickHint": "Click en cualquier tecnología para interactuar",
+    "overlay": {
+      "levelLabel": "Nivel de Experiencia",
+      "descriptionLabel": "Descripción",
+      "projectsLabel": "Proyectos Clave",
+      "closeButton": "Cerrar",
+      "yearsText": "años"
+    },
+    "levels": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzado",
+      "expert": "Experto"
+    }
   },
   "journey": {
     "title": "Mi Trayectoria",
