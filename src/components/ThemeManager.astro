@@ -1,14 +1,14 @@
 ---
-// This component handles global theme and language management
+// This component handles global theme management
 // It should be included once in the main layout
 ---
 
 <script>
-  import { getCurrentLanguage, SUPPORTED_LANGUAGES } from "../utils/language";
+  import { getCurrentLanguage } from "../utils/language";
   import { eventHandlers } from "../utils/events";
   import type { SupportedLanguage } from "../types";
 
-  class ThemeLanguageManager {
+  class ThemeManager {
     private isDark: boolean = false;
     private currentLanguage: SupportedLanguage = "es";
 
@@ -39,18 +39,12 @@
     }
 
     private setupEventListeners() {
+      // Theme toggle
       document.addEventListener("toggleTheme", () => {
         this.toggleTheme();
       });
 
-      document.addEventListener("toggleLanguage", () => {
-        this.toggleLanguage();
-      });
-
-      document.addEventListener("downloadCV", () => {
-        this.downloadCV();
-      });
-
+      // Listen to system theme changes
       window
         .matchMedia("(prefers-color-scheme: dark)")
         .addEventListener("change", (e) => {
@@ -66,37 +60,9 @@
       this.updateTheme();
       localStorage.setItem("theme", this.isDark ? "dark" : "light");
     }
-
-    public toggleLanguage() {
-      const currentIndex = SUPPORTED_LANGUAGES.indexOf(this.currentLanguage);
-      const nextIndex = (currentIndex + 1) % SUPPORTED_LANGUAGES.length;
-      const newLang = SUPPORTED_LANGUAGES[nextIndex];
-      localStorage.setItem("language", newLang);
-      window.location.href = `/${newLang}`;
-    }
-
-    private downloadCV() {
-      const cvUrl = "/cv-fernando-mirabile.pdf";
-
-      try {
-        const link = document.createElement("a");
-        link.href = cvUrl;
-        link.download = `Fernando-Mirabile-CV-${this.currentLanguage.toUpperCase()}.pdf`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } catch (error) {
-        const message =
-          this.currentLanguage === "es"
-            ? "CV no disponible en este momento. Por favor, contacta por email."
-            : "CV not available at the moment. Please contact via email.";
-        alert(message);
-      }
-    }
-
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    new ThemeLanguageManager();
+    new ThemeManager();
   });
 </script>

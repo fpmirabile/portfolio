@@ -35,9 +35,7 @@ export function onCustomEvent<T extends CustomEventType>(
  * Event handlers for common actions
  */
 export const eventHandlers = {
-  downloadCV: () => dispatchCustomEvent("downloadCV"),
   toggleTheme: () => dispatchCustomEvent("toggleTheme"),
-  toggleLanguage: () => dispatchCustomEvent("toggleLanguage"),
   themeChanged: (isDark: boolean) =>
     dispatchCustomEvent("themeChanged", { isDark }),
 };

@@ -93,18 +93,14 @@ export interface JourneyTexts {
 
 // Event types
 export type CustomEventType =
-  | "downloadCV"
   | "toggleTheme"
-  | "themeChanged"
-  | "toggleLanguage";
+  | "themeChanged";
 
 export interface ThemeChangedDetail {
   isDark: boolean;
 }
 
 export interface CustomEventMap {
-  downloadCV: CustomEvent<void>;
   toggleTheme: CustomEvent<void>;
   themeChanged: CustomEvent<ThemeChangedDetail>;
-  toggleLanguage: CustomEvent<void>;
 }

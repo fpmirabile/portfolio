@@ -1,13 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import FloatingMenu from "../../components/sections/FloatingMenu.astro";
+import FloatingMenu from "../../components/sections/FloatingMenu.svelte";
 import HeroSection from "../../components/sections/HeroSection.astro";
 import TechStack from "../../components/sections/TechStack.astro";
 import TechJourney from "../../components/sections/TechJourney.astro";
 import Education from "../../components/sections/Education.astro";
 import Footer from "../../components/sections/Footer.astro";
 import LanguageSelector from "../../components/sections/LanguageSelector.astro";
-import ThemeLanguageManager from "../../components/ThemeLanguageManager.astro";
+import ThemeManager from "../../components/ThemeManager.astro";
 import type { Technology } from "../../types";
 
 import esTranslations from "../../i18n/es.json";
@@ -23,6 +23,7 @@ const { technologies, certifications } = commonData;
   lang={t.meta.lang}
 >
   <FloatingMenu
+    client:load
     texts={{
       cvText: t.menu.cvText,
       cvSubtitle: t.menu.cvSubtitle,
@@ -66,5 +67,5 @@ const { technologies, certifications } = commonData;
   </main>
 
   <Footer footerText={t.footer.text} />
-  <ThemeLanguageManager />
+  <ThemeManager />
 </Layout>

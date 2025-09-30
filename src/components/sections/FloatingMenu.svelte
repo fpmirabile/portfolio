@@ -12,6 +12,7 @@
   import { onMount } from "svelte";
   import { eventHandlers, onCustomEvent } from "../../utils/events";
   import { getCurrentLanguage, getThemeTextSync } from "../../utils/language";
+  import { downloadCV } from "../../utils/cv";
   import type { MenuTexts } from "../../types";
 
   interface Props {
@@ -61,7 +62,7 @@
 
   function handleCVDownload(event: MouseEvent) {
     event.stopPropagation();
-    eventHandlers.downloadCV();
+    downloadCV();
     closeMenu();
   }
 

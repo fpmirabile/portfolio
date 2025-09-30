@@ -78,10 +78,10 @@ const { texts } = Astro.props;
 </div>
 
 <script>
-  import { eventHandlers } from "../../utils/events";
+  import { downloadCV } from "../../utils/cv";
 
   document.addEventListener("DOMContentLoaded", () => {
     const heroDownloadCV = document.getElementById("heroDownloadCV");
-    heroDownloadCV?.addEventListener("click", eventHandlers.downloadCV);
+    heroDownloadCV?.addEventListener("click", downloadCV);
   });
 </script>
