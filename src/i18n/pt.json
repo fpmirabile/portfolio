@@ -6,6 +6,13 @@
   },
   "menu": {
     "cvText": "Descarregar CV",
+    "cvSubtitle": "Currículo PDF",
+    "emailTitle": "Email",
+    "emailSubtitle": "fpmirabile@gmail.com",
+    "linkedinTitle": "LinkedIn",
+    "linkedinSubtitle": "Perfil Profissional",
+    "githubTitle": "GitHub",
+    "githubSubtitle": "Repositório de Código",
     "languageText": "Idioma",
     "themeText": "Tema",
     "currentLang": "Português",

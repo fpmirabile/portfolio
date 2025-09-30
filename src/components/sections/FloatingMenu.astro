@@ -27,7 +27,7 @@ const { texts } = Astro.props;
       as="button"
       id="cvButton"
       title={texts.cvText}
-      subtitle="PDF Resume"
+      subtitle={texts.cvSubtitle}
     >
       <Download class="w-4 h-4 text-primary" slot="icon" />
     </MenuItem>
@@ -35,8 +35,8 @@ const { texts } = Astro.props;
     <!-- Email -->
     <MenuItem
       href="mailto:fpmirabile@gmail.com"
-      title="Email"
-      subtitle="fpmirabile@gmail.com"
+      title={texts.emailTitle}
+      subtitle={texts.emailSubtitle}
     >
       <Mail class="w-4 h-4 text-primary" slot="icon" />
     </MenuItem>
@@ -45,7 +45,8 @@ const { texts } = Astro.props;
     <MenuItem
       href="https://www.linkedin.com/in/fernando-pablo-mirabile-viola-85a64a52"
       target="_blank"
-      title="LinkedIn"
+      title={texts.linkedinTitle}
+      subtitle={texts.linkedinSubtitle}
     >
       <Linkedin class="w-4 h-4 text-primary" slot="icon" />
     </MenuItem>
@@ -54,7 +55,8 @@ const { texts } = Astro.props;
     <MenuItem
       href="https://github.com/fpmirabile"
       target="_blank"
-      title="GitHub"
+      title={texts.githubTitle}
+      subtitle={texts.githubSubtitle}
     >
       <Github class="w-4 h-4 text-primary" slot="icon" />
     </MenuItem>

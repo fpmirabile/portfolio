@@ -10,7 +10,6 @@ export interface Technology {
   projects?: string[];
 }
 
-// Certification types
 export interface Certification {
   name: string;
   issuer: string;
@@ -18,7 +17,6 @@ export interface Certification {
   year: string;
 }
 
-// Journey types
 export interface JourneyItem {
   year: string;
   title: string;
@@ -26,13 +24,19 @@ export interface JourneyItem {
   tech: string[];
 }
 
-// Component Props types
 export interface BaseTexts {
   [key: string]: string | BaseTexts;
 }
 
 export interface MenuTexts {
   cvText: string;
+  cvSubtitle: string;
+  emailTitle: string;
+  emailSubtitle: string;
+  linkedinTitle: string;
+  linkedinSubtitle: string;
+  githubTitle: string;
+  githubSubtitle: string;
   themeText: string;
   themes: {
     light: string;

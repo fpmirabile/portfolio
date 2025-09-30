@@ -6,6 +6,13 @@
   },
   "menu": {
     "cvText": "Download Resume",
+    "cvSubtitle": "PDF Resume",
+    "emailTitle": "Email",
+    "emailSubtitle": "fpmirabile@gmail.com",
+    "linkedinTitle": "LinkedIn",
+    "linkedinSubtitle": "Professional Profile",
+    "githubTitle": "GitHub",
+    "githubSubtitle": "Code Repository",
     "languageText": "Language",
     "themeText": "Theme",
     "currentLang": "English",
