@@ -21,7 +21,7 @@ const { texts } = Astro.props;
 
 <div class="fixed top-6 right-6 z-50">
   <!-- Menu Items -->
-  <div id="menuItems" class="absolute top-16 right-0 space-y-3">
+  <div id="menuItems" class="absolute top-16 right-0 space-y-3 pointer-events-none">
     <!-- CV Download -->
     <MenuItem
       as="button"
@@ -104,6 +104,7 @@ const { texts } = Astro.props;
     function closeMenu() {
       menuOpen = false;
       menuItems?.classList.remove("menu-open");
+      menuItems?.classList.add("pointer-events-none");
       menuIconOpen?.classList.remove("hidden");
       menuIconClose?.classList.add("hidden");
     }
@@ -114,6 +115,7 @@ const { texts } = Astro.props;
 
       if (menuOpen) {
         menuItems?.classList.add("menu-open");
+        menuItems?.classList.remove("pointer-events-none");
         menuIconOpen?.classList.add("hidden");
         menuIconClose?.classList.remove("hidden");
       } else {

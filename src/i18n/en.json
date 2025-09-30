@@ -95,6 +95,7 @@
     "educationDesc": "Academic background and professional certifications",
     "academicTitle": "Academic Background",
     "certificationsTitle": "Certifications",
+    "counterText": "certifications",
     "degree": {
       "type": "Bachelor's Degree",
       "name": "Informatics Engineering",

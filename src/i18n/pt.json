@@ -95,6 +95,7 @@
     "educationDesc": "Formação académica e certificações profissionais",
     "academicTitle": "Formação Académica",
     "certificationsTitle": "Certificações",
+    "counterText": "certificações",
     "degree": {
       "type": "Licenciatura",
       "name": "Engenharia Informática",

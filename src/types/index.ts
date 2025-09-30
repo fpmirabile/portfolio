@@ -58,6 +58,7 @@ export interface EducationTexts {
   educationDesc: string;
   academicTitle: string;
   certificationsTitle: string;
+  counterText: string;
   degree: {
     type: string;
     name: string;

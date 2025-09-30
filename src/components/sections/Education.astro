@@ -89,7 +89,8 @@ const { texts, certifications } = Astro.props;
 
         <div class="mt-4 text-center">
           <p class="text-xs text-muted-foreground" id="certificationCounter">
-            1 de {certifications.length} certificaciones
+            1 de {certifications.length}
+            {texts.counterText}
           </p>
         </div>
       </div>
@@ -97,7 +98,7 @@ const { texts, certifications } = Astro.props;
   </div>
 </section>
 
-<script define:vars={{ certifications }}>
+<script define:vars={{ certifications, counterText: texts.counterText }}>
   document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
     let intervalId = null;
@@ -154,7 +155,7 @@ const { texts, certifications } = Astro.props;
 
     // Update counter
     function updateCounter() {
-      counter.textContent = `${currentIndex + 1} de ${certifications.length} certificaciones`;
+      counter.textContent = `${currentIndex + 1} de ${certifications.length} ${counterText}`;
     }
 
     // Create indicators
