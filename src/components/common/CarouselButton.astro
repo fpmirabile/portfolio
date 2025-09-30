@@ -13,7 +13,7 @@ const defaultLabel = direction === "prev" ? "Previous item" : "Next item";
 <button
   id={id}
   class:list={[
-    "absolute top-1/2 transform -translate-y-1/2 p-1 text-muted-foreground hover:text-foreground transition-colors",
+    "absolute top-1/2 transform -translate-y-1/2 p-1 text-muted-foreground hover:text-primary transition-colors",
     direction === "prev" ? "left-2" : "right-2",
     className,
   ]}
