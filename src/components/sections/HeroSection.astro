@@ -1,12 +1,5 @@
 ---
-export interface HeroTexts {
-  roleText: string;
-  descriptionText: string;
-  downloadCVText: string;
-  contactText: string;
-  yearsExpText: string;
-  countriesText: string;
-}
+import type { HeroTexts } from "../../types";
 
 export interface Props {
   texts: HeroTexts;
@@ -96,10 +89,10 @@ const { texts } = Astro.props;
 </div>
 
 <script>
+  import { eventHandlers } from "../../utils/events";
+
   document.addEventListener("DOMContentLoaded", () => {
     const heroDownloadCV = document.getElementById("heroDownloadCV");
-    heroDownloadCV?.addEventListener("click", () => {
-      document.dispatchEvent(new CustomEvent("downloadCV"));
-    });
+    heroDownloadCV?.addEventListener("click", eventHandlers.downloadCV);
   });
 </script>
