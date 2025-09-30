@@ -39,22 +39,10 @@
     "description": "Uma jornada de mais de 10 anos a construir soluções que importam",
     "items": [
       {
-        "year": "2015",
-        "title": "Comecei no Desenvolvimento Web",
-        "description": "Comecei com Java e JavaScript vanilla, construindo as minhas primeiras aplicações web.",
-        "tech": ["Java", "JavaScript", "HTML/CSS"]
-      },
-      {
-        "year": "2017",
-        "title": "Frameworks Frontend",
-        "description": "Mergulhei no Angular e React, descobrindo o poder da arquitetura baseada em componentes.",
-        "tech": ["Angular", "React", "TypeScript"]
-      },
-      {
-        "year": "2020",
-        "title": "Liderança Full Stack",
-        "description": "Tornei-me Tech Lead na Mural, gerindo equipas e arquitetando soluções escaláveis.",
-        "tech": ["Node.js", "GraphQL", "AWS", "Team Leadership"]
+        "year": "2024",
+        "title": "Engenheiro Sénior",
+        "description": "Atualmente na Jampp, focado na modernização de sistemas e segurança.",
+        "tech": ["System Architecture", "Security", "Legacy Modernization"]
       },
       {
         "year": "2022",
@@ -63,10 +51,22 @@
         "tech": ["Svelte", "Spring Boot", "Microservices", "Docker"]
       },
       {
-        "year": "2024",
-        "title": "Engenheiro Sénior",
-        "description": "Atualmente na Jampp, focado na modernização de sistemas e segurança.",
-        "tech": ["System Architecture", "Security", "Legacy Modernization"]
+        "year": "2020",
+        "title": "Liderança Full Stack",
+        "description": "Tornei-me Tech Lead na Mural, gerindo equipas e arquitetando soluções escaláveis.",
+        "tech": ["Node.js", "GraphQL", "AWS", "Team Leadership"]
+      },
+      {
+        "year": "2017",
+        "title": "Frameworks Frontend",
+        "description": "Mergulhei no Angular e React, descobrindo o poder da arquitetura baseada em componentes.",
+        "tech": ["Angular", "React", "TypeScript"]
+      },
+      {
+        "year": "2015",
+        "title": "Comecei no Desenvolvimento Web",
+        "description": "Comecei com Java e JavaScript vanilla, construindo as minhas primeiras aplicações web.",
+        "tech": ["Java", "JavaScript", "HTML/CSS"]
       }
     ]
   },

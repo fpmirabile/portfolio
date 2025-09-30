@@ -1,10 +1,6 @@
 ---
-export interface JourneyItem {
-  year: string;
-  title: string;
-  description: string;
-  tech: string[];
-}
+import type { JourneyItem } from "../../types";
+import TimelineCard from "../common/TimelineCard.astro";
 
 export interface Props {
   journeyTitle: string;
@@ -35,81 +31,55 @@ const { journeyTitle, journeyDesc, journeyItems } = Astro.props;
     <div class="relative">
       <!-- Timeline Line -->
       <div
-        class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-border"
+        class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary/40"
       >
       </div>
 
-      <div class="space-y-12" id="journeyTimeline">
+      <div class="space-y-16" id="journeyTimeline">
         {
           journeyItems.map((item, i) => (
             <div
-              class="animate-fade-in-up"
+              class="animate-fade-in-up relative"
               style={`animation-delay: ${i * 0.1}s`}
             >
-              <div class="grid lg:grid-cols-2 gap-8 items-center">
+              <div class="grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
                 {i % 2 === 0 ? (
                   <>
                     {/* Left Side */}
-                    <div class="lg:text-right">
-                      <div class="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                        <div class="text-2xl font-bold text-accent mb-2">
-                          {item.year}
-                        </div>
-                        <h3 class="text-xl font-semibold text-card-foreground mb-3">
-                          {item.title}
-                        </h3>
-                        <p class="text-muted-foreground mb-4 leading-relaxed">
-                          {item.description}
-                        </p>
-                        <div class="flex flex-wrap gap-2 lg:justify-end">
-                          {item.tech.map((tech) => (
-                            <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-mono">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+                    <TimelineCard
+                      year={item.year}
+                      title={item.title}
+                      description={item.description}
+                      tech={item.tech}
+                      align="left"
+                    />
 
                     {/* Timeline Dot */}
-                    <div class="flex justify-center">
-                      <div class="w-4 h-4 bg-accent rounded-full border-4 border-background shadow-lg" />
+                    <div class="flex justify-center items-center relative z-10">
+                      <div class="w-6 h-6 bg-primary rounded-full border-[5px] border-background shadow-xl ring-4 ring-primary/20" />
                     </div>
 
                     {/* Empty Right Side */}
-                    <div />
+                    <div class="hidden lg:block" />
                   </>
                 ) : (
                   <>
                     {/* Empty Left Side */}
-                    <div />
+                    <div class="hidden lg:block" />
 
                     {/* Timeline Dot */}
-                    <div class="flex justify-center">
-                      <div class="w-4 h-4 bg-accent rounded-full border-4 border-background shadow-lg" />
+                    <div class="flex justify-center items-center relative z-10">
+                      <div class="w-6 h-6 bg-primary rounded-full border-[5px] border-background shadow-xl ring-4 ring-primary/20" />
                     </div>
 
                     {/* Right Side */}
-                    <div>
-                      <div class="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                        <div class="text-2xl font-bold text-accent mb-2">
-                          {item.year}
-                        </div>
-                        <h3 class="text-xl font-semibold text-card-foreground mb-3">
-                          {item.title}
-                        </h3>
-                        <p class="text-muted-foreground mb-4 leading-relaxed">
-                          {item.description}
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                          {item.tech.map((tech) => (
-                            <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-mono">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+                    <TimelineCard
+                      year={item.year}
+                      title={item.title}
+                      description={item.description}
+                      tech={item.tech}
+                      align="right"
+                    />
                   </>
                 )}
               </div>

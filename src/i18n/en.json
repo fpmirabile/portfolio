@@ -39,22 +39,10 @@
     "description": "A 10+ year journey building solutions that matter",
     "items": [
       {
-        "year": "2015",
-        "title": "Started Web Development",
-        "description": "Began with Java and vanilla JavaScript, building my first web applications.",
-        "tech": ["Java", "JavaScript", "HTML/CSS"]
-      },
-      {
-        "year": "2017",
-        "title": "Frontend Frameworks",
-        "description": "Dove into Angular and React, discovering the power of component-based architecture.",
-        "tech": ["Angular", "React", "TypeScript"]
-      },
-      {
-        "year": "2020",
-        "title": "Full Stack Leadership",
-        "description": "Became Tech Lead at Mural, managing teams and architecting scalable solutions.",
-        "tech": ["Node.js", "GraphQL", "AWS", "Team Leadership"]
+        "year": "2024",
+        "title": "Senior Engineer",
+        "description": "Currently at Jampp, focusing on system modernization and security.",
+        "tech": ["System Architecture", "Security", "Legacy Modernization"]
       },
       {
         "year": "2022",
@@ -63,10 +51,22 @@
         "tech": ["Svelte", "Spring Boot", "Microservices", "Docker"]
       },
       {
-        "year": "2024",
-        "title": "Senior Engineer",
-        "description": "Currently at Jampp, focusing on system modernization and security.",
-        "tech": ["System Architecture", "Security", "Legacy Modernization"]
+        "year": "2020",
+        "title": "Full Stack Leadership",
+        "description": "Became Tech Lead at Mural, managing teams and architecting scalable solutions.",
+        "tech": ["Node.js", "GraphQL", "AWS", "Team Leadership"]
+      },
+      {
+        "year": "2017",
+        "title": "Frontend Frameworks",
+        "description": "Dove into Angular and React, discovering the power of component-based architecture.",
+        "tech": ["Angular", "React", "TypeScript"]
+      },
+      {
+        "year": "2015",
+        "title": "Started Web Development",
+        "description": "Began with Java and vanilla JavaScript, building my first web applications.",
+        "tech": ["Java", "JavaScript", "HTML/CSS"]
       }
     ]
   },
