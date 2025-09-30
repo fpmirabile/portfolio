@@ -74,7 +74,14 @@
     "educationTitle": "Educação",
     "educationDesc": "Formação académica e certificações profissionais",
     "academicTitle": "Formação Académica",
-    "certificationsTitle": "Certificações"
+    "certificationsTitle": "Certificações",
+    "degree": {
+      "type": "Licenciatura",
+      "name": "Engenharia Informática",
+      "institution": "Universidad de la Empresa Argentina (UADE)",
+      "location": "Buenos Aires",
+      "graduationDate": "Graduado Julho 2024"
+    }
   },
   "footer": {
     "text": "Feito com paixão desde Portugal 🇵🇹"

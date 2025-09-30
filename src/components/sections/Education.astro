@@ -1,17 +1,7 @@
 ---
-export interface Certification {
-  name: string;
-  issuer: string;
-  type: string;
-  year: string;
-}
-
-export interface EducationTexts {
-  educationTitle: string;
-  educationDesc: string;
-  academicTitle: string;
-  certificationsTitle: string;
-}
+import type { Certification, EducationTexts } from "../../types";
+import CarouselButton from "../common/CarouselButton.astro";
+import InfoCard from "../common/InfoCard.astro";
 
 export interface Props {
   texts: EducationTexts;
@@ -47,29 +37,15 @@ const { texts, certifications } = Astro.props;
         >
           {texts.academicTitle}
         </h3>
-        <div class="bg-card border border-border rounded-xl p-6">
-          <div class="flex items-start justify-between mb-4">
-            <span
-              class="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-medium"
-            >
-              Bachelor's Degree
-            </span>
-            <span class="text-sm text-muted-foreground"
-              >Graduated July 2024</span
-            >
-          </div>
-
-          <h4 class="text-lg font-semibold text-card-foreground mb-2">
-            Informatics Engineering
-          </h4>
-
-          <div class="flex items-center gap-2 text-muted-foreground">
-            <span class="font-medium"
-              >Universidad de la Empresa Argentina (UADE)</span
-            >
-            <span>•</span>
-            <span class="text-sm">Buenos Aires</span>
-          </div>
+        <div
+          class="relative bg-card border border-border rounded-xl p-6 h-[200px] flex items-center justify-center"
+        >
+          <InfoCard
+            badge={texts.degree.type}
+            title={texts.degree.name}
+            subtitle={texts.degree.institution}
+            footer={texts.degree.graduationDate}
+          />
         </div>
       </div>
 
@@ -83,11 +59,18 @@ const { texts, certifications } = Astro.props;
         </h3>
         <div
           class="relative bg-card border border-border rounded-xl p-6 h-[200px] overflow-hidden"
+          id="certificationCarousel"
         >
           <!-- Carousel Content -->
           <div class="absolute inset-6 flex items-center justify-center">
-            <div class="text-center animate-fade-in" id="currentCertification">
-              <!-- Current certification will be populated by JavaScript -->
+            <div id="currentCertification">
+              <InfoCard
+                badge={certifications[0].type}
+                title={certifications[0].name}
+                subtitle={certifications[0].issuer}
+                footer={certifications[0].year}
+                animate={true}
+              />
             </div>
           </div>
 
@@ -100,48 +83,13 @@ const { texts, certifications } = Astro.props;
           </div>
 
           <!-- Navigation Arrows -->
-          <button
-            id="prevCertBtn"
-            class="absolute left-2 top-1/2 transform -translate-y-1/2 p-1 text-muted-foreground hover:text-foreground transition-colors"
-            aria-label="Previous certification"
-          >
-            <svg
-              class="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 19l-7-7 7-7"></path>
-            </svg>
-          </button>
-
-          <button
-            id="nextCertBtn"
-            class="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-muted-foreground hover:text-foreground transition-colors"
-            aria-label="Next certification"
-          >
-            <svg
-              class="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
+          <CarouselButton direction="prev" id="prevCertBtn" />
+          <CarouselButton direction="next" id="nextCertBtn" />
         </div>
 
         <div class="mt-4 text-center">
           <p class="text-xs text-muted-foreground" id="certificationCounter">
-            <!-- Counter will be populated by JavaScript -->
+            1 de {certifications.length} certificaciones
           </p>
         </div>
       </div>
@@ -151,130 +99,155 @@ const { texts, certifications } = Astro.props;
 
 <script define:vars={{ certifications }}>
   document.addEventListener("DOMContentLoaded", () => {
-    let currentCertIndex = 0;
-    let certificationInterval;
+    let currentIndex = 0;
+    let intervalId = null;
 
-    function updateCurrentCertification() {
-      const cert = certifications[currentCertIndex];
-      const currentCert = document.getElementById("currentCertification");
-
-      if (currentCert) {
-        currentCert.innerHTML = `
-          <div class="flex items-center justify-center mb-3">
-            <span class="px-2 py-1 bg-secondary text-secondary-foreground rounded text-xs font-medium">
-              ${cert.type}
-            </span>
-          </div>
-          
-          <h4 class="font-semibold text-card-foreground mb-2 text-sm leading-tight">
-            ${cert.name}
-          </h4>
-          
-          <p class="text-sm text-muted-foreground mb-2">
-            ${cert.issuer}
-          </p>
-          
-          <p class="text-xs text-accent">
-            ${cert.year}
-          </p>
-        `;
-      }
-    }
-
-    function renderCertificationIndicators() {
-      const indicators = document.getElementById("certificationIndicators");
-      if (indicators) {
-        indicators.innerHTML = certifications
-          .map(
-            (_, i) => `
-          <button 
-            class="cert-indicator w-2 h-2 rounded-full transition-all duration-200 ${
-              i === currentCertIndex ? "bg-accent" : "bg-muted-foreground/30"
-            }" 
-            data-index="${i}"
-            aria-label="Go to certification ${i + 1}"
-          ></button>
-        `
-          )
-          .join("");
-
-        // Add click listeners to indicators
-        const indicatorButtons = indicators.querySelectorAll(".cert-indicator");
-        indicatorButtons.forEach((button, index) => {
-          button.addEventListener("click", () => {
-            goToCertification(index);
-          });
-        });
-      }
-    }
-
-    function updateCertificationCounter() {
-      const counter = document.getElementById("certificationCounter");
-      if (counter) {
-        counter.textContent = `${currentCertIndex + 1} de ${certifications.length} certificaciones`;
-      }
-    }
-
-    function nextCertification() {
-      currentCertIndex = (currentCertIndex + 1) % certifications.length;
-      updateCurrentCertification();
-      renderCertificationIndicators();
-      updateCertificationCounter();
-    }
-
-    function previousCertification() {
-      currentCertIndex =
-        currentCertIndex === 0
-          ? certifications.length - 1
-          : currentCertIndex - 1;
-      updateCurrentCertification();
-      renderCertificationIndicators();
-      updateCertificationCounter();
-    }
-
-    function goToCertification(index) {
-      currentCertIndex = index;
-      updateCurrentCertification();
-      renderCertificationIndicators();
-      updateCertificationCounter();
-    }
-
-    function startCertificationCarousel() {
-      certificationInterval = setInterval(() => {
-        nextCertification();
-      }, 4000);
-    }
-
-    // Initialize
-    updateCurrentCertification();
-    renderCertificationIndicators();
-    updateCertificationCounter();
-    startCertificationCarousel();
-
-    // Navigation buttons
+    const currentCertElement = document.getElementById("currentCertification");
+    const indicatorsContainer = document.getElementById(
+      "certificationIndicators"
+    );
+    const counter = document.getElementById("certificationCounter");
+    const carouselElement = document.getElementById("certificationCarousel");
     const prevBtn = document.getElementById("prevCertBtn");
     const nextBtn = document.getElementById("nextCertBtn");
 
-    prevBtn?.addEventListener("click", () => {
-      clearInterval(certificationInterval);
-      previousCertification();
-      startCertificationCarousel();
-    });
+    if (
+      !currentCertElement ||
+      !indicatorsContainer ||
+      !counter ||
+      !carouselElement
+    ) {
+      return;
+    }
 
-    nextBtn?.addEventListener("click", () => {
-      clearInterval(certificationInterval);
-      nextCertification();
-      startCertificationCarousel();
-    });
+    // Render certification content
+    function renderCertification(cert, animate = false) {
+      const content = `
+        <div class="flex items-center justify-center mb-3">
+          <span class="px-2 py-1 bg-secondary text-secondary-foreground rounded text-xs font-medium">
+            ${cert.type}
+          </span>
+        </div>
+        
+        <h4 class="font-semibold text-card-foreground mb-2 text-sm leading-tight">
+          ${cert.name}
+        </h4>
+        
+        <p class="text-sm text-muted-foreground mb-2">
+          ${cert.issuer}
+        </p>
+        
+        <p class="text-xs text-accent">
+          ${cert.year}
+        </p>
+      `;
 
-    // Pause carousel on hover
-    const carousel = document.querySelector(".relative.bg-card");
-    carousel?.addEventListener("mouseenter", () => {
-      clearInterval(certificationInterval);
-    });
+      if (animate) {
+        currentCertElement.innerHTML = "";
+        setTimeout(() => {
+          currentCertElement.innerHTML = `<div class="text-center animate-fade-in">${content}</div>`;
+        }, 10);
+      } else {
+        currentCertElement.innerHTML = `<div class="text-center">${content}</div>`;
+      }
+    }
 
-    carousel?.addEventListener("mouseleave", () => {
-      startCertificationCarousel();
-    });
+    // Update counter
+    function updateCounter() {
+      counter.textContent = `${currentIndex + 1} de ${certifications.length} certificaciones`;
+    }
+
+    // Create indicators
+    function createIndicators() {
+      indicatorsContainer.innerHTML = certifications
+        .map(
+          (_, i) => `
+          <button
+            class="carousel-indicator w-2 h-2 rounded-full transition-all duration-200 ${
+              i === currentIndex ? "bg-accent" : "bg-muted-foreground/30"
+            }"
+            data-index="${i}"
+            aria-label="Go to item ${i + 1}"
+          ></button>
+        `
+        )
+        .join("");
+
+      // Add click listeners to indicators
+      const indicators = indicatorsContainer.querySelectorAll(
+        ".carousel-indicator"
+      );
+      indicators.forEach((indicator) => {
+        indicator.addEventListener("click", () => {
+          const index = parseInt(indicator.getAttribute("data-index") || "0");
+          goTo(index);
+          restart();
+        });
+      });
+    }
+
+    // Update all elements
+    function updateAll(animate = false) {
+      renderCertification(certifications[currentIndex], animate);
+      updateCounter();
+      createIndicators();
+    }
+
+    // Navigation functions
+    function next(animate = true) {
+      currentIndex = (currentIndex + 1) % certifications.length;
+      updateAll(animate);
+    }
+
+    function previous(animate = true) {
+      currentIndex =
+        currentIndex === 0 ? certifications.length - 1 : currentIndex - 1;
+      updateAll(animate);
+    }
+
+    function goTo(index, animate = true) {
+      if (index >= 0 && index < certifications.length) {
+        currentIndex = index;
+        updateAll(animate);
+      }
+    }
+
+    function start() {
+      stop();
+      updateAll(false);
+      if (certifications.length > 1) {
+        intervalId = setInterval(() => next(true), 4000);
+      }
+    }
+
+    function stop() {
+      if (intervalId !== null) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+    }
+
+    function restart() {
+      stop();
+      start();
+    }
+
+    carouselElement.addEventListener("mouseenter", stop);
+    carouselElement.addEventListener("mouseleave", start);
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        previous(true);
+        restart();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        next(true);
+        restart();
+      });
+    }
+
+    start();
   });
 </script>

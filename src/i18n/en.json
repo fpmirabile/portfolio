@@ -74,7 +74,14 @@
     "educationTitle": "Education",
     "educationDesc": "Academic background and professional certifications",
     "academicTitle": "Academic Background",
-    "certificationsTitle": "Certifications"
+    "certificationsTitle": "Certifications",
+    "degree": {
+      "type": "Bachelor's Degree",
+      "name": "Informatics Engineering",
+      "institution": "Universidad de la Empresa Argentina (UADE)",
+      "location": "Buenos Aires",
+      "graduationDate": "Graduated July 2024"
+    }
   },
   "footer": {
     "text": "Made with passion from Portugal 🇵🇹"
