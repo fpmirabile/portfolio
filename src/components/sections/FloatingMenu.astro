@@ -21,7 +21,10 @@ const { texts } = Astro.props;
 
 <div class="fixed top-6 right-6 z-50">
   <!-- Menu Items -->
-  <div id="menuItems" class="absolute top-16 right-0 space-y-3 pointer-events-none">
+  <div
+    id="menuItems"
+    class="absolute top-16 right-0 space-y-3 pointer-events-none"
+  >
     <!-- CV Download -->
     <MenuItem
       as="button"
@@ -29,7 +32,7 @@ const { texts } = Astro.props;
       title={texts.cvText}
       subtitle={texts.cvSubtitle}
     >
-      <Download class="w-4 h-4 text-primary" slot="icon" />
+      <Download class="w-4 h-4 text-primary" slot="icon" aria-hidden="true" />
     </MenuItem>
 
     <!-- Email -->
@@ -38,7 +41,7 @@ const { texts } = Astro.props;
       title={texts.emailTitle}
       subtitle={texts.emailSubtitle}
     >
-      <Mail class="w-4 h-4 text-primary" slot="icon" />
+      <Mail class="w-4 h-4 text-primary" slot="icon" aria-hidden="true" />
     </MenuItem>
 
     <!-- LinkedIn -->
@@ -48,7 +51,7 @@ const { texts } = Astro.props;
       title={texts.linkedinTitle}
       subtitle={texts.linkedinSubtitle}
     >
-      <Linkedin class="w-4 h-4 text-primary" slot="icon" />
+      <Linkedin class="w-4 h-4 text-primary" slot="icon" aria-hidden="true" />
     </MenuItem>
 
     <!-- GitHub -->
@@ -58,7 +61,7 @@ const { texts } = Astro.props;
       title={texts.githubTitle}
       subtitle={texts.githubSubtitle}
     >
-      <Github class="w-4 h-4 text-primary" slot="icon" />
+      <Github class="w-4 h-4 text-primary" slot="icon" aria-hidden="true" />
     </MenuItem>
 
     <MenuItem
@@ -69,11 +72,17 @@ const { texts } = Astro.props;
       titleId="themeText"
       subtitleId="currentTheme"
     >
-      <Sun slot="icon" id="themeIconLight" class="w-4 h-4 text-primary" />
+      <Sun
+        slot="icon"
+        id="themeIconLight"
+        class="w-4 h-4 text-primary"
+        aria-hidden="true"
+      />
       <Moon
         slot="icon"
         id="themeIconDark"
         class="w-4 h-4 text-primary hidden"
+        aria-hidden="true"
       />
     </MenuItem>
   </div>
@@ -84,8 +93,8 @@ const { texts } = Astro.props;
     class="w-14 h-14 bg-primary text-primary-foreground rounded-full shadow-lg hover:shadow-xl hover:bg-primary/90 transition-all duration-200 flex items-center justify-center"
     aria-label="Toggle menu"
   >
-    <Menu id="menuIconOpen" class="w-6 h-6" />
-    <X id="menuIconClose" class="w-6 h-6 hidden" />
+    <Menu id="menuIconOpen" class="w-6 h-6" aria-hidden="true" />
+    <X id="menuIconClose" class="w-6 h-6 hidden" aria-hidden="true" />
   </button>
 </div>
 
