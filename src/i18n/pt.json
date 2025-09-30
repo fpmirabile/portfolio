@@ -9,7 +9,10 @@
     "languageText": "Idioma",
     "themeText": "Tema",
     "currentLang": "Português",
-    "currentTheme": "Claro"
+    "themes": {
+      "light": "Claro",
+      "dark": "Escuro"
+    }
   },
   "personalInfo": {
     "email": "fpmirabile@gmail.com",
