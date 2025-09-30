@@ -1,7 +1,6 @@
 ---
 import type { Technology } from "../../types";
-import TechButton from "../common/TechButton.astro";
-import SkillDemoOverlay from "../common/SkillDemoOverlay.astro";
+import TechStackContainer from "../common/TechStackContainer.svelte";
 
 export interface Props {
   technologies: Technology[];
@@ -31,24 +30,12 @@ const { technologies, title, clickHint, overlayTexts, levels } = Astro.props;
       {title}
     </h3>
 
-    <!-- Interactive Demo Overlay -->
-    <SkillDemoOverlay
+    <TechStackContainer
       technologies={technologies}
       overlayTexts={overlayTexts}
       levels={levels}
+      client:load
     />
-
-    <div class="grid grid-cols-2 gap-3" id="technologiesGrid">
-      {
-        technologies.map((tech) => (
-          <TechButton
-            name={tech.name}
-            category={tech.category}
-            years={tech.years}
-          />
-        ))
-      }
-    </div>
 
     <div class="mt-4 text-xs text-muted-foreground text-center">
       💡 <span id="clickTechHint">{clickHint}</span>
