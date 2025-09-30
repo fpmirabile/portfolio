@@ -10,11 +10,7 @@ import {
   X,
 } from "lucide-astro";
 import MenuItem from "../common/MenuItem.astro";
-export interface MenuTexts {
-  cvText: string;
-  themeText: string;
-  currentTheme: string;
-}
+import type { MenuTexts } from "../../types";
 
 export interface Props {
   texts: MenuTexts;
@@ -67,7 +63,7 @@ const { texts } = Astro.props;
       as="button"
       id="themeButton"
       title={texts.themeText}
-      subtitle={texts.currentTheme}
+      subtitle={texts.themes.light}
       titleId="themeText"
       subtitleId="currentTheme"
     >
@@ -92,6 +88,9 @@ const { texts } = Astro.props;
 </div>
 
 <script>
+  import { eventHandlers, onCustomEvent } from "../../utils/events";
+  import { getCurrentLanguage, getThemeTextSync } from "../../utils/language";
+
   document.addEventListener("DOMContentLoaded", () => {
     let menuOpen = false;
 
@@ -130,20 +129,15 @@ const { texts } = Astro.props;
       }
     });
 
+    // CV download handler
     const cvButton = document.getElementById("cvButton");
-    cvButton?.addEventListener("click", () => {
-      document.dispatchEvent(new CustomEvent("downloadCV"));
-    });
+    cvButton?.addEventListener("click", eventHandlers.downloadCV);
 
+    // Theme toggle setup
     const themeButton = document.getElementById("themeButton");
     const themeIconLight = document.getElementById("themeIconLight");
     const themeIconDark = document.getElementById("themeIconDark");
-
-    const themeTexts = {
-      es: { light: "Claro", dark: "Oscuro" },
-      en: { light: "Light", dark: "Dark" },
-      pt: { light: "Claro", dark: "Escuro" },
-    };
+    const currentThemeEl = document.getElementById("currentTheme");
 
     function applyTheme(isDark: boolean) {
       if (isDark) {
@@ -155,32 +149,19 @@ const { texts } = Astro.props;
       }
     }
 
+    // Apply initial theme
     applyTheme(document.documentElement.classList.contains("dark"));
-
-    function getCurrentLanguage() {
-      const pathLang = window.location.pathname.split("/")[1];
-      if (["es", "en", "pt"].includes(pathLang)) {
-        return pathLang;
-      }
-      return localStorage.getItem("language") || "es";
-    }
-
-    const currentLang = getCurrentLanguage();
-    const currentThemeEl = document.getElementById("currentTheme");
-
-    document.addEventListener("themeChanged", (event) => {
-      const { isDark } = (event as CustomEvent).detail;
+    // Listen to theme changes
+    onCustomEvent("themeChanged", (event) => {
+      const { isDark } = event.detail;
       applyTheme(isDark);
+
       if (currentThemeEl) {
-        const langKey = currentLang as keyof typeof themeTexts;
-        currentThemeEl.innerText = isDark
-          ? themeTexts[langKey].dark
-          : themeTexts[langKey].light;
+        const currentLang = getCurrentLanguage();
+        currentThemeEl.innerText = getThemeTextSync(isDark, currentLang);
       }
     });
 
-    themeButton?.addEventListener("click", () => {
-      document.dispatchEvent(new CustomEvent("toggleTheme"));
-    });
+    themeButton?.addEventListener("click", eventHandlers.toggleTheme);
   });
 </script>
