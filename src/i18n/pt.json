@@ -52,6 +52,33 @@
       "intermediate": "Intermediário",
       "advanced": "Avançado",
       "expert": "Especialista"
+    },
+    "technologies": {
+      "JavaScript": "Linguagem principal para desenvolvimento web full-stack",
+      "React": "Construção de interfaces de utilizador modernas e escaláveis e SPAs",
+      "TypeScript": "Desenvolvimento com tipagem segura para aplicações de grande escala",
+      "Java": "Desenvolvimento backend empresarial com ecossistema Spring",
+      "Node.js": "Serviços backend escaláveis, APIs e microsserviços",
+      "Express.js": "APIs RESTful e serviços backend",
+      "Spring Boot": "Microsserviços Java e aplicações empresariais",
+      "GraphQL": "Design eficiente de APIs e obtenção de dados",
+      "Angular": "Aplicações frontend à escala empresarial (versões 1-5)",
+      "Svelte": "Framework reativo moderno para aplicações web de alto desempenho",
+      "C#/.NET": "ASP.NET, MVC e APIs REST",
+      "Python": "Processamento de dados e automatização de fluxos de trabalho",
+      "MongoDB": "Base de dados NoSQL para estruturas de dados flexíveis",
+      "PostgreSQL": "Base de dados relacional para modelos de dados complexos",
+      "MySQL": "Gestão de bases de dados relacionais",
+      "AWS": "Infraestrutura na cloud, serverless e deployment (Lambda, EC2, S3, RDS)",
+      "React Native": "Desenvolvimento móvel multiplataforma",
+      "Swift": "Desenvolvimento nativo iOS",
+      "Airflow": "Orquestração de pipelines de dados e automatização de fluxos de trabalho",
+      "Flowise": "Orquestração de serviços de IA e gestão de memória",
+      "Twilio": "Integração de WhatsApp e mensagens",
+      "Optimizely": "Testes A/B e experimentação de funcionalidades",
+      "Mulesoft": "Integração de APIs e middleware",
+      "GCP": "Serviços Google Cloud Platform (BigQuery, Dataflow, Cloud Foundry)",
+      "n8n": "Automatização de fluxos de trabalho"
     }
   },
   "journey": {
@@ -88,7 +115,12 @@
   },
   "sideProjects": {
     "title": "Projetos Pessoais",
-    "description": "Projetos pessoais e empreendimentos"
+    "description": "Projetos pessoais e empreendimentos",
+    "projects": {
+      "Mibo AI": {
+        "description": "Chatbot de WhatsApp para organizar Google Calendar, Drive e criar folhas de cálculo através de IA conversacional"
+      }
+    }
   },
   "education": {
     "educationTitle": "Educação",

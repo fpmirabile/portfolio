@@ -52,6 +52,33 @@
       "intermediate": "Intermediate",
       "advanced": "Advanced",
       "expert": "Expert"
+    },
+    "technologies": {
+      "JavaScript": "Core language for full-stack web development",
+      "React": "Building modern, scalable user interfaces and SPAs",
+      "TypeScript": "Type-safe development for large-scale applications",
+      "Java": "Enterprise backend development with Spring ecosystem",
+      "Node.js": "Scalable backend services, APIs, and microservices",
+      "Express.js": "RESTful APIs and backend services",
+      "Spring Boot": "Java microservices and enterprise applications",
+      "GraphQL": "Efficient API design and data fetching",
+      "Angular": "Enterprise-scale frontend applications (versions 1-5)",
+      "Svelte": "Modern reactive framework for high-performance web apps",
+      "C#/.NET": "ASP.NET, MVC, and REST APIs",
+      "Python": "Data processing and workflow automation",
+      "MongoDB": "NoSQL database for flexible data structures",
+      "PostgreSQL": "Relational database for complex data models",
+      "MySQL": "Relational database management",
+      "AWS": "Cloud infrastructure, serverless, and deployment (Lambda, EC2, S3, RDS)",
+      "React Native": "Cross-platform mobile development",
+      "Swift": "iOS native development",
+      "Airflow": "Data pipeline orchestration and workflow automation",
+      "Flowise": "AI service orchestration and memory management",
+      "Twilio": "WhatsApp and messaging integration",
+      "Optimizely": "A/B testing and feature experimentation",
+      "Mulesoft": "API integration and middleware",
+      "GCP": "Google Cloud Platform services (BigQuery, Dataflow, Cloud Foundry)",
+      "n8n": "Workflow automation"
     }
   },
   "journey": {
@@ -88,7 +115,12 @@
   },
   "sideProjects": {
     "title": "Side Projects",
-    "description": "Personal projects and entrepreneurial ventures"
+    "description": "Personal projects and entrepreneurial ventures",
+    "projects": {
+      "Mibo AI": {
+        "description": "WhatsApp chatbot for organizing Google Calendar, Drive, and creating spreadsheets through conversational AI"
+      }
+    }
   },
   "education": {
     "educationTitle": "Education",
