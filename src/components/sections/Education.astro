@@ -3,12 +3,12 @@ import type { Certification, EducationTexts } from "../../types";
 import InfoCard from "../common/InfoCard.svelte";
 import CertificationCarousel from "../common/CertificationCarousel.svelte";
 
-export interface Props {
+interface Props {
   texts: EducationTexts;
   certifications: Certification[];
 }
 
-const { texts, certifications } = Astro.props;
+const { texts, certifications } = Astro.props as Props;
 ---
 
 <section class="py-20 bg-muted">

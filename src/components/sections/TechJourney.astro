@@ -2,7 +2,7 @@
 import type { WorkExperience } from "../../types";
 import Timeline from "../common/Timeline.svelte";
 
-export interface Props {
+interface Props {
   journeyTitle: string;
   journeyDesc: string;
   workExperience: WorkExperience[];
@@ -11,7 +11,7 @@ export interface Props {
 
 const { journeyTitle, journeyDesc, workExperience, achievements } = Astro.props;
 
-const timelineItems = workExperience.map((job) => {
+const timelineItems = workExperience.map((job: WorkExperience) => {
   const year = job.period.split(" - ")[0].split(" ").pop() || job.period;
   const jobAchievements = achievements[job.company] || [];
   const description =

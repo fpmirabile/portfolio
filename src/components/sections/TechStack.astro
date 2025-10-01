@@ -2,7 +2,7 @@
 import type { Technology } from "../../types";
 import TechStackContainer from "../common/TechStackContainer.svelte";
 
-export interface Props {
+interface Props {
   technologies: Technology[];
   title: string;
   clickHint: string;
@@ -19,9 +19,15 @@ export interface Props {
     advanced: string;
     expert: string;
   };
+  techDescriptions: Record<string, string>;
 }
 
-const { technologies, title, clickHint, overlayTexts, levels } = Astro.props;
+const { technologies, title, clickHint, overlayTexts, levels, techDescriptions } = Astro.props;
+
+const technologiesWithDescriptions = technologies.map(tech => ({
+  ...tech,
+  description: techDescriptions[tech.name] || ""
+}));
 ---
 
 <div class="relative">
@@ -35,7 +41,7 @@ const { technologies, title, clickHint, overlayTexts, levels } = Astro.props;
 
     <div class="flex-1 min-h-0 overflow-hidden">
       <TechStackContainer
-        technologies={technologies}
+        technologies={technologiesWithDescriptions}
         overlayTexts={overlayTexts}
         levels={levels}
         client:visible

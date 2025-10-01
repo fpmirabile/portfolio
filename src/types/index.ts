@@ -32,7 +32,6 @@ export interface WorkExperience {
   location: string;
   period: string;
   technologies: string[];
-  achievements: string[];
 }
 
 export interface SideProject {
@@ -41,7 +40,6 @@ export interface SideProject {
   status: string;
   commitment: string;
   year: string;
-  description: string;
   technologies: string[];
   role: string;
 }

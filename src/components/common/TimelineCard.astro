@@ -1,5 +1,5 @@
 ---
-export interface Props {
+interface Props {
   year: string;
   title: string;
   description: string;
@@ -7,7 +7,7 @@ export interface Props {
   align?: "left" | "right";
 }
 
-const { year, title, description, tech, align = "left" } = Astro.props;
+const { year, title, description, tech, align = "left" } = Astro.props as Props;
 const isLeft = align === "left";
 ---
 

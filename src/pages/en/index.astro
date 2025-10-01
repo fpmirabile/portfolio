@@ -15,7 +15,15 @@ import enTranslations from "../../i18n/en.json";
 import commonData from "../../constants/data.json";
 
 const t = enTranslations;
-const { technologies, certifications, workExperience, sideProjects } = commonData;
+const { technologies, certifications, workExperience, sideProjects } =
+  commonData;
+
+const projectDescriptions: Record<string, string> = {};
+for (const [projectName, projectData] of Object.entries(
+  t.sideProjects.projects
+)) {
+  projectDescriptions[projectName] = projectData.description;
+}
 ---
 
 <Layout
@@ -57,6 +65,7 @@ const { technologies, certifications, workExperience, sideProjects } = commonDat
             clickHint={t.techStack.clickHint}
             overlayTexts={t.techStack.overlay}
             levels={t.techStack.levels}
+            techDescriptions={t.techStack.technologies}
             client:visible
           />
         </HeroSection>
@@ -73,6 +82,7 @@ const { technologies, certifications, workExperience, sideProjects } = commonDat
       sideProjectsTitle={t.sideProjects.title}
       sideProjectsDesc={t.sideProjects.description}
       sideProjects={sideProjects}
+      projectDescriptions={projectDescriptions}
     />
     <Education texts={t.education} certifications={certifications} />
   </main>

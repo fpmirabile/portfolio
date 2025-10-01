@@ -1,28 +1,24 @@
 ---
+import type { SideProject } from "../../types";
 import Timeline from "../common/Timeline.svelte";
 
-export interface SideProject {
-  name: string;
-  url: string;
-  status: string;
-  commitment: string;
-  year: string;
-  description: string;
-  technologies: string[];
-  role: string;
-}
-
-export interface Props {
+interface Props {
   sideProjectsTitle: string;
   sideProjectsDesc: string;
   sideProjects: SideProject[];
+  projectDescriptions: Record<string, string>;
 }
 
-const { sideProjectsTitle, sideProjectsDesc, sideProjects } = Astro.props;
+const {
+  sideProjectsTitle,
+  sideProjectsDesc,
+  sideProjects,
+  projectDescriptions,
+} = Astro.props;
 const timelineItems = sideProjects.map((project) => ({
   year: project.year,
   title: project.name,
-  description: project.description,
+  description: projectDescriptions[project.name] || "",
   tech: project.technologies,
   url: project.url,
   status: project.status,
