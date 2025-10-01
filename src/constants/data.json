@@ -1,24 +1,47 @@
 {
+  "sideProjects": [
+    {
+      "name": "Mibo AI",
+      "url": "https://mibo-ai.com",
+      "status": "active",
+      "commitment": "part-time",
+      "year": "2025",
+      "description": "WhatsApp chatbot for organizing Google Calendar, Drive, and creating spreadsheets through conversational AI",
+      "technologies": [
+        "SvelteKit",
+        "Express.js",
+        "Flowise",
+        "Twilio",
+        "MongoDB",
+        "Node.js"
+      ],
+      "role": "Founder & Full Stack Developer"
+    }
+  ],
   "technologies": [
     {
       "name": "JavaScript",
       "category": "Language",
       "years": "10+",
       "level": "expert",
-      "description": "Core language for web development, used across frontend and backend",
-      "projects": [
-        "Jampp Platform",
-        "Mural Collaboration Tools",
-        "Multiple Web Apps"
-      ]
+      "description": "Core language for full-stack web development",
+      "projects": ["Mibo AI", "Jampp", "Mural", "Kin+Carta", "IT Resources"]
+    },
+    {
+      "name": "React",
+      "category": "Frontend",
+      "years": "8+",
+      "level": "expert",
+      "description": "Building modern, scalable user interfaces and SPAs",
+      "projects": ["Jampp", "Harness/Split", "Mural", "Kin+Carta"]
     },
     {
       "name": "TypeScript",
       "category": "Language",
       "years": "6+",
       "level": "expert",
-      "description": "Type-safe JavaScript for large-scale applications",
-      "projects": ["Jampp Modernization", "Mural Backend Services"]
+      "description": "Type-safe development for large-scale applications",
+      "projects": ["Mural", "Harness/Split", "Jampp"]
     },
     {
       "name": "Java",
@@ -26,127 +49,423 @@
       "years": "8+",
       "level": "advanced",
       "description": "Enterprise backend development with Spring ecosystem",
-      "projects": ["Legacy System Modernization", "Microservices Architecture"]
+      "projects": ["Harness/Split", "Kin+Carta", "Legacy Systems"]
     },
     {
-      "name": "Python",
-      "category": "Language",
-      "years": "5+",
+      "name": "Node.js",
+      "category": "Backend",
+      "years": "8+",
+      "level": "expert",
+      "description": "Scalable backend services, APIs, and microservices",
+      "projects": ["Mibo AI", "Jampp", "Mural", "Kin+Carta"]
+    },
+    {
+      "name": "Express.js",
+      "category": "Backend",
+      "years": "8+",
+      "level": "expert",
+      "description": "RESTful APIs and backend services",
+      "projects": ["Mibo AI", "Jampp", "Mural", "Kin+Carta"]
+    },
+    {
+      "name": "Spring Boot",
+      "category": "Backend",
+      "years": "7+",
       "level": "advanced",
-      "description": "Data processing, automation, and machine learning",
-      "projects": ["ML Models", "Data Pipeline Automation"]
+      "description": "Java microservices and enterprise applications",
+      "projects": ["Harness/Split", "Kin+Carta"]
     },
     {
-      "name": "React",
+      "name": "GraphQL",
+      "category": "API",
+      "years": "4+",
+      "level": "advanced",
+      "description": "Efficient API design and data fetching",
+      "projects": ["Jampp", "Harness/Split"]
+    },
+    {
+      "name": "Angular",
       "category": "Frontend",
       "years": "6+",
-      "level": "expert",
-      "description": "Building modern, interactive user interfaces",
-      "projects": ["Mural Dashboard", "Multiple SPA Applications"]
+      "level": "advanced",
+      "description": "Enterprise-scale frontend applications (versions 1-5)",
+      "projects": ["Kin+Carta", "IT Resources"]
     },
     {
       "name": "Svelte",
       "category": "Frontend",
       "years": "3+",
       "level": "advanced",
-      "description": "Modern framework for fast, reactive web applications",
-      "projects": ["Jampp UI Components", "Performance-Critical Features"]
+      "description": "Modern reactive framework for high-performance web apps",
+      "projects": ["Mibo AI", "Harness/Split"]
     },
     {
-      "name": "Angular",
-      "category": "Frontend",
-      "years": "4+",
-      "level": "advanced",
-      "description": "Enterprise-scale frontend applications",
-      "projects": ["Corporate Dashboards", "Admin Panels"]
-    },
-    {
-      "name": "Node.js",
-      "category": "Backend",
-      "years": "6+",
-      "level": "expert",
-      "description": "Scalable backend services and APIs",
-      "projects": ["Mural Backend", "Real-time Services", "REST APIs"]
-    },
-    {
-      "name": "Spring Boot",
+      "name": "C#/.NET",
       "category": "Backend",
       "years": "5+",
       "level": "advanced",
-      "description": "Java-based microservices and enterprise applications",
-      "projects": ["Jampp Services", "Legacy System Migration"]
+      "description": "ASP.NET, MVC, and REST APIs",
+      "projects": ["IT Resources", "Early Career Projects"]
     },
     {
-      "name": "GraphQL",
-      "category": "API",
-      "years": "3+",
-      "level": "advanced",
-      "description": "Efficient API design and data fetching",
-      "projects": ["Mural API Layer", "Client-Server Communication"]
-    },
-    {
-      "name": "PostgreSQL",
-      "category": "Database",
-      "years": "5+",
-      "level": "advanced",
-      "description": "Relational database for complex data models",
-      "projects": ["Jampp Data Layer", "Transactional Systems"]
+      "name": "Python",
+      "category": "Language",
+      "years": "2+",
+      "level": "intermediate",
+      "description": "Data processing and workflow automation",
+      "projects": ["Mural (Airflow)", "Data Pipelines"]
     },
     {
       "name": "MongoDB",
       "category": "Database",
-      "years": "4+",
+      "years": "6+",
       "level": "advanced",
       "description": "NoSQL database for flexible data structures",
-      "projects": ["Document Storage", "Real-time Data"]
+      "projects": ["Mibo AI", "Mural", "Kin+Carta"]
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Database",
+      "years": "4+",
+      "level": "advanced",
+      "description": "Relational database for complex data models",
+      "projects": ["Harness/Split", "Kin+Carta"]
+    },
+    {
+      "name": "MySQL",
+      "category": "Database",
+      "years": "4+",
+      "level": "advanced",
+      "description": "Relational database management",
+      "projects": ["Jampp", "Kin+Carta"]
     },
     {
       "name": "AWS",
       "category": "Cloud",
-      "years": "4+",
+      "years": "5+",
       "level": "advanced",
-      "description": "Cloud infrastructure and serverless solutions",
-      "projects": ["Mural Infrastructure", "Scalable Deployments"]
+      "description": "Cloud infrastructure, serverless, and deployment (Lambda, EC2, S3, RDS)",
+      "projects": ["Jampp", "Kin+Carta"]
     },
     {
-      "name": "Docker",
-      "category": "DevOps",
+      "name": "React Native",
+      "category": "Mobile",
       "years": "3+",
+      "level": "intermediate",
+      "description": "Cross-platform mobile development",
+      "projects": ["Kin+Carta"]
+    },
+    {
+      "name": "Swift",
+      "category": "Mobile",
+      "years": "2+",
+      "level": "intermediate",
+      "description": "iOS native development",
+      "projects": ["Kin+Carta"]
+    },
+    {
+      "name": "Airflow",
+      "category": "Data Engineering",
+      "years": "1+",
+      "level": "intermediate",
+      "description": "Data pipeline orchestration and workflow automation",
+      "projects": ["Mural"]
+    },
+    {
+      "name": "Flowise",
+      "category": "AI/ML",
+      "years": "1+",
       "level": "advanced",
-      "description": "Containerization for consistent deployments",
-      "projects": ["Microservices Deployment", "Development Environments"]
+      "description": "AI service orchestration and memory management",
+      "projects": ["Mibo AI"]
+    },
+    {
+      "name": "Twilio",
+      "category": "Communication APIs",
+      "years": "1+",
+      "level": "advanced",
+      "description": "WhatsApp and messaging integration",
+      "projects": ["Mibo AI"]
+    },
+    {
+      "name": "Optimizely",
+      "category": "Experimentation",
+      "years": "2+",
+      "level": "advanced",
+      "description": "A/B testing and feature experimentation",
+      "projects": ["Mural"]
+    },
+    {
+      "name": "Mulesoft",
+      "category": "Integration",
+      "years": "1+",
+      "level": "intermediate",
+      "description": "API integration and middleware",
+      "projects": ["Kin+Carta"]
+    },
+    {
+      "name": "GCP",
+      "category": "Cloud",
+      "years": "2+",
+      "level": "intermediate",
+      "description": "Google Cloud Platform services (BigQuery, Dataflow, Cloud Foundry)",
+      "projects": ["Kin+Carta"]
+    },
+    {
+      "name": "n8n",
+      "category": "Automation",
+      "years": "<1",
+      "level": "beginner",
+      "description": "Workflow automation",
+      "projects": ["Jampp"]
     }
   ],
   "certifications": [
     {
-      "name": "Supervised Machine Learning: Regression and Classification",
-      "issuer": "Coursera",
-      "type": "Certificate",
-      "year": "2024"
+      "name": "Application Security for Developers and DevOps Professionals",
+      "issuer": "IBM",
+      "credentialId": "9DP3W7PW92KF",
+      "year": 2025,
+      "month": "August",
+      "skills": ["Application Security"]
     },
     {
       "name": "Design Solutions for Securing Applications",
-      "issuer": "Microsoft",
-      "type": "Certificate",
-      "year": "2023"
+      "issuer": "Microsoft Learning",
+      "credentialId": "wz8hvy7n",
+      "year": 2025,
+      "month": "March",
+      "skills": ["OWASP", "Application Security", "STRIDE"]
     },
     {
-      "name": "AWS Solutions Architect",
-      "issuer": "Amazon Web Services",
-      "type": "Certificate",
-      "year": "2022"
+      "name": "CCNA: Switching, Routing, and Wireless Essentials",
+      "issuer": "Cisco",
+      "year": 2023,
+      "month": "December",
+      "skills": ["CCNA", "Networking"]
     },
     {
-      "name": "Advanced React Patterns",
-      "issuer": "Frontend Masters",
-      "type": "Certificate",
-      "year": "2021"
+      "name": "Supervised Machine Learning: Regression and Classification",
+      "issuer": "Coursera",
+      "credentialId": "25TF7H9W378J",
+      "year": 2023,
+      "month": "August",
+      "skills": ["Machine Learning", "Linear Regression", "Supervised Learning"]
     },
     {
-      "name": "Spring Framework Certification",
-      "issuer": "Pivotal",
-      "type": "Certificate",
-      "year": "2020"
+      "name": "EF SET English Certificate C1 (72/100)",
+      "issuer": "EF SET",
+      "year": 2023,
+      "month": "February",
+      "skills": ["English"]
+    },
+    {
+      "name": "Game Physics - Introducing Gravitation & Rotation in Unity",
+      "issuer": "Udemy",
+      "credentialId": "UC-6f3dc004-c277-4711-8b5d-b304c9ee92b7",
+      "year": 2020,
+      "month": "April",
+      "skills": ["Unity", "Game Development"]
+    },
+    {
+      "name": "iOS 12 & Swift - The Complete iOS App Development Bootcamp",
+      "issuer": "Udemy",
+      "year": 2019,
+      "month": "February",
+      "skills": ["Swift", "iOS Development"]
+    },
+    {
+      "name": "Data Engineering on Google Cloud Platform Specialization",
+      "issuer": "Coursera",
+      "credentialId": "YC7Y4G457LX4",
+      "year": 2018,
+      "month": "December",
+      "skills": ["GCP", "Data Engineering"]
+    },
+    {
+      "name": "Serverless Data Analysis with Google BigQuery and Cloud Dataflow",
+      "issuer": "Coursera",
+      "credentialId": "JRK64GNC2DKJ",
+      "year": 2018,
+      "month": "November",
+      "skills": ["BigQuery", "Cloud Dataflow"]
+    },
+    {
+      "name": "Serverless Machine Learning with Tensorflow on Google Cloud Platform",
+      "issuer": "Coursera",
+      "credentialId": "UQNKG5BGQ6AF",
+      "year": 2018,
+      "month": "November",
+      "skills": ["TensorFlow", "Machine Learning", "GCP"]
+    },
+    {
+      "name": "Google Cloud Platform Big Data and Machine Learning Fundamentals",
+      "issuer": "Coursera",
+      "credentialId": "ZAFFWXTGXK5G",
+      "year": 2018,
+      "month": "October",
+      "skills": ["GCP", "Big Data", "Machine Learning"]
+    },
+    {
+      "name": "Leveraging Unstructured Data with Cloud Dataproc on Google Cloud Platform",
+      "issuer": "Coursera",
+      "credentialId": "TVZ32NQSYEFJ",
+      "year": 2018,
+      "month": "October",
+      "skills": ["Cloud Dataproc", "GCP"]
+    },
+    {
+      "name": "Pivotal Cloud Foundry Developer e-Learning (PRPP Advanced)",
+      "issuer": "Pivotal Software, Inc.",
+      "year": 2018,
+      "month": "July",
+      "skills": ["Cloud Foundry", "Platform Engineering"]
+    },
+    {
+      "name": "Spring Boot Developer E-Learning (PRPP Advanced)",
+      "issuer": "Pivotal Software, Inc.",
+      "year": 2018,
+      "month": "July",
+      "skills": ["Spring Boot", "Java"]
+    },
+    {
+      "name": "Web API Design",
+      "issuer": "Pluralsight",
+      "year": 2018,
+      "month": "July",
+      "skills": ["API Design", "REST"]
+    },
+    {
+      "name": "Learn Test Driven Development in Java",
+      "issuer": "Udemy",
+      "year": 2018,
+      "month": "June",
+      "skills": ["TDD", "Java"]
+    },
+    {
+      "name": "DevOps with AWS CodePipeline, Jenkins and AWS CodeDeploy",
+      "issuer": "Udemy",
+      "year": 2018,
+      "month": "January",
+      "skills": ["AWS", "DevOps", "CI/CD"]
+    },
+    {
+      "name": "Spring Boot - Rapid Spring Application Development",
+      "issuer": "Udemy",
+      "year": 2017,
+      "month": "October",
+      "skills": ["Spring Boot"]
+    },
+    {
+      "name": "The Complete React Native and Redux Course",
+      "issuer": "Udemy",
+      "year": 2017,
+      "month": "October",
+      "skills": ["React Native", "Redux"]
     }
-  ]
+  ],
+  "workExperience": [
+    {
+      "company": "Jampp",
+      "position": "Senior Full Stack Developer/Engineer",
+      "location": "Remote (EU)",
+      "period": "Feb 2024 - Present",
+      "technologies": [
+        "React.js",
+        "Express.js",
+        "n8n",
+        "GraphQL",
+        "AWS",
+        "MySQL"
+      ],
+      "achievements": [
+        "Spearheaded architectural rework and modernization initiatives",
+        "Proactively resolved critical security vulnerabilities",
+        "Established engineering best practices across the team"
+      ]
+    },
+    {
+      "company": "Harness (ex Split)",
+      "position": "Senior Full Stack Developer/Engineer",
+      "location": "Remote (Buenos Aires)",
+      "period": "Oct 2022 - Feb 2024",
+      "technologies": [
+        "React.js",
+        "GraphQL",
+        "Spring Framework",
+        "Svelte",
+        "A/B Testing",
+        "PostgreSQL/MongoDB"
+      ],
+      "achievements": [
+        "Launched features increasing product engagement by 18%",
+        "Drove Agile adoption improving sprint delivery by 30%",
+        "Reduced onboarding time by 15% through documentation"
+      ]
+    },
+    {
+      "company": "Mural",
+      "position": "Senior Full Stack Engineer / Tech Lead",
+      "location": "Remote (Buenos Aires)",
+      "period": "Feb 2020 - Oct 2022",
+      "technologies": [
+        "React.js",
+        "Express.js",
+        "Airflow",
+        "Optimizely",
+        "MongoDB",
+        "TypeScript"
+      ],
+      "achievements": [
+        "Progressed to Tech Lead managing 6 engineers",
+        "Achieved 25% increase in monthly active users",
+        "Reduced post-release bugs by 20% through code review standards",
+        "Accelerated time-to-market for experiments by 30%"
+      ]
+    },
+    {
+      "company": "Kin + Carta (ex Solstice)",
+      "position": "Senior Consultant Engineer",
+      "location": "Palermo (Hybrid)",
+      "period": "Sep 2017 - Feb 2020",
+      "technologies": [
+        "React",
+        "Angular 4-5",
+        "Swift",
+        "React Native",
+        "Spring Framework",
+        "AWS",
+        "GCP",
+        "Mulesoft",
+        "Express.js",
+        "MongoDB",
+        "PostgreSQL",
+        "MySQL"
+      ],
+      "achievements": [
+        "Delivered full-stack solutions for multiple clients",
+        "Improved integration reliability reducing downtime by 15%",
+        "Reduced deployment errors by 50% through CI automation",
+        "Promoted TDD increasing codebase stability"
+      ]
+    },
+    {
+      "company": "IT Resources S.A.",
+      "position": "Senior Full Stack Developer/Engineer",
+      "location": "Buenos Aires",
+      "period": "Jul 2015 - Sep 2017",
+      "technologies": ["Angular 1", "C#", "ASP.NET", "Oracle DB"],
+      "achievements": [
+        "Developed enterprise web applications",
+        "Built REST APIs with .NET framework"
+      ]
+    }
+  ],
+  "education": {
+    "degree": "Informatics Engineering",
+    "institution": "Universidad de la Empresa Argentina (UADE)",
+    "location": "Buenos Aires",
+    "graduationYear": 2024,
+    "note": "Completed degree while working full-time"
+  }
 }
