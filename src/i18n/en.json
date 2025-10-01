@@ -86,6 +86,10 @@
       ]
     }
   },
+  "sideProjects": {
+    "title": "Side Projects",
+    "description": "Personal projects and entrepreneurial ventures"
+  },
   "education": {
     "educationTitle": "Education",
     "educationDesc": "Academic background and professional certifications",

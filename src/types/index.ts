@@ -35,6 +35,17 @@ export interface WorkExperience {
   achievements: string[];
 }
 
+export interface SideProject {
+  name: string;
+  url: string;
+  status: string;
+  commitment: string;
+  year: string;
+  description: string;
+  technologies: string[];
+  role: string;
+}
+
 export interface BaseTexts {
   [key: string]: string | BaseTexts;
 }
@@ -98,6 +109,11 @@ export interface TechStackTexts {
 }
 
 export interface JourneyTexts {
+  title: string;
+  description: string;
+}
+
+export interface SideProjectsTexts {
   title: string;
   description: string;
 }

@@ -86,6 +86,10 @@
       ]
     }
   },
+  "sideProjects": {
+    "title": "Projetos Pessoais",
+    "description": "Projetos pessoais e empreendimentos"
+  },
   "education": {
     "educationTitle": "Educação",
     "educationDesc": "Formação académica e certificações profissionais",

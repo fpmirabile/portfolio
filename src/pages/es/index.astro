@@ -4,6 +4,7 @@ import FloatingMenu from "../../components/sections/FloatingMenu.svelte";
 import HeroSection from "../../components/sections/HeroSection.astro";
 import TechStack from "../../components/sections/TechStack.astro";
 import TechJourney from "../../components/sections/TechJourney.astro";
+import SideProjects from "../../components/sections/SideProjects.astro";
 import Education from "../../components/sections/Education.astro";
 import Footer from "../../components/sections/Footer.astro";
 import LanguageSelector from "../../components/sections/LanguageSelector.astro";
@@ -14,7 +15,7 @@ import esTranslations from "../../i18n/es.json";
 import commonData from "../../constants/data.json";
 
 const t = esTranslations;
-const { technologies, certifications, workExperience } = commonData;
+const { technologies, certifications, workExperience, sideProjects } = commonData;
 ---
 
 <Layout
@@ -63,6 +64,11 @@ const { technologies, certifications, workExperience } = commonData;
       journeyDesc={t.journey.description}
       workExperience={workExperience}
       achievements={t.journey.achievements}
+    />
+    <SideProjects
+      sideProjectsTitle={t.sideProjects.title}
+      sideProjectsDesc={t.sideProjects.description}
+      sideProjects={sideProjects}
     />
     <Education texts={t.education} certifications={certifications} />
   </main>

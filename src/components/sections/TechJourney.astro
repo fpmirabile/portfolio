@@ -1,6 +1,6 @@
 ---
 import type { WorkExperience } from "../../types";
-import TimelineCard from "../common/TimelineCard.astro";
+import Timeline from "../common/Timeline.svelte";
 
 export interface Props {
   journeyTitle: string;
@@ -10,6 +10,20 @@ export interface Props {
 }
 
 const { journeyTitle, journeyDesc, workExperience, achievements } = Astro.props;
+
+const timelineItems = workExperience.map((job) => {
+  const year = job.period.split(" - ")[0].split(" ").pop() || job.period;
+  const jobAchievements = achievements[job.company] || [];
+  const description =
+    jobAchievements.length > 0 ? jobAchievements.join(" • ") : job.position;
+
+  return {
+    year,
+    title: job.position,
+    description,
+    tech: job.technologies,
+  };
+});
 ---
 
 <section class="py-20 bg-muted">
@@ -29,93 +43,6 @@ const { journeyTitle, journeyDesc, workExperience, achievements } = Astro.props;
       </p>
     </div>
 
-    <div class="relative">
-      <!-- Timeline Line - Left aligned on mobile, centered on desktop -->
-      <div
-        class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-0.5 lg:w-1 h-full bg-primary/30"
-      >
-      </div>
-
-      <div class="space-y-8 lg:space-y-16" id="journeyTimeline">
-        {
-          workExperience.map((job, i) => {
-            const year = job.period.split(' - ')[0].split(' ').pop() || job.period;
-            const jobAchievements = achievements[job.company] || [];
-            const description = jobAchievements.length > 0
-              ? jobAchievements.join(' • ')
-              : job.position;
-            
-            return (
-              <div
-                class="animate-fade-in-up relative"
-                style={`animation-delay: ${i * 0.1}s`}
-              >
-                {/* Mobile Layout - Single column with left-aligned dots */}
-                <div class="lg:hidden flex gap-4 items-start">
-                  {/* Timeline Dot - Mobile */}
-                  <div class="flex-shrink-0 flex justify-center items-center relative z-10 pt-2">
-                    <div class="w-8 h-8 bg-primary rounded-full border-4 border-background shadow-lg ring-4 ring-primary/30" />
-                  </div>
-                  
-                  {/* Card - Mobile */}
-                  <div class="flex-1">
-                    <TimelineCard
-                      year={year}
-                      title={job.position}
-                      description={description}
-                      tech={job.technologies}
-                      align="left"
-                    />
-                  </div>
-                </div>
-
-                {/* Desktop Layout - Alternating sides */}
-                <div class="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
-                  {i % 2 === 0 ? (
-                    <>
-                      {/* Left Side */}
-                      <TimelineCard
-                        year={year}
-                        title={job.position}
-                        description={description}
-                        tech={job.technologies}
-                        align="left"
-                      />
-
-                      {/* Timeline Dot - Desktop */}
-                      <div class="flex justify-center items-center relative z-10">
-                        <div class="w-6 h-6 bg-primary rounded-full border-[5px] border-background shadow-xl ring-4 ring-primary/20" />
-                      </div>
-
-                      {/* Empty Right Side */}
-                      <div />
-                    </>
-                  ) : (
-                    <>
-                      {/* Empty Left Side */}
-                      <div />
-
-                      {/* Timeline Dot - Desktop */}
-                      <div class="flex justify-center items-center relative z-10">
-                        <div class="w-6 h-6 bg-primary rounded-full border-[5px] border-background shadow-xl ring-4 ring-primary/20" />
-                      </div>
-
-                      {/* Right Side */}
-                      <TimelineCard
-                        year={year}
-                        title={job.position}
-                        description={description}
-                        tech={job.technologies}
-                        align="right"
-                      />
-                    </>
-                  )}
-                </div>
-              </div>
-            );
-          })
-        }
-      </div>
-    </div>
+    <Timeline items={timelineItems} variant="work" client:load />
   </div>
 </section>
