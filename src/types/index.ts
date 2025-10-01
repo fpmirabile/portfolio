@@ -16,6 +16,7 @@ export interface Certification {
   credentialId?: string;
   year: number;
   month: string;
+  type: string;
   skills: string[];
 }
 
@@ -79,6 +80,11 @@ export interface EducationTexts {
   academicTitle: string;
   certificationsTitle: string;
   counterText: string;
+  certificationTypes: {
+    certification: string;
+    course: string;
+    specialization: string;
+  };
   degree: {
     type: string;
     name: string;

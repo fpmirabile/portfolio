@@ -8,7 +8,7 @@ interface Props {
   certifications: Certification[];
 }
 
-const { texts, certifications } = Astro.props as Props;
+const { texts, certifications } = Astro.props;
 ---
 
 <section class="py-20 bg-muted">
@@ -61,6 +61,7 @@ const { texts, certifications } = Astro.props as Props;
         <CertificationCarousel
           certifications={certifications}
           counterText={texts.counterText}
+          certificationTypes={texts.certificationTypes}
           client:visible
         />
       </div>

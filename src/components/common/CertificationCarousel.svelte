@@ -7,9 +7,14 @@
   interface Props {
     certifications: Certification[];
     counterText: string;
+    certificationTypes: {
+      certification: string;
+      course: string;
+      specialization: string;
+    };
   }
 
-  let { certifications, counterText }: Props = $props();
+  let { certifications, counterText, certificationTypes }: Props = $props();
 
   let currentIndex = $state(0);
   let intervalId: number | null = null;
@@ -96,10 +101,10 @@
   <div class="absolute inset-6 flex items-center justify-center">
     {#key currentIndex}
       <InfoCard
-        badge={currentCert.type}
+        badge={certificationTypes[currentCert.type as keyof typeof certificationTypes]}
         title={currentCert.name}
         subtitle={currentCert.issuer}
-        footer={currentCert.year}
+        footer={currentCert.year.toString()}
         animate={true}
       />
     {/key}

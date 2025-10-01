@@ -128,6 +128,11 @@
     "academicTitle": "Formación Académica",
     "certificationsTitle": "Certificaciones",
     "counterText": "certificaciones",
+    "certificationTypes": {
+      "certification": "Certificación",
+      "course": "Curso",
+      "specialization": "Especialización"
+    },
     "degree": {
       "type": "Licenciatura",
       "name": "Ingeniería en Informática",

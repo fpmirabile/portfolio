@@ -201,6 +201,7 @@
       "credentialId": "9DP3W7PW92KF",
       "year": 2025,
       "month": "August",
+      "type": "certification",
       "skills": ["Application Security"]
     },
     {
@@ -209,6 +210,7 @@
       "credentialId": "wz8hvy7n",
       "year": 2025,
       "month": "March",
+      "type": "certification",
       "skills": ["OWASP", "Application Security", "STRIDE"]
     },
     {
@@ -216,6 +218,7 @@
       "issuer": "Cisco",
       "year": 2023,
       "month": "December",
+      "type": "certification",
       "skills": ["CCNA", "Networking"]
     },
     {
@@ -224,6 +227,7 @@
       "credentialId": "25TF7H9W378J",
       "year": 2023,
       "month": "August",
+      "type": "course",
       "skills": ["Machine Learning", "Linear Regression", "Supervised Learning"]
     },
     {
@@ -231,6 +235,7 @@
       "issuer": "EF SET",
       "year": 2023,
       "month": "February",
+      "type": "certification",
       "skills": ["English"]
     },
     {
@@ -239,6 +244,7 @@
       "credentialId": "UC-6f3dc004-c277-4711-8b5d-b304c9ee92b7",
       "year": 2020,
       "month": "April",
+      "type": "course",
       "skills": ["Unity", "Game Development"]
     },
     {
@@ -246,6 +252,7 @@
       "issuer": "Udemy",
       "year": 2019,
       "month": "February",
+      "type": "course",
       "skills": ["Swift", "iOS Development"]
     },
     {
@@ -254,6 +261,7 @@
       "credentialId": "YC7Y4G457LX4",
       "year": 2018,
       "month": "December",
+      "type": "specialization",
       "skills": ["GCP", "Data Engineering"]
     },
     {
@@ -262,6 +270,7 @@
       "credentialId": "JRK64GNC2DKJ",
       "year": 2018,
       "month": "November",
+      "type": "course",
       "skills": ["BigQuery", "Cloud Dataflow"]
     },
     {
@@ -270,6 +279,7 @@
       "credentialId": "UQNKG5BGQ6AF",
       "year": 2018,
       "month": "November",
+      "type": "course",
       "skills": ["TensorFlow", "Machine Learning", "GCP"]
     },
     {
@@ -278,6 +288,7 @@
       "credentialId": "ZAFFWXTGXK5G",
       "year": 2018,
       "month": "October",
+      "type": "course",
       "skills": ["GCP", "Big Data", "Machine Learning"]
     },
     {
@@ -286,6 +297,7 @@
       "credentialId": "TVZ32NQSYEFJ",
       "year": 2018,
       "month": "October",
+      "type": "course",
       "skills": ["Cloud Dataproc", "GCP"]
     },
     {
@@ -293,6 +305,7 @@
       "issuer": "Pivotal Software, Inc.",
       "year": 2018,
       "month": "July",
+      "type": "course",
       "skills": ["Cloud Foundry", "Platform Engineering"]
     },
     {
@@ -300,6 +313,7 @@
       "issuer": "Pivotal Software, Inc.",
       "year": 2018,
       "month": "July",
+      "type": "course",
       "skills": ["Spring Boot", "Java"]
     },
     {
@@ -307,6 +321,7 @@
       "issuer": "Pluralsight",
       "year": 2018,
       "month": "July",
+      "type": "course",
       "skills": ["API Design", "REST"]
     },
     {
@@ -314,6 +329,7 @@
       "issuer": "Udemy",
       "year": 2018,
       "month": "June",
+      "type": "course",
       "skills": ["TDD", "Java"]
     },
     {
@@ -321,6 +337,7 @@
       "issuer": "Udemy",
       "year": 2018,
       "month": "January",
+      "type": "course",
       "skills": ["AWS", "DevOps", "CI/CD"]
     },
     {
@@ -328,6 +345,7 @@
       "issuer": "Udemy",
       "year": 2017,
       "month": "October",
+      "type": "course",
       "skills": ["Spring Boot"]
     },
     {
@@ -335,6 +353,7 @@
       "issuer": "Udemy",
       "year": 2017,
       "month": "October",
+      "type": "course",
       "skills": ["React Native", "Redux"]
     }
   ],
