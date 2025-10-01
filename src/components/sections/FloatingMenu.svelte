@@ -103,7 +103,7 @@
 
     <!-- Email -->
     <a
-      href="mailto:fpmirabile@gmail.com"
+      href="mailto:fpmirabile@zohomail.eu"
       class="flex items-center gap-3 bg-card border border-border rounded-lg p-3 shadow-lg hover:shadow-xl hover:border-primary/50 hover:bg-card/80 transition-all duration-200 min-w-[200px]"
     >
       <div
