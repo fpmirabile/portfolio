@@ -25,19 +25,24 @@ const { technologies, title, clickHint, overlayTexts, levels } = Astro.props;
 ---
 
 <div class="relative">
-  <div class="glass-effect rounded-2xl p-8 relative overflow-hidden">
-    <h3 class="text-lg font-semibold text-primary mb-4" id="techStackText">
+  <div
+    class="glass-effect rounded-2xl p-8 relative flex flex-col"
+    style="height: 600px; max-height: 80vh;"
+  >
+    <h3 class="text-lg font-semibold text-primary mb-4 flex-shrink-0" id="techStackText">
       {title}
     </h3>
 
-    <TechStackContainer
-      technologies={technologies}
-      overlayTexts={overlayTexts}
-      levels={levels}
-      client:visible
-    />
+    <div class="flex-1 min-h-0 overflow-hidden">
+      <TechStackContainer
+        technologies={technologies}
+        overlayTexts={overlayTexts}
+        levels={levels}
+        client:visible
+      />
+    </div>
 
-    <div class="mt-4 text-xs text-muted-foreground text-center">
+    <div class="mt-4 text-xs text-muted-foreground text-center flex-shrink-0">
       💡 <span id="clickTechHint">{clickHint}</span>
     </div>
   </div>
