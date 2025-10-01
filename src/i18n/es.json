@@ -8,7 +8,7 @@
     "cvText": "Descargar CV",
     "cvSubtitle": "Currículum PDF",
     "emailTitle": "Email",
-    "emailSubtitle": "fpmirabile@gmail.com",
+    "emailSubtitle": "fpmirabile@zohomail.eu",
     "linkedinTitle": "LinkedIn",
     "linkedinSubtitle": "Perfil Profesional",
     "githubTitle": "GitHub",
@@ -22,7 +22,7 @@
     }
   },
   "personalInfo": {
-    "email": "fpmirabile@gmail.com",
+    "email": "fpmirabile@zohomail.eu",
     "location": "Porto, Portugal",
     "languages": "ES, EN, PT",
     "emailLabel": "Email",
@@ -57,38 +57,34 @@
   "journey": {
     "title": "Mi Trayectoria",
     "description": "Un viaje de 10+ años construyendo soluciones que importan",
-    "items": [
-      {
-        "year": "2024",
-        "title": "Senior Engineer",
-        "description": "Actualmente en Jampp, enfocado en modernización de sistemas y seguridad.",
-        "tech": ["System Architecture", "Security", "Legacy Modernization"]
-      },
-      {
-        "year": "2022",
-        "title": "Experto en Stack Moderno",
-        "description": "Adopté frameworks modernos como Svelte y arquitecturas cloud avanzadas.",
-        "tech": ["Svelte", "Spring Boot", "Microservices", "Docker"]
-      },
-      {
-        "year": "2020",
-        "title": "Liderazgo Full Stack",
-        "description": "Me convertí en Tech Lead en Mural, gestionando equipos y arquitectando soluciones escalables.",
-        "tech": ["Node.js", "GraphQL", "AWS", "Team Leadership"]
-      },
-      {
-        "year": "2017",
-        "title": "Frameworks Frontend",
-        "description": "Me sumergí en Angular y React, descubriendo el poder de la arquitectura basada en componentes.",
-        "tech": ["Angular", "React", "TypeScript"]
-      },
-      {
-        "year": "2015",
-        "title": "Comenzé en Desarrollo Web",
-        "description": "Comencé con Java y JavaScript vanilla, construyendo mis primeras aplicaciones web.",
-        "tech": ["Java", "JavaScript", "HTML/CSS"]
-      }
-    ]
+    "achievements": {
+      "Jampp": [
+        "Lideré iniciativas de modernización y reingeniería arquitectónica",
+        "Resolví proactivamente vulnerabilidades de seguridad críticas",
+        "Establecí mejores prácticas de ingeniería en todo el equipo"
+      ],
+      "Harness (ex Split)": [
+        "Lancé funcionalidades que aumentaron el engagement del producto en un 18%",
+        "Impulsé la adopción de Agile mejorando la entrega de sprints en un 30%",
+        "Reduje el tiempo de onboarding en un 15% mediante documentación"
+      ],
+      "Mural": [
+        "Ascendí a Tech Lead gestionando 6 ingenieros",
+        "Logré un aumento del 25% en usuarios activos mensuales",
+        "Reduje bugs post-release en un 20% mediante estándares de code review",
+        "Aceleré el time-to-market de experimentos en un 30%"
+      ],
+      "Kin + Carta (ex Solstice)": [
+        "Entregué soluciones full-stack para múltiples clientes",
+        "Mejoré la confiabilidad de integraciones reduciendo downtime en un 15%",
+        "Reduje errores de deployment en un 50% mediante automatización de CI",
+        "Promovió TDD aumentando la estabilidad del código"
+      ],
+      "IT Resources S.A.": [
+        "Desarrollé aplicaciones web empresariales",
+        "Construí APIs REST con framework .NET"
+      ]
+    }
   },
   "education": {
     "educationTitle": "Educación",
