@@ -14,7 +14,7 @@ import ptTranslations from "../../i18n/pt.json";
 import commonData from "../../constants/data.json";
 
 const t = ptTranslations;
-const { technologies, certifications } = commonData;
+const { technologies, certifications, workExperience } = commonData;
 ---
 
 <Layout
@@ -61,7 +61,8 @@ const { technologies, certifications } = commonData;
     <TechJourney
       journeyTitle={t.journey.title}
       journeyDesc={t.journey.description}
-      journeyItems={t.journey.items}
+      workExperience={workExperience}
+      achievements={t.journey.achievements}
     />
     <Education texts={t.education} certifications={certifications} />
   </main>

@@ -14,7 +14,7 @@ import enTranslations from "../../i18n/en.json";
 import commonData from "../../constants/data.json";
 
 const t = enTranslations;
-const { technologies, certifications } = commonData;
+const { technologies, certifications, workExperience } = commonData;
 ---
 
 <Layout
@@ -65,7 +65,8 @@ const { technologies, certifications } = commonData;
     <TechJourney
       journeyTitle={t.journey.title}
       journeyDesc={t.journey.description}
-      journeyItems={t.journey.items}
+      workExperience={workExperience}
+      achievements={t.journey.achievements}
     />
     <Education texts={t.education} certifications={certifications} />
   </main>

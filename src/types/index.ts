@@ -13,8 +13,10 @@ export interface Technology {
 export interface Certification {
   name: string;
   issuer: string;
-  type: string;
-  year: string;
+  credentialId?: string;
+  year: number;
+  month: string;
+  skills: string[];
 }
 
 export interface JourneyItem {
@@ -22,6 +24,15 @@ export interface JourneyItem {
   title: string;
   description: string;
   tech: string[];
+}
+
+export interface WorkExperience {
+  company: string;
+  position: string;
+  location: string;
+  period: string;
+  technologies: string[];
+  achievements: string[];
 }
 
 export interface BaseTexts {
@@ -91,10 +102,7 @@ export interface JourneyTexts {
   description: string;
 }
 
-// Event types
-export type CustomEventType =
-  | "toggleTheme"
-  | "themeChanged";
+export type CustomEventType = "toggleTheme" | "themeChanged";
 
 export interface ThemeChangedDetail {
   isDark: boolean;
