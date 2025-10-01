@@ -2,12 +2,13 @@ import { getCurrentLanguage } from "./language";
 
 export function downloadCV() {
   const currentLanguage = getCurrentLanguage();
-  const cvUrl = "/cv-fernando-mirabile.pdf";
+  const cvUrl = `${window.location.origin}/Fernando_Mirabile_resume.pdf`;
 
   try {
     const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = `Fernando-Mirabile-CV-${currentLanguage.toUpperCase()}.pdf`;
+    link.download = "Fernando_Mirabile_resume.pdf";
+    link.target = "_blank";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
