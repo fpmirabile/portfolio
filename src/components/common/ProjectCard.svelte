@@ -46,9 +46,11 @@
   );
 
   const yearClass = $derived(
-    classNames("text-sm font-semibold px-3 py-1 rounded-full", {
+    classNames("text-sm font-semibold py-1 rounded-full", {
       "text-purple-500 bg-purple-500/10": isSideProject,
       "text-primary": !isSideProject,
+      "pl-3 pr-0": isLeft,
+      "pr-3 pl-0": !isLeft,
     })
   );
 
