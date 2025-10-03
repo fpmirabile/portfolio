@@ -12,16 +12,21 @@ interface Props {
 const { journeyTitle, journeyDesc, workExperience, achievements } = Astro.props;
 
 const timelineItems = workExperience.map((job: WorkExperience) => {
-  const year = job.period.split(" - ")[0].split(" ").pop() || job.period;
+  const period = job.period;
   const jobAchievements = achievements[job.company] || [];
   const description =
     jobAchievements.length > 0 ? jobAchievements.join(" • ") : job.position;
+  const isPresent = period.toLowerCase().includes("present");
+  const displayPeriod = isPresent
+    ? period.split(" - ")[0]
+    : period;
 
   return {
-    year,
+    year: displayPeriod,
     title: job.position,
     description,
     tech: job.technologies,
+    status: isPresent ? "Active" : undefined,
   };
 });
 ---
