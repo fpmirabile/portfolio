@@ -35,7 +35,8 @@
     "downloadCVText": "Download Resume",
     "contactText": "Contact",
     "yearsExpText": "Years Experience",
-    "countriesText": "Countries"
+    "englishLevelText": "English Level",
+    "portugueseLevelText": "Portuguese Level"
   },
   "techStack": {
     "title": "Tech Stack",

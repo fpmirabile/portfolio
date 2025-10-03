@@ -35,7 +35,8 @@
     "downloadCVText": "Descarregar CV",
     "contactText": "Contacto",
     "yearsExpText": "Anos de Experiência",
-    "countriesText": "Países"
+    "englishLevelText": "Nível de Inglês",
+    "portugueseLevelText": "Nível de Português"
   },
   "techStack": {
     "title": "Tech Stack",

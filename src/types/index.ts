@@ -71,7 +71,8 @@ export interface HeroTexts {
   downloadCVText: string;
   contactText: string;
   yearsExpText: string;
-  countriesText: string;
+  englishLevelText: string;
+  portugueseLevelText: string;
 }
 
 export interface EducationTexts {
