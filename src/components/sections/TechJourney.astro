@@ -27,6 +27,7 @@ const timelineItems = workExperience.map((job: WorkExperience) => {
     description,
     tech: job.technologies,
     status: isPresent ? "Active" : undefined,
+    role: job.company,
   };
 });
 ---
