@@ -7,14 +7,16 @@
       "commitment": "part-time",
       "year": "2025",
       "technologies": [
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "PostgreSQL",
         "SvelteKit",
-        "Express.js",
-        "Flowise",
-        "Twilio",
-        "MongoDB",
-        "Node.js"
+        "Docker",
+        "Terraform",
+        "Express.js"
       ],
-      "role": "CTO Founder"
+      "role": "Creator & Lead Architect"
     }
   ],
   "technologies": [
@@ -23,7 +25,14 @@
       "category": "Language",
       "years": "10+",
       "level": "expert",
-      "projects": ["Mibo AI", "Jampp", "Mural", "Kin+Carta", "IT Resources"]
+      "projects": ["Mibo AI", "Jampp", "Mural", "Kin+Carta", "IT Resources", "Adistec"]
+    },
+    {
+      "name": "TypeScript",
+      "category": "Language",
+      "years": "6+",
+      "level": "expert",
+      "projects": ["Mibo AI", "Jampp", "Harness/Split", "Mural"]
     },
     {
       "name": "React",
@@ -31,20 +40,6 @@
       "years": "8+",
       "level": "expert",
       "projects": ["Jampp", "Harness/Split", "Mural", "Kin+Carta"]
-    },
-    {
-      "name": "TypeScript",
-      "category": "Language",
-      "years": "6+",
-      "level": "expert",
-      "projects": ["Mural", "Harness/Split", "Jampp"]
-    },
-    {
-      "name": "Java",
-      "category": "Language",
-      "years": "8+",
-      "level": "advanced",
-      "projects": ["Harness/Split", "Kin+Carta", "Legacy Systems"]
     },
     {
       "name": "Node.js",
@@ -61,18 +56,18 @@
       "projects": ["Mibo AI", "Jampp", "Mural", "Kin+Carta"]
     },
     {
+      "name": "Java",
+      "category": "Language",
+      "years": "8+",
+      "level": "advanced",
+      "projects": ["Harness/Split", "Kin+Carta", "Adistec"]
+    },
+    {
       "name": "Spring Boot",
       "category": "Backend",
       "years": "7+",
       "level": "advanced",
-      "projects": ["Harness/Split", "Kin+Carta"]
-    },
-    {
-      "name": "GraphQL",
-      "category": "API",
-      "years": "4+",
-      "level": "advanced",
-      "projects": ["Jampp", "Harness/Split"]
+      "projects": ["Harness/Split", "Kin+Carta", "Adistec"]
     },
     {
       "name": "Angular",
@@ -82,46 +77,25 @@
       "projects": ["Kin+Carta", "IT Resources"]
     },
     {
-      "name": "Svelte",
-      "category": "Frontend",
-      "years": "3+",
-      "level": "advanced",
-      "projects": ["Mibo AI", "Harness/Split"]
-    },
-    {
-      "name": "C#/.NET",
-      "category": "Backend",
-      "years": "5+",
-      "level": "advanced",
-      "projects": ["IT Resources", "Early Career Projects"]
-    },
-    {
-      "name": "Python",
-      "category": "Language",
-      "years": "2+",
-      "level": "intermediate",
-      "projects": ["Mural (Airflow)", "Data Pipelines"]
-    },
-    {
       "name": "MongoDB",
       "category": "Database",
       "years": "6+",
       "level": "advanced",
-      "projects": ["Mibo AI", "Mural", "Kin+Carta"]
+      "projects": ["Harness/Split", "Mural", "Kin+Carta"]
     },
     {
       "name": "PostgreSQL",
       "category": "Database",
       "years": "4+",
       "level": "advanced",
-      "projects": ["Harness/Split", "Kin+Carta"]
+      "projects": ["Mibo AI"]
     },
     {
       "name": "MySQL",
       "category": "Database",
       "years": "4+",
       "level": "advanced",
-      "projects": ["Jampp", "Kin+Carta"]
+      "projects": ["Jampp"]
     },
     {
       "name": "AWS",
@@ -131,15 +105,29 @@
       "projects": ["Jampp", "Kin+Carta"]
     },
     {
-      "name": "React Native",
-      "category": "Mobile",
-      "years": "3+",
+      "name": "GraphQL",
+      "category": "API",
+      "years": "4+",
       "level": "intermediate",
-      "projects": ["Kin+Carta"]
+      "projects": ["Jampp", "Harness/Split"]
     },
     {
-      "name": "Swift",
-      "category": "Mobile",
+      "name": "SvelteKit",
+      "category": "Frontend",
+      "years": "2+",
+      "level": "intermediate",
+      "projects": ["Mibo AI"]
+    },
+    {
+      "name": "Python",
+      "category": "Language",
+      "years": "2+",
+      "level": "intermediate",
+      "projects": ["Mibo AI", "Mural"]
+    },
+    {
+      "name": "GCP",
+      "category": "Cloud",
       "years": "2+",
       "level": "intermediate",
       "projects": ["Kin+Carta"]
@@ -147,23 +135,30 @@
     {
       "name": "Airflow",
       "category": "Data Engineering",
-      "years": "1+",
+      "years": "2+",
       "level": "intermediate",
       "projects": ["Mural"]
     },
     {
-      "name": "Flowise",
-      "category": "AI/ML",
-      "years": "1+",
-      "level": "advanced",
-      "projects": ["Mibo AI"]
+      "name": "React Native",
+      "category": "Mobile",
+      "years": "3+",
+      "level": "intermediate",
+      "projects": ["Kin+Carta"]
     },
     {
-      "name": "Twilio",
-      "category": "Communication APIs",
-      "years": "1+",
+      "name": "C#/.NET",
+      "category": "Backend",
+      "years": "5+",
       "level": "advanced",
-      "projects": ["Mibo AI"]
+      "projects": ["IT Resources", "Adistec"]
+    },
+    {
+      "name": "Swift",
+      "category": "Mobile",
+      "years": "2+",
+      "level": "intermediate",
+      "projects": ["Kin+Carta"]
     },
     {
       "name": "Optimizely",
@@ -175,26 +170,112 @@
     {
       "name": "Mulesoft",
       "category": "Integration",
-      "years": "1+",
-      "level": "intermediate",
-      "projects": ["Kin+Carta"]
-    },
-    {
-      "name": "GCP",
-      "category": "Cloud",
       "years": "2+",
       "level": "intermediate",
       "projects": ["Kin+Carta"]
     },
     {
+      "name": "Twilio",
+      "category": "Communication APIs",
+      "years": "1+",
+      "level": "advanced",
+      "projects": ["Mibo AI"]
+    },
+    {
+      "name": "Flowise",
+      "category": "AI/ML",
+      "years": "1+",
+      "level": "advanced",
+      "projects": ["Mibo AI"]
+    },
+    {
       "name": "n8n",
       "category": "Automation",
-      "years": "<1",
-      "level": "beginner",
+      "years": "1+",
+      "level": "intermediate",
       "projects": ["Jampp"]
+    },
+    {
+      "name": "OpenSearch",
+      "category": "Search & Analytics",
+      "years": "1+",
+      "level": "intermediate",
+      "projects": ["Jampp"]
+    },
+    {
+      "name": "ElasticSearch",
+      "category": "Search & Analytics",
+      "years": "2+",
+      "level": "intermediate",
+      "projects": ["Mural"]
+    },
+    {
+      "name": "Docker",
+      "category": "DevOps",
+      "years": "2+",
+      "level": "intermediate",
+      "projects": ["Mibo AI"]
+    },
+    {
+      "name": "Terraform",
+      "category": "DevOps",
+      "years": "1+",
+      "level": "intermediate",
+      "projects": ["Mibo AI"]
+    },
+    {
+      "name": "Golang",
+      "category": "Language",
+      "years": "1+",
+      "level": "intermediate",
+      "projects": ["Harness/Split"]
+    },
+    {
+      "name": "Groovy",
+      "category": "Language",
+      "years": "1+",
+      "level": "intermediate",
+      "projects": ["Harness/Split"]
+    },
+    {
+      "name": "Oracle SQL",
+      "category": "Database",
+      "years": "3+",
+      "level": "intermediate",
+      "projects": ["Kin+Carta", "IT Resources"]
+    },
+    {
+      "name": "RabbitMQ",
+      "category": "Message Queue",
+      "years": "2+",
+      "level": "intermediate",
+      "projects": ["Kin+Carta"]
+    },
+    {
+      "name": "jQuery",
+      "category": "Frontend",
+      "years": "2+",
+      "level": "intermediate",
+      "projects": ["Adistec"]
     }
   ],
   "certifications": [
+    {
+      "name": "IBM Ethical Hacking with Open Source Tools",
+      "issuer": "Coursera",
+      "year": 2026,
+      "month": "February",
+      "type": "course",
+      "skills": ["Ethical Hacking", "Security", "Open Source Tools"]
+    },
+    {
+      "name": "Agentic AI",
+      "issuer": "DeepLearning.ai",
+      "year": 2025,
+      "month": "December",
+      "type": "course",
+      "skills": ["AI", "Agentic AI", "LLMs"]
+    },
     {
       "name": "Application Security for Developers and DevOps Professionals",
       "issuer": "IBM",
@@ -360,77 +441,85 @@
   "workExperience": [
     {
       "company": "Jampp",
-      "position": "Senior Full Stack Developer/Engineer",
+      "position": "Senior Software Engineer",
       "location": "Remote (EU)",
       "period": "Feb 2024 - Present",
       "technologies": [
         "React.js",
         "Express.js",
-        "n8n",
+        "MySQL",
         "GraphQL",
+        "N8N",
         "AWS",
-        "MySQL"
+        "OpenSearch"
       ]
     },
     {
       "company": "Harness (ex Split)",
-      "position": "Senior Full Stack Developer/Engineer",
+      "position": "Senior Software Engineer",
       "location": "Remote (Buenos Aires)",
       "period": "Oct 2022 - Feb 2024",
       "technologies": [
         "React.js",
+        "TypeScript",
         "GraphQL",
-        "Spring Framework",
-        "Svelte",
-        "A/B Testing",
-        "PostgreSQL/MongoDB"
+        "Spring Boot",
+        "MongoDB",
+        "Groovy",
+        "Golang"
       ]
     },
     {
       "company": "Mural",
-      "position": "Senior Full Stack Engineer / Tech Lead",
+      "position": "Senior Full Stack Engineer / Team Leader",
       "location": "Remote (Buenos Aires)",
       "period": "Feb 2020 - Oct 2022",
       "technologies": [
         "React.js",
         "Express.js",
+        "ElasticSearch",
         "Airflow",
-        "Optimizely",
         "MongoDB",
-        "TypeScript"
+        "Optimizely"
       ]
     },
     {
       "company": "Kin + Carta (ex Solstice)",
-      "position": "Senior Consultant Engineer",
-      "location": "Palermo (Hybrid)",
+      "position": "Software Engineer Technical Consultant",
+      "location": "Buenos Aires (Hybrid)",
       "period": "Sep 2017 - Feb 2020",
       "technologies": [
-        "React",
-        "Angular 4-5",
-        "Swift",
+        "Angular 4+",
+        "React.js",
         "React Native",
-        "Spring Framework",
-        "AWS",
-        "GCP",
-        "Mulesoft",
-        "Express.js",
+        "RabbitMQ",
         "MongoDB",
-        "PostgreSQL",
-        "MySQL"
+        "Oracle SQL",
+        "Spring Boot",
+        "Mulesoft",
+        "Swift",
+        "AWS",
+        "GCP"
       ]
     },
     {
       "company": "IT Resources S.A.",
-      "position": "Senior Full Stack Developer/Engineer",
+      "position": "Senior Web Application Developer",
       "location": "Buenos Aires",
-      "period": "Jul 2015 - Sep 2017",
-      "technologies": ["Angular 1", "C#", "ASP.NET", "Oracle DB"]
+      "period": "Jul 2016 - Sep 2017",
+      "technologies": ["C#", "Angular.js", "Oracle SQL"]
+    },
+    {
+      "company": "Adistec",
+      "position": "Web Developer",
+      "location": "Buenos Aires",
+      "period": "Mar 2014 - Jul 2016",
+      "technologies": ["Spring Boot", "C#", "JavaScript", "jQuery"]
     }
   ],
   "education": {
     "degree": "Informatics Engineering",
-    "institution": "Universidad de la Empresa Argentina (UADE)",
+    "institution": "Universidad Argentina de la Empresa (UADE)",
     "location": "Buenos Aires",
     "graduationYear": 2024,
     "note": "Completed degree while working full-time"
