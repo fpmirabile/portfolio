@@ -15,7 +15,6 @@ const { texts, recentWork } = Astro.props;
 >
   <div class="section-shell grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(19rem,.7fr)] lg:items-center lg:gap-16">
     <div class="min-w-0">
-      <p class="eyebrow mb-5">{texts.roleText}</p>
       <h1
         id="hero-title"
         aria-label="Fernando Mirabile"
@@ -25,7 +24,10 @@ const { texts, recentWork } = Astro.props;
         <br />
         <span class="text-primary">Mirabile.</span>
       </h1>
-      <p class="mt-7 max-w-2xl text-[clamp(1.45rem,2.4vw,2.2rem)] leading-[1.2] font-medium text-foreground">
+      <p class="mt-5 text-sm font-semibold uppercase tracking-[.12em] text-primary">
+        {texts.roleText}
+      </p>
+      <p class="mt-6 max-w-2xl text-[clamp(1.45rem,2.4vw,2.2rem)] leading-[1.2] font-medium text-foreground">
         {texts.taglineText}
       </p>
       <p class="prose-lead mt-5 max-w-2xl">{texts.descriptionText}</p>
@@ -51,7 +53,7 @@ const { texts, recentWork } = Astro.props;
         </a>
       </div>
       <p class="mt-7 text-sm text-muted-foreground">
-        10+ {texts.yearsExpText} <span aria-hidden="true">·</span> C1{" "}
+        {texts.careerStartText} <span aria-hidden="true">·</span> C1{" "}
         {texts.englishLevelText} <span aria-hidden="true">·</span> B1{" "}
         {texts.portugueseLevelText}
       </p>

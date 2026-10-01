@@ -17,6 +17,8 @@
             "Redis",
             "PostgreSQL",
             "SvelteKit",
+            "n8n",
+            "Cloudflare",
             "Express.js"
           ]
         },
@@ -202,7 +204,7 @@
       "category": "Automation",
       "years": "1+",
       "level": "intermediate",
-      "projects": ["Jampp"]
+      "projects": ["Mibo AI", "Jampp"]
     },
     {
       "name": "OpenSearch",
@@ -272,23 +274,44 @@
     {
       "name": "IBM Ethical Hacking with Open Source Tools",
       "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/PJZ85L2Y3BDY",
       "year": 2026,
       "month": "February",
       "type": "course",
       "skills": ["Ethical Hacking", "Security", "Open Source Tools"]
     },
     {
+      "name": "Exploitation and Penetration Testing with Metasploit",
+      "issuer": "Coursera",
+      "url": "https://www.credly.com/badges/48ae4394-cf6c-498c-a96c-62f754a51dfe/linked_in_profile",
+      "year": 2026,
+      "month": "January",
+      "type": "course",
+      "skills": ["Penetration Testing", "Metasploit", "Security"]
+    },
+    {
       "name": "Agentic AI",
       "issuer": "DeepLearning.ai",
+      "url": "https://www.deeplearning.ai/certificates/8b33728d-0675-4434-8d86-6917720277e7?usp=sharing",
       "year": 2025,
       "month": "December",
       "type": "course",
       "skills": ["AI", "Agentic AI", "LLMs"]
     },
     {
+      "name": "Evaluating and Debugging Generative AI",
+      "issuer": "DeepLearning.ai",
+      "url": "https://www.deeplearning.ai/accomplishments/5f4acf24-1457-42c1-8b9d-02a5610a55b9?usp=sharing",
+      "year": 2025,
+      "month": "November",
+      "type": "course",
+      "skills": ["Generative AI", "Evaluation", "Debugging"]
+    },
+    {
       "name": "Application Security for Developers and DevOps Professionals",
       "issuer": "IBM",
       "credentialId": "9DP3W7PW92KF",
+      "url": "https://www.coursera.org/account/accomplishments/verify/9DP3W7PW92KF",
       "year": 2025,
       "month": "August",
       "type": "certification",
@@ -298,6 +321,7 @@
       "name": "Design Solutions for Securing Applications",
       "issuer": "Microsoft Learning",
       "credentialId": "wz8hvy7n",
+      "url": "https://learn.microsoft.com/en-us/users/fernandomirabile-6789/achievements/wz8hvy7n",
       "year": 2025,
       "month": "March",
       "type": "certification",
@@ -306,6 +330,7 @@
     {
       "name": "CCNA: Switching, Routing, and Wireless Essentials",
       "issuer": "Cisco",
+      "url": "https://www.credly.com/badges/6b381a5c-e3ca-4b78-ba6e-a24371157c02/linked_in_profile",
       "year": 2023,
       "month": "December",
       "type": "certification",
@@ -323,6 +348,7 @@
     {
       "name": "EF SET English Certificate C1 (72/100)",
       "issuer": "EF SET",
+      "url": "https://cert.efset.org/MnF2qx",
       "year": 2023,
       "month": "February",
       "type": "certification",
@@ -349,6 +375,7 @@
       "name": "Data Engineering on Google Cloud Platform Specialization",
       "issuer": "Coursera",
       "credentialId": "YC7Y4G457LX4",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/YC7Y4G457LX4",
       "year": 2018,
       "month": "December",
       "type": "specialization",
@@ -358,6 +385,7 @@
       "name": "Serverless Data Analysis with Google BigQuery and Cloud Dataflow",
       "issuer": "Coursera",
       "credentialId": "JRK64GNC2DKJ",
+      "url": "https://www.coursera.org/account/accomplishments/verify/JRK64GNC2DKJ",
       "year": 2018,
       "month": "November",
       "type": "course",
@@ -376,6 +404,7 @@
       "name": "Google Cloud Platform Big Data and Machine Learning Fundamentals",
       "issuer": "Coursera",
       "credentialId": "ZAFFWXTGXK5G",
+      "url": "https://www.coursera.org/account/accomplishments/verify/ZAFFWXTGXK5G",
       "year": 2018,
       "month": "October",
       "type": "course",
@@ -385,6 +414,7 @@
       "name": "Leveraging Unstructured Data with Cloud Dataproc on Google Cloud Platform",
       "issuer": "Coursera",
       "credentialId": "TVZ32NQSYEFJ",
+      "url": "https://www.coursera.org/account/accomplishments/verify/TVZ32NQSYEFJ",
       "year": 2018,
       "month": "October",
       "type": "course",
@@ -453,7 +483,18 @@
       "position": "Senior Software Engineer",
       "location": "Remote (EU)",
       "period": "Feb 2024 - Present",
-      "technologies": ["React.js", "Express.js", "MySQL", "GraphQL", "N8N", "AWS", "OpenSearch"]
+      "technologies": [
+        "React.js",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "GraphQL",
+        "Mastra",
+        "n8n",
+        "AWS",
+        "OpenSearch"
+      ]
     },
     {
       "company": "Harness (ex Split)",

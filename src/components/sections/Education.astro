@@ -1,4 +1,5 @@
 ---
+import { ArrowUpRight } from "@lucide/astro";
 import type { Certification, EducationTexts } from "../../types";
 import CollectionDialog from "../common/CollectionDialog.astro";
 
@@ -47,7 +48,23 @@ const years = [
           {recent.map((certification) => (
             <article class="py-4 first:pt-0">
               <h3 class="font-semibold text-foreground">
-                {certification.name}
+                {certification.url ? (
+                  <a
+                    href={certification.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-start gap-1.5 transition-colors hover:text-primary focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  >
+                    {certification.name}
+                    <ArrowUpRight
+                      size={15}
+                      class="mt-1 shrink-0"
+                      aria-hidden="true"
+                    />
+                  </a>
+                ) : (
+                  certification.name
+                )}
               </h3>
               <p class="mt-1 text-sm text-muted-foreground">
                 {certification.issuer} · {certification.year}
@@ -73,7 +90,23 @@ const years = [
                       .map((certification) => (
                         <article class="grid gap-1 py-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-5">
                           <h4 class="font-semibold text-foreground">
-                            {certification.name}
+                            {certification.url ? (
+                              <a
+                                href={certification.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-start gap-1.5 transition-colors hover:text-primary focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                              >
+                                {certification.name}
+                                <ArrowUpRight
+                                  size={15}
+                                  class="mt-1 shrink-0"
+                                  aria-hidden="true"
+                                />
+                              </a>
+                            ) : (
+                              certification.name
+                            )}
                           </h4>
                           <p class="text-sm text-muted-foreground sm:text-right">
                             {certification.issuer}

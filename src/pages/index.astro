@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import texts from "../i18n/en.json";
 ---
 
 <Layout
-  title="Fernando Mirabile - Full Stack Developer"
-  description="Senior Software Engineer with 10+ years of experience in React, Svelte, Node.js, and Spring Boot. Currently at Jampp, based in Porto, Portugal."
+  title={texts.meta.title}
+  description={texts.meta.description}
   lang="en"
   redirectTo="/en"
 >

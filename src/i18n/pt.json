@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Fernando Mirabile | Senior Software Engineer",
-    "description": "Engenheiro de Software Sénior com mais de 10 anos de experiência em React, Svelte, Node.js e Spring Boot. Atualmente na Jampp, baseado no Porto, Portugal.",
+    "description": "Engenheiro de software sénior no Porto. Desenho e construo produtos de ponta a ponta, assumindo a responsabilidade técnica entre interfaces, APIs e dados.",
     "lang": "pt"
   },
   "menu": {
@@ -41,22 +41,22 @@
     "languagesLabel": "Idiomas"
   },
   "hero": {
-    "roleText": "Engenheiro de Software Sénior · Full Stack",
-    "taglineText": "Construo produtos, sistemas e equipas que geram resultados.",
-    "descriptionText": "Mais de 10 anos a desenvolver produtos com React, Svelte, Node.js e Spring Boot, da arquitetura à entrega.",
+    "roleText": "Engenheiro de software sénior · Full stack",
+    "taglineText": "Do problema à produção: desenho e construo software de ponta a ponta.",
+    "descriptionText": "Assumo a responsabilidade técnica entre interfaces, APIs e dados; adapto as linguagens e ferramentas à equipa e ao produto.",
     "locationText": "Porto, Portugal",
-    "currentText": "Atualmente na Jampp",
+    "currentText": "Na Jampp · Criador do Mibo AI",
     "recentWorkEyebrow": "Experiência recente",
     "recentWorkTitle": "Equipas e produtos onde trabalhei",
     "downloadCVText": "Descarregar CV",
-    "contactText": "Envia-me um email",
-    "yearsExpText": "anos de experiência",
+    "contactText": "Vamos falar do teu projeto",
+    "careerStartText": "A desenvolver software desde 2014",
     "englishLevelText": "inglês",
     "portugueseLevelText": "português"
   },
   "techStack": {
-    "title": "Tech Stack",
-    "clickHint": "Explora a minha experiência com cada tecnologia",
+    "title": "Tecnologias",
+    "clickHint": "Ferramentas que usei em produtos reais, de interfaces e APIs a dados e infraestrutura.",
     "allTechnologiesText": "Explorar todas as tecnologias",
     "overlay": {
       "levelLabel": "Nível de Experiência",
@@ -72,84 +72,98 @@
       "expert": "Especialista"
     },
     "technologies": {
-      "JavaScript": "Linguagem principal para desenvolvimento web full-stack",
-      "React": "Construção de interfaces de utilizador modernas e escaláveis e SPAs",
-      "TypeScript": "Desenvolvimento com tipagem segura para aplicações de grande escala",
-      "Java": "Desenvolvimento backend empresarial com ecossistema Spring",
-      "Node.js": "Serviços backend escaláveis, APIs e microsserviços",
-      "Express.js": "APIs RESTful e serviços backend",
-      "Spring Boot": "Microsserviços Java e aplicações empresariais",
-      "GraphQL": "Design eficiente de APIs e obtenção de dados",
-      "Angular": "Aplicações frontend à escala empresarial (versões 1-5)",
-      "Svelte": "Framework reativo moderno para aplicações web de alto desempenho",
+      "JavaScript": "Base de interfaces e serviços web ao longo da minha carreira",
+      "React": "Interfaces e experiências de produto na Jampp, na Harness e na Mural",
+      "TypeScript": "Interfaces e serviços tipados na Jampp, na Harness e no Mibo AI",
+      "Java": "Experiência anterior em sistemas empresariais com Java e Spring",
+      "Node.js": "APIs e serviços para produtos web e para o Mibo AI",
+      "Express.js": "APIs e serviços backend para produtos web",
+      "Spring Boot": "Experiência anterior em microsserviços Java e sistemas empresariais",
+      "GraphQL": "APIs e consultas na Jampp e na Harness",
+      "Angular": "Interfaces para clientes da Kin+Carta e aplicações na IT Resources",
       "C#/.NET": "ASP.NET, MVC e APIs REST",
-      "Python": "Processamento de dados e automatização de fluxos de trabalho",
-      "MongoDB": "Base de dados NoSQL para estruturas de dados flexíveis",
-      "PostgreSQL": "Base de dados relacional para modelos de dados complexos",
-      "MySQL": "Gestão de bases de dados relacionais",
-      "AWS": "Infraestrutura na cloud, serverless e deployment (Lambda, EC2, S3, RDS)",
+      "Python": "Testes de agentes e fluxos de dados no Mibo AI e na Mural",
+      "MongoDB": "Persistência documental na Harness, na Mural e na Kin+Carta",
+      "PostgreSQL": "Persistência e consultas para produtos como o Mibo AI",
+      "MySQL": "Dados de produto e consultas na Jampp",
+      "AWS": "Infraestrutura e deployments na Jampp e na Kin+Carta",
       "React Native": "Desenvolvimento móvel multiplataforma",
       "Swift": "Desenvolvimento nativo iOS",
       "Airflow": "Orquestração de pipelines de dados e automatização de fluxos de trabalho",
-      "Flowise": "Orquestração de serviços de IA e gestão de memória",
-      "Twilio": "Integração de WhatsApp e mensagens",
+      "Flowise": "Fluxos da primeira versão do assistente do Mibo AI",
+      "Twilio": "Mensagens de WhatsApp na primeira versão do Mibo AI",
       "Optimizely": "Testes A/B e experimentação de funcionalidades",
       "Mulesoft": "Integração de APIs e middleware",
-      "GCP": "Serviços Google Cloud Platform (BigQuery, Dataflow, Cloud Foundry)",
-      "n8n": "Automatização de fluxos de trabalho"
+      "GCP": "Serviços Google Cloud usados na Kin+Carta",
+      "n8n": "Automatizações no Mibo AI e na Jampp",
+      "SvelteKit": "Interface do Mibo AI e desenvolvimento de aplicações web",
+      "Docker": "Serviços e ambientes de desenvolvimento para o Mibo AI",
+      "OpenSearch": "Pesquisa e análise de dados na Jampp",
+      "ElasticSearch": "Pesquisa e análise de dados na Mural",
+      "Terraform": "Infraestrutura como código no Mibo AI",
+      "Golang": "Experiência com Go na Harness",
+      "Groovy": "Experiência com Groovy na Harness",
+      "Oracle SQL": "Consultas e dados na Kin+Carta e na IT Resources",
+      "RabbitMQ": "Mensagens entre serviços na Kin+Carta",
+      "jQuery": "Interfaces web na Adistec"
     }
   },
   "journey": {
     "title": "A Minha Jornada",
-    "description": "Uma jornada de mais de 10 anos a construir soluções que importam",
+    "description": "Do desenvolvimento web à liderança técnica em equipas de produto desde 2014.",
     "earlierText": "Ver experiência anterior",
     "earlierTitle": "Experiência anterior",
     "achievements": {
       "Jampp": [
-        "Liderei iniciativas de modernização e reengenharia arquitetónica",
-        "Resolvi proativamente vulnerabilidades de segurança críticas",
-        "Estabeleci melhores práticas de engenharia em toda a equipa"
+        "Sou responsável pelo desenvolvimento e modernização de uma plataforma interna de gestão de campanhas, da conceção à produção",
+        "Automatizo fluxos operacionais com agentes de IA para reduzir o trabalho manual dos gestores de campanhas",
+        "Modernizo código React legado e trabalho em frontend, backend, infraestrutura e análise de dados",
+        "Corrijo vulnerabilidades de segurança e defino práticas de engenharia sustentáveis"
       ],
       "Harness (ex Split)": [
-        "Lancei funcionalidades de produto e trabalhei para melhorar a sua adoção",
-        "Introduzi práticas ágeis para tornar a entrega mais previsível",
-        "Documentei processos para facilitar a integração de novos colegas"
+        "Construí funcionalidades para um produto de feature flags e experimentação",
+        "Implementei hooks React reutilizáveis para simplificar novas funcionalidades",
+        "Escrevi documentação técnica e de arquitetura para facilitar a integração de novos colegas"
       ],
       "Mural": [
-        "Progredi para Tech Lead e liderei uma equipa de engenharia",
-        "Trabalhei em funcionalidades para melhorar a utilização do produto",
-        "Defini padrões de code review para reduzir bugs após os lançamentos",
-        "Ajudei a lançar experiências de produto mais rapidamente"
+        "Liderei seis engenheiros em iniciativas de aquisição e envolvimento de utilizadores",
+        "Redesenhei o fluxo para partilhar conteúdo e convidar utilizadores",
+        "Construí infraestrutura de feature flags com Optimizely para web e mobile",
+        "Integrei dados de experiências em pipelines de Airflow",
+        "Ajudei a definir normas de revisão de código para toda a empresa"
       ],
       "Kin + Carta (ex Solstice)": [
-        "Entreguei soluções full stack para múltiplos clientes",
-        "Melhorei a fiabilidade das integrações",
-        "Automatizei processos de CI para reduzir erros de deployment",
-        "Promovi TDD para melhorar a estabilidade do código"
+        "Construí aplicações web e mobile para clientes com Angular, React e Swift",
+        "Desenvolvi APIs de integração com MuleSoft",
+        "Automatizei deployments com Travis CI e promovi TDD nas equipas"
       ],
       "IT Resources S.A.": [
-        "Desenvolvi aplicações web empresariais",
-        "Construí APIs REST com framework .NET"
+        "Desenvolvi portais financeiros e aplicações bancárias",
+        "Construí APIs REST com C# e .NET"
+      ],
+      "Adistec": [
+        "Construí ferramentas internas e aplicações para clientes",
+        "Trabalhei em serviços backend e integrações de dados com Spring Boot e C#"
       ]
     }
   },
   "sideProjects": {
     "title": "Projetos Pessoais",
-    "description": "Projetos pessoais e empreendimentos",
-    "viewProjectText": "Ver projeto",
-    "roleText": "Criador e arquiteto principal",
+    "description": "Um produto próprio que evoluiu de assistente de WhatsApp para testes de agentes com traces reais.",
+    "viewProjectText": "Visitar o projeto",
+    "roleText": "Conceção e desenvolvimento do produto",
     "projects": {
       "Mibo AI": {
         "stages": {
           "testing": {
             "label": "Atualidade",
             "title": "Testes de agentes de IA",
-            "description": "Testa agentes com traces reais enviados por OpenTelemetry (OTLP), verificações automáticas e testes ativos a pedido."
+            "description": "Verifica o comportamento dos agentes com traces reais recebidos via OTLP. Combina verificações automáticas com testes a pedido."
           },
           "assistant": {
             "label": "2025 · Primeira versão",
             "title": "Assistente de WhatsApp",
-            "description": "Assistente conversacional criado com Twilio e Flowise para organizar o Google Calendar e o Drive e criar folhas de cálculo no Sheets."
+            "description": "Assistente de WhatsApp com Twilio e Flowise para organizar o Google Calendar e o Drive e criar folhas de cálculo no Sheets."
           }
         }
       }
@@ -157,11 +171,11 @@
   },
   "education": {
     "educationTitle": "Educação",
-    "educationDesc": "Formação académica e certificações profissionais",
+    "educationDesc": "Formação académica e aprendizagem contínua",
     "academicTitle": "Formação Académica",
-    "certificationsTitle": "Certificações",
-    "showAllText": "Ver todas as certificações",
-    "counterText": "certificações",
+    "certificationsTitle": "Cursos e certificações",
+    "showAllText": "Ver todos os cursos e certificações",
+    "counterText": "cursos e certificações",
     "certificationTypes": {
       "certification": "Certificação",
       "course": "Curso",
@@ -172,12 +186,12 @@
       "name": "Engenharia Informática",
       "institution": "Universidad de la Empresa Argentina (UADE)",
       "location": "Buenos Aires",
-      "graduationDate": "Graduado Julho 2024"
+      "graduationDate": "Formação concluída em julho de 2024"
     }
   },
   "footer": {
     "text": "",
-    "invitation": "Vamos conversar sobre o que podemos construir juntos?",
+    "invitation": "Procuras alguém que assuma um desafio técnico e trabalhe com a tua equipa? Vamos conversar.",
     "backToTopText": "Voltar ao início"
   }
 }

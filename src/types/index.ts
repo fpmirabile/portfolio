@@ -14,6 +14,7 @@ export interface Certification {
   name: string;
   issuer: string;
   credentialId?: string;
+  url?: string;
   year: number;
   month: string;
   type: string;
@@ -78,7 +79,7 @@ export interface HeroTexts {
   recentWorkTitle: string;
   downloadCVText: string;
   contactText: string;
-  yearsExpText: string;
+  careerStartText: string;
   englishLevelText: string;
   portugueseLevelText: string;
 }

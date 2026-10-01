@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Fernando Mirabile | Senior Software Engineer",
-    "description": "Senior Software Engineer with 10+ years of experience in React, Svelte, Node.js, and Spring Boot. Currently at Jampp, based in Porto, Portugal.",
+    "description": "Senior software engineer in Porto. I design and build products end to end, taking ownership across interfaces, APIs, and data.",
     "lang": "en"
   },
   "menu": {
@@ -42,21 +42,21 @@
   },
   "hero": {
     "roleText": "Senior Software Engineer · Full Stack",
-    "taglineText": "I build products, systems, and teams that deliver results.",
-    "descriptionText": "Over 10 years building products with React, Svelte, Node.js, and Spring Boot, from architecture through delivery.",
+    "taglineText": "From problem to production: I design and build software end to end.",
+    "descriptionText": "I take ownership of technical solutions across interfaces, APIs, and data, adapting languages and tools to the team and product.",
     "locationText": "Porto, Portugal",
-    "currentText": "Currently at Jampp",
+    "currentText": "At Jampp · Creator of Mibo AI",
     "recentWorkEyebrow": "Recent experience",
     "recentWorkTitle": "Teams and products I've worked on",
     "downloadCVText": "Download Resume",
-    "contactText": "Email me",
-    "yearsExpText": "years of experience",
+    "contactText": "Let's talk about your project",
+    "careerStartText": "Building software since 2014",
     "englishLevelText": "English",
     "portugueseLevelText": "Portuguese"
   },
   "techStack": {
-    "title": "Tech Stack",
-    "clickHint": "Explore my experience with each technology",
+    "title": "Technologies",
+    "clickHint": "Tools I've used in real products, from interfaces and APIs to data and infrastructure.",
     "allTechnologiesText": "Explore all technologies",
     "overlay": {
       "levelLabel": "Experience Level",
@@ -72,84 +72,98 @@
       "expert": "Expert"
     },
     "technologies": {
-      "JavaScript": "Core language for full-stack web development",
-      "React": "Building modern, scalable user interfaces and SPAs",
-      "TypeScript": "Type-safe development for large-scale applications",
-      "Java": "Enterprise backend development with Spring ecosystem",
-      "Node.js": "Scalable backend services, APIs, and microservices",
-      "Express.js": "RESTful APIs and backend services",
-      "Spring Boot": "Java microservices and enterprise applications",
-      "GraphQL": "Efficient API design and data fetching",
-      "Angular": "Enterprise-scale frontend applications (versions 1-5)",
-      "Svelte": "Modern reactive framework for high-performance web apps",
+      "JavaScript": "A foundation for web interfaces and services throughout my career",
+      "React": "Product interfaces and experiments at Jampp, Harness, and Mural",
+      "TypeScript": "Typed interfaces and services at Jampp, Harness, and Mibo AI",
+      "Java": "Earlier work on enterprise systems with Java and Spring",
+      "Node.js": "APIs and services for web products and Mibo AI",
+      "Express.js": "APIs and backend services for web products",
+      "Spring Boot": "Earlier work on Java microservices and enterprise systems",
+      "GraphQL": "APIs and queries at Jampp and Harness",
+      "Angular": "Client interfaces at Kin+Carta and applications at IT Resources",
       "C#/.NET": "ASP.NET, MVC, and REST APIs",
-      "Python": "Data processing and workflow automation",
-      "MongoDB": "NoSQL database for flexible data structures",
-      "PostgreSQL": "Relational database for complex data models",
-      "MySQL": "Relational database management",
-      "AWS": "Cloud infrastructure, serverless, and deployment (Lambda, EC2, S3, RDS)",
+      "Python": "Agent testing and data workflows at Mibo AI and Mural",
+      "MongoDB": "Document storage at Harness, Mural, and Kin+Carta",
+      "PostgreSQL": "Storage and queries for products such as Mibo AI",
+      "MySQL": "Product data and queries at Jampp",
+      "AWS": "Infrastructure and deployments at Jampp and Kin+Carta",
       "React Native": "Cross-platform mobile development",
       "Swift": "iOS native development",
       "Airflow": "Data pipeline orchestration and workflow automation",
-      "Flowise": "AI service orchestration and memory management",
-      "Twilio": "WhatsApp and messaging integration",
+      "Flowise": "Flows for the first version of Mibo AI's assistant",
+      "Twilio": "WhatsApp messaging in the first version of Mibo AI",
       "Optimizely": "A/B testing and feature experimentation",
       "Mulesoft": "API integration and middleware",
-      "GCP": "Google Cloud Platform services (BigQuery, Dataflow, Cloud Foundry)",
-      "n8n": "Workflow automation"
+      "GCP": "Google Cloud services used at Kin+Carta",
+      "n8n": "Workflow automation at Mibo AI and Jampp",
+      "SvelteKit": "Mibo AI's interface and web application development",
+      "Docker": "Services and development environments for Mibo AI",
+      "OpenSearch": "Search and data analysis at Jampp",
+      "ElasticSearch": "Search and data analysis at Mural",
+      "Terraform": "Infrastructure as code for Mibo AI",
+      "Golang": "Experience with Go at Harness",
+      "Groovy": "Experience with Groovy at Harness",
+      "Oracle SQL": "Queries and data at Kin+Carta and IT Resources",
+      "RabbitMQ": "Messaging between services at Kin+Carta",
+      "jQuery": "Web interfaces at Adistec"
     }
   },
   "journey": {
     "title": "My Journey",
-    "description": "A 10+ year journey building solutions that matter",
+    "description": "From web development to technical leadership on product teams since 2014.",
     "earlierText": "View earlier experience",
     "earlierTitle": "Earlier experience",
     "achievements": {
       "Jampp": [
-        "Spearheaded architectural rework and modernization initiatives",
-        "Proactively resolved critical security vulnerabilities",
-        "Established engineering best practices across the team"
+        "Own features and modernization of an internal campaign management platform, from design to production",
+        "Automate operational workflows with AI agents to reduce manual work for campaign managers",
+        "Modernize legacy React code and work across frontend, backend, infrastructure, and analytics",
+        "Fix security vulnerabilities and establish maintainable engineering practices"
       ],
       "Harness (ex Split)": [
-        "Launched product features and worked to improve adoption",
-        "Introduced Agile practices to make delivery more predictable",
-        "Documented processes to help new teammates get started"
+        "Built features for a feature flagging and experimentation product",
+        "Implemented reusable React hooks to simplify new feature work",
+        "Wrote technical and architecture docs to help new teammates get started"
       ],
       "Mural": [
-        "Progressed to Tech Lead and led an engineering team",
-        "Worked on features aimed at improving product usage",
-        "Set code review standards to reduce post-release bugs",
-        "Helped ship product experiments faster"
+        "Led six engineers working on user acquisition and engagement",
+        "Redesigned the flow for sharing content and inviting users",
+        "Built feature flagging infrastructure with Optimizely for web and mobile",
+        "Integrated experiment data into Airflow pipelines",
+        "Co-authored company-wide code review standards"
       ],
       "Kin + Carta (ex Solstice)": [
-        "Delivered full-stack solutions for multiple clients",
-        "Improved the reliability of integrations",
-        "Automated CI processes to reduce deployment errors",
-        "Promoted TDD to improve code stability"
+        "Built web and mobile applications for clients with Angular, React, and Swift",
+        "Developed integration APIs with MuleSoft",
+        "Automated deployments with Travis CI and promoted TDD across teams"
       ],
       "IT Resources S.A.": [
-        "Developed enterprise web applications",
-        "Built REST APIs with .NET framework"
+        "Built financial portals and banking applications",
+        "Built REST APIs with C# and .NET"
+      ],
+      "Adistec": [
+        "Built internal tools and client-facing applications",
+        "Worked on backend services and data integrations with Spring Boot and C#"
       ]
     }
   },
   "sideProjects": {
     "title": "Side Projects",
-    "description": "Personal projects and entrepreneurial ventures",
-    "viewProjectText": "View project",
-    "roleText": "Creator & Lead Architect",
+    "description": "A product I built that evolved from a WhatsApp assistant to testing agents with real traces.",
+    "viewProjectText": "Visit the project",
+    "roleText": "Product design and development",
     "projects": {
       "Mibo AI": {
         "stages": {
           "testing": {
             "label": "Current direction",
             "title": "AI agent testing",
-            "description": "Tests agents with real OpenTelemetry (OTLP) traces, automated assertions, and on-demand active tests."
+            "description": "Checks how agents behave using real traces received via OTLP. Combines automated assertions with tests run on demand."
           },
           "assistant": {
             "label": "2025 · First version",
             "title": "WhatsApp assistant",
-            "description": "Conversational assistant built with Twilio and Flowise to organize Google Calendar and Drive and create Sheets spreadsheets."
+            "description": "WhatsApp assistant built with Twilio and Flowise to organize Google Calendar and Drive and create spreadsheets in Sheets."
           }
         }
       }
@@ -157,11 +171,11 @@
   },
   "education": {
     "educationTitle": "Education",
-    "educationDesc": "Academic background and professional certifications",
+    "educationDesc": "Formal education and ongoing learning",
     "academicTitle": "Academic Background",
-    "certificationsTitle": "Certifications",
-    "showAllText": "View all certifications",
-    "counterText": "certifications",
+    "certificationsTitle": "Courses and certifications",
+    "showAllText": "View all courses and certifications",
+    "counterText": "courses and certifications",
     "certificationTypes": {
       "certification": "Certification",
       "course": "Course",
@@ -172,12 +186,12 @@
       "name": "Informatics Engineering",
       "institution": "Universidad de la Empresa Argentina (UADE)",
       "location": "Buenos Aires",
-      "graduationDate": "Graduated July 2024"
+      "graduationDate": "Graduated in July 2024"
     }
   },
   "footer": {
     "text": "",
-    "invitation": "Let's talk about what we could build together.",
+    "invitation": "Looking for someone to own a technical challenge and work with your team? Let's talk.",
     "backToTopText": "Back to top"
   }
 }
