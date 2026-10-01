@@ -73,16 +73,25 @@ body {
   padding-inline: env(safe-area-inset-left, 0px) env(safe-area-inset-right, 0px);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-wrap: balance;
   letter-spacing: -0.035em;
 }
 
-p { text-wrap: pretty; }
+p {
+  text-wrap: pretty;
+}
 
-button, a, summary { touch-action: manipulation; }
+button,
+a,
+summary {
+  touch-action: manipulation;
+}
 
-button, summary {
+button,
+summary {
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -100,9 +109,9 @@ button, summary {
 
 .eyebrow {
   color: hsl(var(--primary));
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: .13em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
@@ -128,11 +137,11 @@ button, summary {
   border-radius: 1.25rem;
   background: hsl(var(--card));
   color: hsl(var(--foreground));
-  box-shadow: 0 24px 80px hsl(0 0% 0% / .25);
+  box-shadow: 0 24px 80px hsl(0 0% 0% / 0.25);
 }
 
 .collection-dialog::backdrop {
-  background: hsl(0 0% 0% / .68);
+  background: hsl(0 0% 0% / 0.68);
   backdrop-filter: blur(3px);
 }
 
@@ -142,17 +151,21 @@ button, summary {
   max-height: min(88dvh, 54rem);
 }
 
-.button-primary, .button-secondary {
+.button-primary,
+.button-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: .65rem;
+  gap: 0.65rem;
   min-height: 3rem;
-  padding: .7rem 1.2rem;
-  border-radius: .6rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.6rem;
   font-weight: 650;
   text-decoration: none;
-  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
 }
 
 .button-primary {
@@ -166,22 +179,35 @@ button, summary {
   border: 1px solid hsl(var(--border));
 }
 
-.button-primary:active, .button-secondary:active { transform: scale(.98); }
+.button-primary:active,
+.button-secondary:active {
+  transform: scale(0.98);
+}
 
 @media (hover: hover) and (pointer: fine) {
-  .button-primary:hover { background: hsl(var(--primary) / .87); }
-  .button-secondary:hover { border-color: hsl(var(--primary)); }
+  .button-primary:hover {
+    background: hsl(var(--primary) / 0.87);
+  }
+  .button-secondary:hover {
+    border-color: hsl(var(--primary));
+  }
 }
 
 @media (max-width: 640px) {
-  .section-shell { width: min(100% - 2rem, 72rem); }
+  .section-shell {
+    width: min(100% - 2rem, 72rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

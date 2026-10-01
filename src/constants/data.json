@@ -22,13 +22,7 @@
         },
         {
           "key": "assistant",
-          "technologies": [
-            "Twilio",
-            "Flowise",
-            "TypeScript",
-            "Node.js",
-            "Google APIs"
-          ]
+          "technologies": ["Twilio", "Flowise", "TypeScript", "Node.js", "Google APIs"]
         }
       ],
       "role": "Creator & Lead Architect"
@@ -459,15 +453,7 @@
       "position": "Senior Software Engineer",
       "location": "Remote (EU)",
       "period": "Feb 2024 - Present",
-      "technologies": [
-        "React.js",
-        "Express.js",
-        "MySQL",
-        "GraphQL",
-        "N8N",
-        "AWS",
-        "OpenSearch"
-      ]
+      "technologies": ["React.js", "Express.js", "MySQL", "GraphQL", "N8N", "AWS", "OpenSearch"]
     },
     {
       "company": "Harness (ex Split)",

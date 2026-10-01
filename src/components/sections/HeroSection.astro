@@ -2,37 +2,82 @@
 import { ArrowUpRight, Download, MapPin } from "@lucide/astro";
 import type { HeroTexts, WorkExperience } from "../../types";
 
-interface Props { texts: HeroTexts; recentWork: WorkExperience[]; }
+interface Props {
+  texts: HeroTexts;
+  recentWork: WorkExperience[];
+}
 const { texts, recentWork } = Astro.props;
 ---
 
-<section class="border-b border-border py-14 sm:py-20 lg:py-27" aria-labelledby="hero-title">
+<section
+  class="border-b border-border py-14 sm:py-20 lg:py-27"
+  aria-labelledby="hero-title"
+>
   <div class="section-shell grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(19rem,.7fr)] lg:items-center lg:gap-16">
     <div class="min-w-0">
       <p class="eyebrow mb-5">{texts.roleText}</p>
-      <h1 id="hero-title" aria-label="Fernando Mirabile" class="max-w-3xl text-[clamp(3.4rem,8vw,6.8rem)] leading-[.98] font-semibold text-foreground">Fernando<br /><span class="text-primary">Mirabile.</span></h1>
-      <p class="mt-7 max-w-2xl text-[clamp(1.45rem,2.4vw,2.2rem)] leading-[1.2] font-medium text-foreground">{texts.taglineText}</p>
+      <h1
+        id="hero-title"
+        aria-label="Fernando Mirabile"
+        class="max-w-3xl text-[clamp(3.4rem,8vw,6.8rem)] leading-[.98] font-semibold text-foreground"
+      >
+        Fernando
+        <br />
+        <span class="text-primary">Mirabile.</span>
+      </h1>
+      <p class="mt-7 max-w-2xl text-[clamp(1.45rem,2.4vw,2.2rem)] leading-[1.2] font-medium text-foreground">
+        {texts.taglineText}
+      </p>
       <p class="prose-lead mt-5 max-w-2xl">{texts.descriptionText}</p>
       <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
-        <span class="inline-flex items-center gap-2"><MapPin size={16} aria-hidden="true" />{texts.locationText}</span>
+        <span class="inline-flex items-center gap-2">
+          <MapPin size={16} aria-hidden="true" />
+          {texts.locationText}
+        </span>
         <span>{texts.currentText}</span>
       </div>
       <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-        <a href="mailto:fpmirabile@zohomail.eu" class="button-primary"><span>{texts.contactText}</span><ArrowUpRight size={18} aria-hidden="true" /></a>
-        <a href="/Fernando_Mirabile_resume.pdf" download class="button-secondary"><Download size={18} aria-hidden="true" /><span>{texts.downloadCVText}</span></a>
+        <a href="mailto:fpmirabile@zohomail.eu" class="button-primary">
+          <span>{texts.contactText}</span>
+          <ArrowUpRight size={18} aria-hidden="true" />
+        </a>
+        <a
+          href="/Fernando_Mirabile_resume.pdf"
+          download
+          class="button-secondary"
+        >
+          <Download size={18} aria-hidden="true" />
+          <span>{texts.downloadCVText}</span>
+        </a>
       </div>
-      <p class="mt-7 text-sm text-muted-foreground">10+ {texts.yearsExpText} <span aria-hidden="true">·</span> C1 {texts.englishLevelText} <span aria-hidden="true">·</span> B1 {texts.portugueseLevelText}</p>
+      <p class="mt-7 text-sm text-muted-foreground">
+        10+ {texts.yearsExpText} <span aria-hidden="true">·</span> C1{" "}
+        {texts.englishLevelText} <span aria-hidden="true">·</span> B1{" "}
+        {texts.portugueseLevelText}
+      </p>
     </div>
 
-    <aside class="surface-card min-w-0 overflow-hidden p-6 sm:p-8" aria-labelledby="recent-work-title">
+    <aside
+      class="surface-card min-w-0 overflow-hidden p-6 sm:p-8"
+      aria-labelledby="recent-work-title"
+    >
       <p class="eyebrow">{texts.recentWorkEyebrow}</p>
-      <h2 id="recent-work-title" class="mt-2 text-2xl font-semibold text-foreground">{texts.recentWorkTitle}</h2>
+      <h2
+        id="recent-work-title"
+        class="mt-2 text-2xl font-semibold text-foreground"
+      >
+        {texts.recentWorkTitle}
+      </h2>
       <div class="mt-7 divide-y divide-border">
         {recentWork.map((job) => (
           <div class="py-5 first:pt-0 last:pb-0">
             <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-              <h3 class="text-xl font-semibold text-foreground">{job.company}</h3>
-              <span class="text-xs font-medium text-muted-foreground">{job.period}</span>
+              <h3 class="text-xl font-semibold text-foreground">
+                {job.company}
+              </h3>
+              <span class="text-xs font-medium text-muted-foreground">
+                {job.period}
+              </span>
             </div>
             <p class="mt-1 text-sm text-muted-foreground">{job.position}</p>
           </div>

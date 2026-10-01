@@ -6,21 +6,43 @@ interface Props {
   sideProjectsTitle: string;
   sideProjectsDesc: string;
   sideProjects: SideProject[];
-  projectCopy: Record<string, {
-    stages: Record<string, { label: string; title: string; description: string }>;
-  }>;
+  projectCopy: Record<
+    string,
+    {
+      stages: Record<
+        string,
+        { label: string; title: string; description: string }
+      >;
+    }
+  >;
   viewProjectText: string;
   roleText: string;
 }
 
-const { sideProjectsTitle, sideProjectsDesc, sideProjects, projectCopy, viewProjectText, roleText } = Astro.props;
+const {
+  sideProjectsTitle,
+  sideProjectsDesc,
+  sideProjects,
+  projectCopy,
+  viewProjectText,
+  roleText,
+} = Astro.props;
 ---
 
-<section id="projects" class="bg-secondary/35 py-16 sm:py-20" aria-labelledby="projects-title">
+<section
+  id="projects"
+  class="bg-secondary/35 py-16 sm:py-20"
+  aria-labelledby="projects-title"
+>
   <div class="section-shell">
     <div class="mb-10 max-w-2xl">
       <p class="eyebrow mb-3">01</p>
-      <h2 id="projects-title" class="text-4xl font-semibold text-foreground sm:text-5xl">{sideProjectsTitle}</h2>
+      <h2
+        id="projects-title"
+        class="text-4xl font-semibold text-foreground sm:text-5xl"
+      >
+        {sideProjectsTitle}
+      </h2>
       <p class="prose-lead mt-4">{sideProjectsDesc}</p>
     </div>
 
@@ -28,7 +50,9 @@ const { sideProjectsTitle, sideProjectsDesc, sideProjects, projectCopy, viewProj
       {sideProjects.map((project) => (
         <article class="surface-card grid overflow-hidden md:grid-cols-[minmax(0,.7fr)_minmax(0,1.3fr)]">
           <div class="flex min-h-36 flex-col justify-between bg-primary p-7 text-primary-foreground sm:min-h-48 sm:p-9">
-            <span class="text-sm font-semibold tracking-widest">{project.year}</span>
+            <span class="text-sm font-semibold tracking-widest">
+              {project.year}
+            </span>
             <h3 class="text-4xl font-semibold sm:text-5xl">{project.name}</h3>
           </div>
           <div class="min-w-0 p-7 sm:p-9">
@@ -36,19 +60,41 @@ const { sideProjectsTitle, sideProjectsDesc, sideProjects, projectCopy, viewProj
             <div class="mt-6 border-l border-border pl-5 sm:pl-6">
               {project.stages.map((stage) => {
                 const copy = projectCopy[project.name]?.stages[stage.key];
-                return <section class="relative pb-7 last:pb-0" aria-label={copy?.title}>
-                  <span class="absolute -left-[1.56rem] top-1.5 size-2.5 rounded-full border-2 border-card bg-primary sm:-left-[1.81rem]" aria-hidden="true"></span>
-                  <p class="eyebrow">{copy?.label}</p>
-                  <h4 class="mt-1 text-xl font-semibold text-foreground">{copy?.title}</h4>
-                  <p class="mt-2 max-w-2xl leading-relaxed text-muted-foreground">{copy?.description}</p>
-                  <div class="mt-4 flex flex-wrap gap-2">
-                    {stage.technologies.map((technology) => <span class="rounded-full bg-muted px-3 py-1.5 text-xs font-medium text-muted-foreground">{technology}</span>)}
-                  </div>
-                </section>;
+                return (
+                  <section
+                    class="relative pb-7 last:pb-0"
+                    aria-label={copy?.title}
+                  >
+                    <span
+                      class="absolute -left-[1.56rem] top-1.5 size-2.5 rounded-full border-2 border-card bg-primary sm:-left-[1.81rem]"
+                      aria-hidden="true"
+                    ></span>
+                    <p class="eyebrow">{copy?.label}</p>
+                    <h4 class="mt-1 text-xl font-semibold text-foreground">
+                      {copy?.title}
+                    </h4>
+                    <p class="mt-2 max-w-2xl leading-relaxed text-muted-foreground">
+                      {copy?.description}
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                      {stage.technologies.map((technology) => (
+                        <span class="rounded-full bg-muted px-3 py-1.5 text-xs font-medium text-muted-foreground">
+                          {technology}
+                        </span>
+                      ))}
+                    </div>
+                  </section>
+                );
               })}
             </div>
-            <a href={project.url} target="_blank" rel="noopener noreferrer" class="mt-7 inline-flex min-h-11 items-center gap-2 font-semibold text-primary underline decoration-border underline-offset-4 hover:decoration-primary">
-              {viewProjectText}<ArrowUpRight size={18} aria-hidden="true" />
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-7 inline-flex min-h-11 items-center gap-2 font-semibold text-primary underline decoration-border underline-offset-4 hover:decoration-primary"
+            >
+              {viewProjectText}
+              <ArrowUpRight size={18} aria-hidden="true" />
             </a>
           </div>
         </article>

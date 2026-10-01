@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
-  "type": "module",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,6 +9,8 @@
     "astro": "astro",
     "check": "astro check",
     "lint": "oxlint .",
+    "format": "oxfmt . && prettier --plugin prettier-plugin-astro --write 'src/**/*.astro'",
+    "format:check": "oxfmt --check . && prettier --plugin prettier-plugin-astro --check 'src/**/*.astro'",
     "skills:update": "pnpm dlx skills update --project --yes"
   },
   "dependencies": {
@@ -21,6 +23,9 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
-    "oxlint": "^1.86.0"
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0"
   }
 }

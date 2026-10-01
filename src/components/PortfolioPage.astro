@@ -12,23 +12,63 @@ import type { Technology, SupportedLanguage } from "../types";
 import type esTranslations from "../i18n/es.json";
 import commonData from "../constants/data.json";
 
-interface Props { texts: typeof esTranslations; lang: SupportedLanguage; }
+interface Props {
+  texts: typeof esTranslations;
+  lang: SupportedLanguage;
+}
 const { texts: t, lang } = Astro.props;
-const { technologies, certifications, workExperience, sideProjects } = commonData;
+const { technologies, certifications, workExperience, sideProjects } =
+  commonData;
 const projectCopy = t.sideProjects.projects;
 ---
 
 <Layout title={t.meta.title} description={t.meta.description} lang={lang}>
   <div id="top">
-    <SiteHeader {lang} nav={t.nav} resumeText={t.hero.downloadCVText} themeText={t.menu.themeText} />
+    <SiteHeader
+      {lang}
+      nav={t.nav}
+      resumeText={t.hero.downloadCVText}
+      themeText={t.menu.themeText}
+    />
     <main id="main-content">
       <HeroSection texts={t.hero} recentWork={workExperience.slice(0, 3)} />
-      <SideProjects sideProjectsTitle={t.sideProjects.title} sideProjectsDesc={t.sideProjects.description} {sideProjects} {projectCopy} viewProjectText={t.sideProjects.viewProjectText} roleText={t.sideProjects.roleText} />
-      <TechJourney journeyTitle={t.journey.title} journeyDesc={t.journey.description} workExperience={workExperience} achievements={t.journey.achievements} earlierText={t.journey.earlierText} earlierTitle={t.journey.earlierTitle} closeText={t.techStack.overlay.closeButton} />
-      <TechStack technologies={technologies as Technology[]} title={t.techStack.title} clickHint={t.techStack.clickHint} allTechnologiesText={t.techStack.allTechnologiesText} overlayTexts={t.techStack.overlay} levels={t.techStack.levels} techDescriptions={t.techStack.technologies} />
-      <Education texts={t.education} {certifications} closeText={t.techStack.overlay.closeButton} />
+      <SideProjects
+        sideProjectsTitle={t.sideProjects.title}
+        sideProjectsDesc={t.sideProjects.description}
+        {sideProjects}
+        {projectCopy}
+        viewProjectText={t.sideProjects.viewProjectText}
+        roleText={t.sideProjects.roleText}
+      />
+      <TechJourney
+        journeyTitle={t.journey.title}
+        journeyDesc={t.journey.description}
+        workExperience={workExperience}
+        achievements={t.journey.achievements}
+        earlierText={t.journey.earlierText}
+        earlierTitle={t.journey.earlierTitle}
+        closeText={t.techStack.overlay.closeButton}
+      />
+      <TechStack
+        technologies={technologies as Technology[]}
+        title={t.techStack.title}
+        clickHint={t.techStack.clickHint}
+        allTechnologiesText={t.techStack.allTechnologiesText}
+        overlayTexts={t.techStack.overlay}
+        levels={t.techStack.levels}
+        techDescriptions={t.techStack.technologies}
+      />
+      <Education
+        texts={t.education}
+        {certifications}
+        closeText={t.techStack.overlay.closeButton}
+      />
     </main>
-    <Footer invitation={t.footer.invitation} contactText={t.hero.contactText} backToTopText={t.footer.backToTopText} />
+    <Footer
+      invitation={t.footer.invitation}
+      contactText={t.hero.contactText}
+      backToTopText={t.footer.backToTopText}
+    />
     <ThemeManager />
   </div>
 </Layout>

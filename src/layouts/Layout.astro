@@ -15,27 +15,34 @@ const { title, description, lang, redirectTo } = Astro.props;
 <html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <meta name="theme-color" content="#f8f7f3" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    {
-      redirectTo && (
-        <meta http-equiv="refresh" content={`0; url=${redirectTo || "/en"}`} />
-      )
-    }
+    {redirectTo && (
+      <meta http-equiv="refresh" content={`0; url=${redirectTo || "/en"}`} />
+    )}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <script is:inline>
       const savedTheme = localStorage.getItem("theme");
       document.documentElement.classList.toggle(
         "dark",
-        savedTheme ? savedTheme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches
+        savedTheme
+          ? savedTheme === "dark"
+          : matchMedia("(prefers-color-scheme: dark)").matches,
       );
-      document.querySelector('meta[name="theme-color"]')?.setAttribute(
-        "content",
-        document.documentElement.classList.contains("dark") ? "#202723" : "#f8f7f3"
-      );
+      document
+        .querySelector('meta[name="theme-color"]')
+        ?.setAttribute(
+          "content",
+          document.documentElement.classList.contains("dark")
+            ? "#202723"
+            : "#f8f7f3",
+        );
     </script>
   </head>
   <body class="min-h-screen bg-background text-foreground antialiased">

@@ -13,28 +13,57 @@ interface Props {
   closeText: string;
 }
 
-const { journeyTitle, journeyDesc, workExperience, achievements, earlierText, earlierTitle, closeText } = Astro.props;
+const {
+  journeyTitle,
+  journeyDesc,
+  workExperience,
+  achievements,
+  earlierText,
+  earlierTitle,
+  closeText,
+} = Astro.props;
 const recent = workExperience.slice(0, 3);
 const earlier = workExperience.slice(3);
 ---
 
-<section id="experience" class="border-t border-border py-16 sm:py-20" aria-labelledby="experience-title">
+<section
+  id="experience"
+  class="border-t border-border py-16 sm:py-20"
+  aria-labelledby="experience-title"
+>
   <div class="section-shell">
     <div class="mb-10 grid gap-4 md:grid-cols-[1fr_1fr] md:items-end">
       <div>
         <p class="eyebrow mb-3">02</p>
-        <h2 id="experience-title" class="text-4xl font-semibold text-foreground sm:text-5xl">{journeyTitle}</h2>
+        <h2
+          id="experience-title"
+          class="text-4xl font-semibold text-foreground sm:text-5xl"
+        >
+          {journeyTitle}
+        </h2>
       </div>
       <p class="prose-lead max-w-xl">{journeyDesc}</p>
     </div>
 
     <div class="border-t border-border">
-      {recent.map((job) => <WorkItem {job} achievements={achievements[job.company] || []} />)}
+      {recent.map((job) => (
+        <WorkItem {job} achievements={achievements[job.company] || []} />
+      ))}
     </div>
-    {earlier.length > 0 && <CollectionDialog id="earlier-experience-dialog" title={earlierTitle} triggerText={earlierText} {closeText} count={earlier.length}>
-      <div class="border-t border-border">
-        {earlier.map((job) => <WorkItem {job} achievements={achievements[job.company] || []} />)}
-      </div>
-    </CollectionDialog>}
+    {earlier.length > 0 && (
+      <CollectionDialog
+        id="earlier-experience-dialog"
+        title={earlierTitle}
+        triggerText={earlierText}
+        {closeText}
+        count={earlier.length}
+      >
+        <div class="border-t border-border">
+          {earlier.map((job) => (
+            <WorkItem {job} achievements={achievements[job.company] || []} />
+          ))}
+        </div>
+      </CollectionDialog>
+    )}
   </div>
 </section>

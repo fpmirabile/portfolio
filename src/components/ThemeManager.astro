@@ -3,10 +3,9 @@
 
   function applyTheme(isDark: boolean) {
     document.documentElement.classList.toggle("dark", isDark);
-    document.querySelector('meta[name="theme-color"]')?.setAttribute(
-      "content",
-      isDark ? "#202723" : "#f8f7f3"
-    );
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", isDark ? "#202723" : "#f8f7f3");
   }
 
   document.addEventListener("toggleTheme", () => {

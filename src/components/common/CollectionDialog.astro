@@ -12,17 +12,35 @@ interface Props {
 const { id, title, triggerText, closeText, count } = Astro.props;
 ---
 
-<button type="button" class="button-secondary mt-6 gap-3" data-dialog-open={id} aria-haspopup="dialog" aria-controls={id}>
+<button
+  type="button"
+  class="button-secondary mt-6 gap-3"
+  data-dialog-open={id}
+  aria-haspopup="dialog"
+  aria-controls={id}
+>
   <span>{triggerText}</span>
-  <span class="rounded-full bg-muted px-2 py-0.5 text-xs text-muted-foreground">{count}</span>
+  <span class="rounded-full bg-muted px-2 py-0.5 text-xs text-muted-foreground">
+    {count}
+  </span>
   <ArrowUpRight size={17} aria-hidden="true" />
 </button>
 
 <dialog id={id} class="collection-dialog" aria-labelledby={`${id}-title`}>
   <div class="collection-dialog-frame">
     <header class="flex shrink-0 items-center justify-between gap-4 border-b border-border px-5 py-4 sm:px-7">
-      <h3 id={`${id}-title`} class="min-w-0 text-xl font-semibold text-foreground sm:text-2xl">{title}</h3>
-      <button type="button" class="flex size-11 shrink-0 items-center justify-center rounded-lg border border-border text-foreground hover:bg-muted" data-dialog-close aria-label={closeText}>
+      <h3
+        id={`${id}-title`}
+        class="min-w-0 text-xl font-semibold text-foreground sm:text-2xl"
+      >
+        {title}
+      </h3>
+      <button
+        type="button"
+        class="flex size-11 shrink-0 items-center justify-center rounded-lg border border-border text-foreground hover:bg-muted"
+        data-dialog-close
+        aria-label={closeText}
+      >
         <X size={20} aria-hidden="true" />
       </button>
     </header>
@@ -33,25 +51,31 @@ const { id, title, triggerText, closeText, count } = Astro.props;
 </dialog>
 
 <script>
-  document.querySelectorAll<HTMLDialogElement>(".collection-dialog").forEach((dialog) => {
-    const triggers = [...document.querySelectorAll<HTMLButtonElement>("[data-dialog-open]")].filter((trigger) => trigger.dataset.dialogOpen === dialog.id);
-    let activeTrigger: HTMLButtonElement | null = null;
-    let previousOverflow = "";
-    triggers.forEach((trigger) => {
-      trigger.addEventListener("click", () => {
-        activeTrigger = trigger;
-        previousOverflow = document.body.style.overflow;
-        dialog.showModal();
-        document.body.style.overflow = "hidden";
+  document
+    .querySelectorAll<HTMLDialogElement>(".collection-dialog")
+    .forEach((dialog) => {
+      const triggers = [
+        ...document.querySelectorAll<HTMLButtonElement>("[data-dialog-open]"),
+      ].filter((trigger) => trigger.dataset.dialogOpen === dialog.id);
+      let activeTrigger: HTMLButtonElement | null = null;
+      let previousOverflow = "";
+      triggers.forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          activeTrigger = trigger;
+          previousOverflow = document.body.style.overflow;
+          dialog.showModal();
+          document.body.style.overflow = "hidden";
+        });
+      });
+      dialog
+        .querySelector<HTMLButtonElement>("[data-dialog-close]")
+        ?.addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      dialog.addEventListener("close", () => {
+        document.body.style.overflow = previousOverflow;
+        activeTrigger?.focus();
       });
     });
-    dialog.querySelector<HTMLButtonElement>("[data-dialog-close]")?.addEventListener("click", () => dialog.close());
-    dialog.addEventListener("click", (event) => {
-      if (event.target === dialog) dialog.close();
-    });
-    dialog.addEventListener("close", () => {
-      document.body.style.overflow = previousOverflow;
-      activeTrigger?.focus();
-    });
-  });
 </script>

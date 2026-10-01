@@ -19,58 +19,153 @@ interface Props {
   techDescriptions: Record<string, string>;
 }
 
-const { technologies, title, clickHint, allTechnologiesText, overlayTexts, levels, techDescriptions } = Astro.props;
-const featuredNames = new Set(["TypeScript", "React", "Node.js", "Java", "Spring Boot", "PostgreSQL", "AWS", "SvelteKit"]);
+const {
+  technologies,
+  title,
+  clickHint,
+  allTechnologiesText,
+  overlayTexts,
+  levels,
+  techDescriptions,
+} = Astro.props;
+const featuredNames = new Set([
+  "TypeScript",
+  "React",
+  "Node.js",
+  "Java",
+  "Spring Boot",
+  "PostgreSQL",
+  "AWS",
+  "SvelteKit",
+]);
 const featured = technologies.filter((tech) => featuredNames.has(tech.name));
 ---
 
-<section id="skills" class="border-t border-border bg-secondary/35 py-16 sm:py-20" aria-labelledby="skills-title">
+<section
+  id="skills"
+  class="border-t border-border bg-secondary/35 py-16 sm:py-20"
+  aria-labelledby="skills-title"
+>
   <div class="section-shell">
     <div class="mb-9 max-w-2xl">
       <p class="eyebrow mb-3">03</p>
-      <h2 id="skills-title" class="text-4xl font-semibold text-foreground sm:text-5xl">{title}</h2>
+      <h2
+        id="skills-title"
+        class="text-4xl font-semibold text-foreground sm:text-5xl"
+      >
+        {title}
+      </h2>
       <p class="prose-lead mt-4">{clickHint}</p>
     </div>
 
     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
       {featured.map((technology) => (
-        <button type="button" data-dialog-open="technologies-dialog" data-tech-featured-trigger={technologies.indexOf(technology)} aria-haspopup="dialog" aria-controls="technologies-dialog" class="flex min-h-20 min-w-0 items-center justify-between gap-4 rounded-xl border border-border bg-card px-5 py-4 text-left hover:border-primary/60">
-          <span class="min-w-0"><strong class="block text-sm font-semibold text-foreground">{technology.name}</strong><span class="text-xs text-muted-foreground">{technology.category}</span></span>
-          <span class="flex shrink-0 items-center gap-2 text-xs font-semibold text-primary">{technology.years}<ArrowUpRight size={16} aria-hidden="true" /></span>
+        <button
+          type="button"
+          data-dialog-open="technologies-dialog"
+          data-tech-featured-trigger={technologies.indexOf(technology)}
+          aria-haspopup="dialog"
+          aria-controls="technologies-dialog"
+          class="flex min-h-20 min-w-0 items-center justify-between gap-4 rounded-xl border border-border bg-card px-5 py-4 text-left hover:border-primary/60"
+        >
+          <span class="min-w-0">
+            <strong class="block text-sm font-semibold text-foreground">
+              {technology.name}
+            </strong>
+            <span class="text-xs text-muted-foreground">
+              {technology.category}
+            </span>
+          </span>
+          <span class="flex shrink-0 items-center gap-2 text-xs font-semibold text-primary">
+            {technology.years}
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </span>
         </button>
       ))}
     </div>
 
-    <CollectionDialog id="technologies-dialog" title={allTechnologiesText} triggerText={allTechnologiesText} closeText={overlayTexts.closeButton} count={technologies.length}>
+    <CollectionDialog
+      id="technologies-dialog"
+      title={allTechnologiesText}
+      triggerText={allTechnologiesText}
+      closeText={overlayTexts.closeButton}
+      count={technologies.length}
+    >
       <div class="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,.42fr)_minmax(0,.58fr)]">
         <div class="min-w-0">
-          <label for="technology-picker" class="mb-2 block text-sm font-semibold text-foreground lg:hidden">{allTechnologiesText}</label>
-          <select id="technology-picker" data-tech-browser-picker class="min-h-12 w-full rounded-lg border border-border bg-background px-3 text-foreground lg:hidden">
-            {technologies.map((technology, index) => <option value={index}>{technology.name}</option>)}
-          </select>
-          <div class="hidden max-h-[min(60dvh,34rem)] space-y-1 overflow-y-auto pr-2 lg:block" aria-label={title}>
+          <label
+            for="technology-picker"
+            class="mb-2 block text-sm font-semibold text-foreground lg:hidden"
+          >
+            {allTechnologiesText}
+          </label>
+          <select
+            id="technology-picker"
+            data-tech-browser-picker
+            class="min-h-12 w-full rounded-lg border border-border bg-background px-3 text-foreground lg:hidden"
+          >
             {technologies.map((technology, index) => (
-              <button type="button" data-tech-browser-select={index} aria-pressed={index === 0 ? "true" : "false"} aria-controls={`browser-tech-panel-${index}`} class="tech-selector flex min-h-11 w-full items-center justify-between gap-3 rounded-lg px-4 py-2 text-left text-sm text-foreground hover:bg-muted">
+              <option value={index}>{technology.name}</option>
+            ))}
+          </select>
+          <div
+            class="hidden max-h-[min(60dvh,34rem)] space-y-1 overflow-y-auto pr-2 lg:block"
+            aria-label={title}
+          >
+            {technologies.map((technology, index) => (
+              <button
+                type="button"
+                data-tech-browser-select={index}
+                aria-pressed={index === 0 ? "true" : "false"}
+                aria-controls={`browser-tech-panel-${index}`}
+                class="tech-selector flex min-h-11 w-full items-center justify-between gap-3 rounded-lg px-4 py-2 text-left text-sm text-foreground hover:bg-muted"
+              >
                 <span class="min-w-0 font-medium">{technology.name}</span>
-                <span class="shrink-0 text-xs text-muted-foreground">{technology.years}</span>
+                <span class="shrink-0 text-xs text-muted-foreground">
+                  {technology.years}
+                </span>
               </button>
             ))}
           </div>
         </div>
-        <div class="surface-card min-h-64 min-w-0 p-5 sm:p-7" aria-live="polite">
+        <div
+          class="surface-card min-h-64 min-w-0 p-5 sm:p-7"
+          aria-live="polite"
+        >
           {technologies.map((technology, index) => (
-            <div id={`browser-tech-panel-${index}`} data-tech-browser-panel={index} hidden={index !== 0}>
+            <div
+              id={`browser-tech-panel-${index}`}
+              data-tech-browser-panel={index}
+              hidden={index !== 0}
+            >
               <p class="eyebrow">{technology.category}</p>
-              <h4 class="mt-2 text-2xl font-semibold text-foreground sm:text-3xl">{technology.name}</h4>
-              <p class="mt-2 text-sm font-medium text-primary">{levels[technology.level || ""]} · {technology.years} {overlayTexts.yearsText}</p>
-              {techDescriptions[technology.name] && <div class="mt-6 border-t border-border pt-5">
-                <p class="text-sm font-semibold text-foreground">{overlayTexts.descriptionLabel}</p>
-                <p class="mt-2 leading-relaxed text-muted-foreground">{techDescriptions[technology.name]}</p>
-              </div>}
-              {technology.projects && technology.projects.length > 0 && <div class="mt-6 border-t border-border pt-5">
-                <p class="text-sm font-semibold text-foreground">{overlayTexts.projectsLabel}</p>
-                <p class="mt-2 leading-relaxed text-muted-foreground">{technology.projects.join(" · ")}</p>
-              </div>}
+              <h4 class="mt-2 text-2xl font-semibold text-foreground sm:text-3xl">
+                {technology.name}
+              </h4>
+              <p class="mt-2 text-sm font-medium text-primary">
+                {levels[technology.level || ""]} · {technology.years}{" "}
+                {overlayTexts.yearsText}
+              </p>
+              {techDescriptions[technology.name] && (
+                <div class="mt-6 border-t border-border pt-5">
+                  <p class="text-sm font-semibold text-foreground">
+                    {overlayTexts.descriptionLabel}
+                  </p>
+                  <p class="mt-2 leading-relaxed text-muted-foreground">
+                    {techDescriptions[technology.name]}
+                  </p>
+                </div>
+              )}
+              {technology.projects && technology.projects.length > 0 && (
+                <div class="mt-6 border-t border-border pt-5">
+                  <p class="text-sm font-semibold text-foreground">
+                    {overlayTexts.projectsLabel}
+                  </p>
+                  <p class="mt-2 leading-relaxed text-muted-foreground">
+                    {technology.projects.join(" · ")}
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -82,24 +177,49 @@ const featured = technologies.filter((tech) => featuredNames.has(tech.name));
 <style>
   .tech-selector[aria-pressed="true"] {
     border-color: hsl(var(--primary));
-    background: hsl(var(--primary) / .09);
+    background: hsl(var(--primary) / 0.09);
   }
 </style>
 
 <script>
-  const browserButtons = [...document.querySelectorAll<HTMLButtonElement>("[data-tech-browser-select]")];
-  const browserPanels = [...document.querySelectorAll<HTMLElement>("[data-tech-browser-panel]")];
-  const browserPicker = document.querySelector<HTMLSelectElement>("[data-tech-browser-picker]");
+  const browserButtons = [
+    ...document.querySelectorAll<HTMLButtonElement>(
+      "[data-tech-browser-select]",
+    ),
+  ];
+  const browserPanels = [
+    ...document.querySelectorAll<HTMLElement>("[data-tech-browser-panel]"),
+  ];
+  const browserPicker = document.querySelector<HTMLSelectElement>(
+    "[data-tech-browser-picker]",
+  );
 
   function selectBrowserTechnology(index: string) {
-    browserButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.techBrowserSelect === index)));
-    browserPanels.forEach((panel) => { panel.hidden = panel.dataset.techBrowserPanel !== index; });
+    browserButtons.forEach((button) =>
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.techBrowserSelect === index),
+      ),
+    );
+    browserPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.techBrowserPanel !== index;
+    });
     if (browserPicker) browserPicker.value = index;
   }
 
-  browserButtons.forEach((button) => button.addEventListener("click", () => selectBrowserTechnology(button.dataset.techBrowserSelect || "0")));
-  browserPicker?.addEventListener("change", () => selectBrowserTechnology(browserPicker.value));
-  document.querySelectorAll<HTMLButtonElement>("[data-tech-featured-trigger]").forEach((button) => {
-    button.addEventListener("click", () => selectBrowserTechnology(button.dataset.techFeaturedTrigger || "0"));
-  });
+  browserButtons.forEach((button) =>
+    button.addEventListener("click", () =>
+      selectBrowserTechnology(button.dataset.techBrowserSelect || "0"),
+    ),
+  );
+  browserPicker?.addEventListener("change", () =>
+    selectBrowserTechnology(browserPicker.value),
+  );
+  document
+    .querySelectorAll<HTMLButtonElement>("[data-tech-featured-trigger]")
+    .forEach((button) => {
+      button.addEventListener("click", () =>
+        selectBrowserTechnology(button.dataset.techFeaturedTrigger || "0"),
+      );
+    });
 </script>
