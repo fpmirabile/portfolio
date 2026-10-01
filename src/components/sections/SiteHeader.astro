@@ -1,0 +1,84 @@
+---
+import { Moon, Sun, Menu, ArrowUpRight } from "@lucide/astro";
+import type { SupportedLanguage } from "../../types";
+
+interface Props {
+  lang: SupportedLanguage;
+  nav: {
+    experience: string;
+    project: string;
+    skills: string;
+    education: string;
+    contact: string;
+    menu: string;
+    home: string;
+    languages: string;
+    skipContent: string;
+  };
+  resumeText: string;
+  themeText: string;
+}
+
+const { lang, nav, resumeText, themeText } = Astro.props;
+const links = [
+  { href: "#projects", label: nav.project },
+  { href: "#experience", label: nav.experience },
+  { href: "#skills", label: nav.skills },
+  { href: "#education", label: nav.education },
+];
+const languages: SupportedLanguage[] = ["es", "en", "pt"];
+---
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-card focus:p-3">
+  {nav.skipContent}
+</a>
+<header class="sticky top-0 z-40 border-b border-border/75 bg-background/95 backdrop-blur-sm">
+  <div class="section-shell flex min-h-18 items-center justify-between gap-4">
+    <a href={`/${lang}/`} class="shrink-0 text-lg font-bold tracking-tight text-foreground" aria-label={`Fernando Mirabile, ${nav.home}`}>FM<span class="text-primary">.</span></a>
+
+    <nav class="hidden items-center gap-7 lg:flex" aria-label={nav.menu}>
+      {links.map((link) => <a href={link.href} class="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">{link.label}</a>)}
+    </nav>
+
+    <div class="hidden items-center gap-3 lg:flex">
+      <div class="flex items-center gap-1 border-r border-border pr-3" aria-label={nav.languages}>
+        {languages.map((code) => <a href={`/${code}/`} lang={code} aria-current={code === lang ? "page" : undefined} class:list={["rounded px-2 py-1 text-xs font-semibold uppercase", code === lang ? "bg-secondary text-foreground" : "text-muted-foreground hover:text-foreground"]}>{code}</a>)}
+      </div>
+      <button type="button" data-theme-toggle class="flex size-11 items-center justify-center rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground" aria-label={themeText}>
+        <Moon class="dark:hidden" size={19} aria-hidden="true" />
+        <Sun class="hidden dark:block" size={19} aria-hidden="true" />
+      </button>
+      <a href="/Fernando_Mirabile_resume.pdf" download class="button-secondary text-sm">{resumeText}<ArrowUpRight size={16} aria-hidden="true" /></a>
+    </div>
+
+    <details class="relative lg:hidden" id="mobile-navigation">
+      <summary class="flex size-11 list-none items-center justify-center rounded-lg border border-border bg-card text-foreground [&::-webkit-details-marker]:hidden" aria-label={nav.menu}>
+        <Menu size={21} aria-hidden="true" />
+      </summary>
+      <div class="absolute top-full right-0 mt-3 w-[min(19rem,calc(100vw-2rem))] rounded-xl border border-border bg-card p-3 shadow-xl">
+        <nav class="flex flex-col" aria-label={nav.menu}>
+          {links.map((link) => <a href={link.href} class="rounded-md px-3 py-3 font-medium text-foreground hover:bg-muted">{link.label}</a>)}
+          <a href="#contact" class="rounded-md px-3 py-3 font-medium text-foreground hover:bg-muted">{nav.contact}</a>
+        </nav>
+        <div class="mt-2 flex items-center justify-between border-t border-border pt-3">
+          <div class="flex gap-1">
+            {languages.map((code) => <a href={`/${code}/`} lang={code} aria-current={code === lang ? "page" : undefined} class:list={["rounded px-3 py-2 text-sm font-semibold uppercase", code === lang ? "bg-secondary text-foreground" : "text-muted-foreground"]}>{code}</a>)}
+          </div>
+          <button type="button" data-theme-toggle class="flex size-11 items-center justify-center rounded-lg text-foreground" aria-label={themeText}>
+            <Moon class="dark:hidden" size={19} aria-hidden="true" />
+            <Sun class="hidden dark:block" size={19} aria-hidden="true" />
+          </button>
+        </div>
+      </div>
+    </details>
+  </div>
+</header>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-theme-toggle]").forEach((button) => {
+    button.addEventListener("click", () => document.dispatchEvent(new CustomEvent("toggleTheme")));
+  });
+  document.querySelectorAll<HTMLAnchorElement>("#mobile-navigation nav a").forEach((link) => {
+    link.addEventListener("click", () => document.querySelector<HTMLDetailsElement>("#mobile-navigation")?.removeAttribute("open"));
+  });
+</script>

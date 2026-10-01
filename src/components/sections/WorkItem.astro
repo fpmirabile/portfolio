@@ -1,0 +1,20 @@
+---
+import type { WorkExperience } from "../../types";
+
+interface Props { job: WorkExperience; achievements: string[]; }
+const { job, achievements } = Astro.props;
+---
+
+<article class="grid gap-4 border-b border-border py-7 sm:py-9 lg:grid-cols-[10rem_minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-8">
+  <div class="text-sm font-medium text-muted-foreground">{job.period}<span class="mt-1 block text-xs">{job.location}</span></div>
+  <div class="min-w-0">
+    <h3 class="text-2xl font-semibold text-foreground">{job.company}</h3>
+    <p class="mt-1 font-medium text-primary">{job.position}</p>
+    <div class="mt-4 flex flex-wrap gap-1.5">
+      {job.technologies.map((technology) => <span class="rounded-full border border-border px-2.5 py-1 text-xs text-muted-foreground">{technology}</span>)}
+    </div>
+  </div>
+  {achievements.length > 0 && <ul class="min-w-0 space-y-2 text-sm leading-relaxed text-muted-foreground">
+    {achievements.map((achievement) => <li class="flex gap-3"><span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true"></span><span>{achievement}</span></li>)}
+  </ul>}
+</article>

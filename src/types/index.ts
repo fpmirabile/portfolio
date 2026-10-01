@@ -41,7 +41,10 @@ export interface SideProject {
   status: string;
   commitment: string;
   year: string;
-  technologies: string[];
+  stages: {
+    key: string;
+    technologies: string[];
+  }[];
   role: string;
 }
 
@@ -67,7 +70,12 @@ export interface MenuTexts {
 
 export interface HeroTexts {
   roleText: string;
+  taglineText: string;
   descriptionText: string;
+  locationText: string;
+  currentText: string;
+  recentWorkEyebrow: string;
+  recentWorkTitle: string;
   downloadCVText: string;
   contactText: string;
   yearsExpText: string;
@@ -80,6 +88,7 @@ export interface EducationTexts {
   educationDesc: string;
   academicTitle: string;
   certificationsTitle: string;
+  showAllText: string;
   counterText: string;
   certificationTypes: {
     certification: string;

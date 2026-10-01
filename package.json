@@ -7,18 +7,20 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check": "astro check",
+    "lint": "oxlint .",
     "skills:update": "pnpm dlx skills update --project --yes"
   },
   "dependencies": {
-    "@astrojs/svelte": "^9.0.1",
     "@lucide/astro": "^1.49.0",
-    "@lucide/svelte": "^1.49.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.5",
-    "classnames": "^2.5.1",
-    "svelte": "^5.57.1",
     "tailwind-scrollbar": "^4.0.2",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "oxlint": "^1.86.0"
   }
 }

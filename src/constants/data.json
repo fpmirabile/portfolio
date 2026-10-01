@@ -6,15 +6,30 @@
       "status": "active",
       "commitment": "part-time",
       "year": "2025",
-      "technologies": [
-        "TypeScript",
-        "Node.js",
-        "Python",
-        "PostgreSQL",
-        "SvelteKit",
-        "Docker",
-        "Terraform",
-        "Express.js"
+      "stages": [
+        {
+          "key": "testing",
+          "technologies": [
+            "TypeScript",
+            "Python",
+            "OpenTelemetry",
+            "Node.js",
+            "Redis",
+            "PostgreSQL",
+            "SvelteKit",
+            "Express.js"
+          ]
+        },
+        {
+          "key": "assistant",
+          "technologies": [
+            "Twilio",
+            "Flowise",
+            "TypeScript",
+            "Node.js",
+            "Google APIs"
+          ]
+        }
       ],
       "role": "Creator & Lead Architect"
     }

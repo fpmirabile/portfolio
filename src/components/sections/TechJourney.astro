@@ -1,54 +1,40 @@
 ---
 import type { WorkExperience } from "../../types";
-import Timeline from "../common/Timeline.svelte";
+import CollectionDialog from "../common/CollectionDialog.astro";
+import WorkItem from "./WorkItem.astro";
 
 interface Props {
   journeyTitle: string;
   journeyDesc: string;
   workExperience: WorkExperience[];
   achievements: Record<string, string[]>;
+  earlierText: string;
+  earlierTitle: string;
+  closeText: string;
 }
 
-const { journeyTitle, journeyDesc, workExperience, achievements } = Astro.props;
-
-const timelineItems = workExperience.map((job: WorkExperience) => {
-  const period = job.period;
-  const jobAchievements = achievements[job.company] || [];
-  const description =
-    jobAchievements.length > 0 ? jobAchievements.join(" • ") : job.position;
-  const isPresent = period.toLowerCase().includes("present");
-  const displayPeriod = isPresent
-    ? period.split(" - ")[0]
-    : period;
-
-  return {
-    year: displayPeriod,
-    title: job.position,
-    description,
-    tech: job.technologies,
-    status: isPresent ? "Active" : undefined,
-    role: job.company,
-  };
-});
+const { journeyTitle, journeyDesc, workExperience, achievements, earlierText, earlierTitle, closeText } = Astro.props;
+const recent = workExperience.slice(0, 3);
+const earlier = workExperience.slice(3);
 ---
 
-<section class="py-20 bg-muted">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-16 animate-fade-in-up">
-      <h2
-        class="text-3xl lg:text-4xl font-bold text-primary mb-4"
-        id="journeyTitle"
-      >
-        {journeyTitle}
-      </h2>
-      <p
-        class="text-xl text-muted-foreground max-w-2xl mx-auto"
-        id="journeyDesc"
-      >
-        {journeyDesc}
-      </p>
+<section id="experience" class="border-t border-border py-16 sm:py-20" aria-labelledby="experience-title">
+  <div class="section-shell">
+    <div class="mb-10 grid gap-4 md:grid-cols-[1fr_1fr] md:items-end">
+      <div>
+        <p class="eyebrow mb-3">02</p>
+        <h2 id="experience-title" class="text-4xl font-semibold text-foreground sm:text-5xl">{journeyTitle}</h2>
+      </div>
+      <p class="prose-lead max-w-xl">{journeyDesc}</p>
     </div>
 
-    <Timeline items={timelineItems} variant="work" client:load />
+    <div class="border-t border-border">
+      {recent.map((job) => <WorkItem {job} achievements={achievements[job.company] || []} />)}
+    </div>
+    {earlier.length > 0 && <CollectionDialog id="earlier-experience-dialog" title={earlierTitle} triggerText={earlierText} {closeText} count={earlier.length}>
+      <div class="border-t border-border">
+        {earlier.map((job) => <WorkItem {job} achievements={achievements[job.company] || []} />)}
+      </div>
+    </CollectionDialog>}
   </div>
 </section>

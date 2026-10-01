@@ -1,6 +1,6 @@
 # Portfolio - Fernando Mirabile
 
-Personal portfolio site built with Astro + Svelte 5 + Tailwind CSS 4.
+Personal portfolio site built with Astro 7 + Tailwind CSS 4.
 
 ## Quick Start
 
@@ -8,12 +8,14 @@ Personal portfolio site built with Astro + Svelte 5 + Tailwind CSS 4.
 pnpm dev        # Dev server at localhost:4321
 pnpm build      # Build static site to ./dist/
 pnpm preview    # Preview production build
+pnpm check      # Check Astro templates and TypeScript
+pnpm lint       # Lint JavaScript and TypeScript with Oxlint
 ```
 
 ## Architecture
 
 - **Astro 7** for static page generation and routing
-- **Svelte 5** (runes API: `$props()`, `$state()`, `$derived()`) for interactive components
+- **Astro components** for the portfolio; native disclosures for expandable content
 - **Tailwind CSS 4** via Vite plugin with CSS variables for theming
 - **TypeScript** in strict mode
 
@@ -22,8 +24,7 @@ pnpm preview    # Preview production build
 ```
 src/
 ├── components/
-│   ├── sections/      # Page sections (Astro + 1 Svelte component)
-│   └── common/        # Reusable interactive components (Svelte)
+│   └── sections/      # Reusable page sections
 ├── constants/
 │   └── data.json      # All content data (work experience, technologies, certs, side projects, education)
 ├── i18n/
@@ -37,9 +38,8 @@ src/
 │   ├── en/index.astro
 │   ├── es/index.astro
 │   └── pt/index.astro
-├── utils/             # Language detection, CV download, custom events
 ├── styles/
-│   └── global.css     # Tailwind base + custom animations + theme variables
+│   └── global.css     # Tailwind base + theme variables
 └── layouts/
     └── Layout.astro   # Main HTML wrapper
 ```
@@ -48,20 +48,17 @@ src/
 
 ### Components
 - **Astro (.astro)** for static sections and layouts
-- **Svelte (.svelte)** for client-side interactive components
 - PascalCase naming; sections suffixed with "Section" (e.g., `HeroSection.astro`)
-- Svelte components hydrated with `client:idle` or `client:visible`
+- Keep recruiter-facing content in server-rendered HTML
 
 ### Data Flow
-1. `data.json` → imported in page-level Astro files
-2. i18n JSON → imported per-language in each page route
-3. Both passed as props down to section → common components
+1. `data.json` and i18n JSON → `PortfolioPage.astro`
+2. `PortfolioPage.astro` passes content to section components
 
 ### i18n
 - 3 languages: `en`, `es`, `pt` (default: `es`)
 - Each language has its own route (`/en/`, `/es/`, `/pt/`)
 - `data.json` has language-agnostic data; translations live in `i18n/*.json`
-- Language stored in `localStorage`
 
 ### Types
 - `SkillLevel`: `"beginner" | "intermediate" | "advanced" | "expert"` — must use only these 4 values
@@ -71,13 +68,11 @@ src/
 ### Theming
 - Light/dark mode via `.dark` class on `<html>`
 - CSS variables (HSL) defined in `global.css` under `:root` / `.dark`
-- Theme preference stored in `localStorage`
-- Astro ↔ Svelte communication via custom events (`toggleTheme`, `themeChanged`)
+- Theme preference stored in `localStorage` and applied by `ThemeManager.astro`
 
 ## Important Notes
 
-- No ESLint or Prettier configured — follow existing code style
-- No test setup — be careful with changes, verify via `pnpm build`
+- No test setup — verify changes with `pnpm check`, `pnpm lint`, and `pnpm build`
 - `public/Fernando_Mirabile_resume.pdf` is the downloadable resume
 - When updating work/tech data, only edit `data.json`. When updating display text, edit i18n files
 - The `Certification` type requires a `month` field (string, e.g., "January")

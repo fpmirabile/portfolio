@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Fernando Mirabile - Full Stack Developer",
+    "title": "Fernando Mirabile | Senior Software Engineer",
     "description": "Engenheiro de Software Sénior com mais de 10 anos de experiência em React, Svelte, Node.js e Spring Boot. Atualmente na Jampp, baseado no Porto, Portugal.",
     "lang": "pt"
   },
@@ -21,6 +21,17 @@
       "dark": "Escuro"
     }
   },
+  "nav": {
+    "experience": "Experiência",
+    "project": "Projeto",
+    "skills": "Tecnologias",
+    "education": "Formação",
+    "contact": "Contacto",
+    "menu": "Menu principal",
+    "home": "início",
+    "languages": "Idiomas",
+    "skipContent": "Saltar para o conteúdo"
+  },
   "personalInfo": {
     "email": "fpmirabile@zohomail.eu",
     "location": "Porto, Portugal",
@@ -30,17 +41,23 @@
     "languagesLabel": "Idiomas"
   },
   "hero": {
-    "roleText": "Engenheiro de Software Full Stack",
-    "descriptionText": "Full Stack Developer com mais de 10 anos de experiência. Especializado em React, Svelte, Node.js e Spring Boot. Argentino a viver no Porto, Portugal.",
+    "roleText": "Engenheiro de Software Sénior · Full Stack",
+    "taglineText": "Construo produtos, sistemas e equipas que geram resultados.",
+    "descriptionText": "Mais de 10 anos a desenvolver produtos com React, Svelte, Node.js e Spring Boot, da arquitetura à entrega.",
+    "locationText": "Porto, Portugal",
+    "currentText": "Atualmente na Jampp",
+    "recentWorkEyebrow": "Experiência recente",
+    "recentWorkTitle": "Equipas e produtos onde trabalhei",
     "downloadCVText": "Descarregar CV",
-    "contactText": "Contacto",
-    "yearsExpText": "Anos de Experiência",
-    "englishLevelText": "Nível de Inglês",
-    "portugueseLevelText": "Nível de Português"
+    "contactText": "Envia-me um email",
+    "yearsExpText": "anos de experiência",
+    "englishLevelText": "inglês",
+    "portugueseLevelText": "português"
   },
   "techStack": {
     "title": "Tech Stack",
-    "clickHint": "Clique em qualquer tecnologia para interagir",
+    "clickHint": "Explora a minha experiência com cada tecnologia",
+    "allTechnologiesText": "Explorar todas as tecnologias",
     "overlay": {
       "levelLabel": "Nível de Experiência",
       "descriptionLabel": "Descrição",
@@ -85,6 +102,8 @@
   "journey": {
     "title": "A Minha Jornada",
     "description": "Uma jornada de mais de 10 anos a construir soluções que importam",
+    "earlierText": "Ver experiência anterior",
+    "earlierTitle": "Experiência anterior",
     "achievements": {
       "Jampp": [
         "Liderei iniciativas de modernização e reengenharia arquitetónica",
@@ -92,21 +111,21 @@
         "Estabeleci melhores práticas de engenharia em toda a equipa"
       ],
       "Harness (ex Split)": [
-        "Lancei funcionalidades que aumentaram o engagement do produto em 18%",
-        "Impulsionei a adoção de Agile melhorando a entrega de sprints em 30%",
-        "Reduzi o tempo de onboarding em 15% através de documentação"
+        "Lancei funcionalidades de produto e trabalhei para melhorar a sua adoção",
+        "Introduzi práticas ágeis para tornar a entrega mais previsível",
+        "Documentei processos para facilitar a integração de novos colegas"
       ],
       "Mural": [
-        "Progredi para Tech Lead gerindo 6 engenheiros",
-        "Alcancei um aumento de 25% em utilizadores ativos mensais",
-        "Reduzi bugs pós-lançamento em 20% através de padrões de code review",
-        "Acelerei o time-to-market de experiências em 30%"
+        "Progredi para Tech Lead e liderei uma equipa de engenharia",
+        "Trabalhei em funcionalidades para melhorar a utilização do produto",
+        "Defini padrões de code review para reduzir bugs após os lançamentos",
+        "Ajudei a lançar experiências de produto mais rapidamente"
       ],
       "Kin + Carta (ex Solstice)": [
-        "Entreguei soluções full-stack para múltiplos clientes",
-        "Melhorei a confiabilidade de integrações reduzindo downtime em 15%",
-        "Reduzi erros de deployment em 50% através de automação de CI",
-        "Promovi TDD aumentando a estabilidade do código"
+        "Entreguei soluções full stack para múltiplos clientes",
+        "Melhorei a fiabilidade das integrações",
+        "Automatizei processos de CI para reduzir erros de deployment",
+        "Promovi TDD para melhorar a estabilidade do código"
       ],
       "IT Resources S.A.": [
         "Desenvolvi aplicações web empresariais",
@@ -117,9 +136,22 @@
   "sideProjects": {
     "title": "Projetos Pessoais",
     "description": "Projetos pessoais e empreendimentos",
+    "viewProjectText": "Ver projeto",
+    "roleText": "Criador e arquiteto principal",
     "projects": {
       "Mibo AI": {
-        "description": "Chatbot de WhatsApp para organizar Google Calendar, Drive e criar folhas de cálculo através de IA conversacional"
+        "stages": {
+          "testing": {
+            "label": "Atualidade",
+            "title": "Testes de agentes de IA",
+            "description": "Testa agentes com traces reais enviados por OpenTelemetry (OTLP), verificações automáticas e testes ativos a pedido."
+          },
+          "assistant": {
+            "label": "2025 · Primeira versão",
+            "title": "Assistente de WhatsApp",
+            "description": "Assistente conversacional criado com Twilio e Flowise para organizar o Google Calendar e o Drive e criar folhas de cálculo no Sheets."
+          }
+        }
       }
     }
   },
@@ -128,6 +160,7 @@
     "educationDesc": "Formação académica e certificações profissionais",
     "academicTitle": "Formação Académica",
     "certificationsTitle": "Certificações",
+    "showAllText": "Ver todas as certificações",
     "counterText": "certificações",
     "certificationTypes": {
       "certification": "Certificação",
@@ -143,6 +176,8 @@
     }
   },
   "footer": {
-    "text": ""
+    "text": "",
+    "invitation": "Vamos conversar sobre o que podemos construir juntos?",
+    "backToTopText": "Voltar ao início"
   }
 }
