@@ -12,7 +12,7 @@ pnpm preview    # Preview production build
 
 ## Architecture
 
-- **Astro 5** for static page generation and routing
+- **Astro 7** for static page generation and routing
 - **Svelte 5** (runes API: `$props()`, `$state()`, `$derived()`) for interactive components
 - **Tailwind CSS 4** via Vite plugin with CSS variables for theming
 - **TypeScript** in strict mode

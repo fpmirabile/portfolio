@@ -16,14 +16,16 @@ export default defineConfig({
       minify: "esbuild",
       rollupOptions: {
         output: {
-          manualChunks: {
-            lucide: ["lucide-svelte", "lucide-astro"],
+          manualChunks(id) {
+            if (id.includes("@lucide/svelte") || id.includes("@lucide/astro")) {
+              return "lucide";
+            }
           },
         },
       },
     },
     ssr: {
-      noExternal: ["lucide-svelte", "lucide-astro"],
+      noExternal: ["@lucide/svelte", "@lucide/astro"],
     },
   },
 
