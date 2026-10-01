@@ -149,21 +149,21 @@
   },
   "sideProjects": {
     "title": "Proyectos Personales",
-    "description": "Un producto propio que pasó de asistente de WhatsApp a pruebas de agentes con trazas reales.",
+    "description": "Diseñé y desarrollé Mibo AI para detectar problemas en agentes de IA a partir de sus trazas reales.",
     "viewProjectText": "Visitar el proyecto",
-    "roleText": "Diseño y desarrollo del producto",
+    "roleText": "Producto propio · Diseño, arquitectura y desarrollo",
     "projects": {
       "Mibo AI": {
         "stages": {
           "testing": {
-            "label": "Actualidad",
-            "title": "Testing de agentes de IA",
-            "description": "Comprueba cómo se comportan los agentes con trazas reales recibidas por OTLP. Combina verificaciones automáticas con pruebas bajo demanda."
+            "label": "Producto actual",
+            "title": "Pruebas de agentes con trazas reales",
+            "description": "Mibo recibe trazas de agentes en uso mediante OTLP y evalúa automáticamente su comportamiento para detectar fallos. También permite probar casos concretos a demanda."
           },
           "assistant": {
             "label": "2025 · Primera versión",
-            "title": "Asistente de WhatsApp",
-            "description": "Asistente de WhatsApp con Twilio y Flowise para organizar Google Calendar y Drive y crear hojas de cálculo en Sheets."
+            "title": "Asistente por WhatsApp",
+            "description": "La primera versión permitía organizar eventos y archivos, y crear hojas de cálculo desde WhatsApp, con Twilio, Flowise y servicios de Google."
           }
         }
       }

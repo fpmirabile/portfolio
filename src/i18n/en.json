@@ -149,21 +149,21 @@
   },
   "sideProjects": {
     "title": "Side Projects",
-    "description": "A product I built that evolved from a WhatsApp assistant to testing agents with real traces.",
+    "description": "I designed and built Mibo AI to uncover problems in AI agents using traces from real interactions.",
     "viewProjectText": "Visit the project",
-    "roleText": "Product design and development",
+    "roleText": "My product · Design, architecture, and development",
     "projects": {
       "Mibo AI": {
         "stages": {
           "testing": {
-            "label": "Current direction",
-            "title": "AI agent testing",
-            "description": "Checks how agents behave using real traces received via OTLP. Combines automated assertions with tests run on demand."
+            "label": "Current product",
+            "title": "Testing agents with real traces",
+            "description": "Mibo receives traces from agents in use via OTLP and automatically checks their behavior to catch failures. It also supports on-demand tests for specific scenarios."
           },
           "assistant": {
             "label": "2025 · First version",
             "title": "WhatsApp assistant",
-            "description": "WhatsApp assistant built with Twilio and Flowise to organize Google Calendar and Drive and create spreadsheets in Sheets."
+            "description": "The first version let people organize events and files and create spreadsheets from WhatsApp, using Twilio, Flowise, and Google services."
           }
         }
       }
