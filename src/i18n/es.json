@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Fernando Mirabile | Senior Software Engineer",
-    "description": "Ingeniero de software senior en Porto. Diseño y construyo productos de punta a punta, con autonomía entre interfaces, APIs y datos.",
+    "title": "Fernando Mirabile | Ingeniero de software senior",
+    "description": "Ingeniero de software senior. Diseño y construyo productos de punta a punta, con autonomía entre interfaces, APIs y datos.",
     "lang": "es"
   },
   "menu": {
@@ -34,7 +34,7 @@
   },
   "personalInfo": {
     "email": "fpmirabile@zohomail.eu",
-    "location": "Porto, Portugal",
+    "location": "Portugal",
     "languages": "ES, EN, PT",
     "emailLabel": "Email",
     "locationLabel": "Ubicación",
@@ -44,7 +44,7 @@
     "roleText": "Ingeniero de software senior · Full stack",
     "taglineText": "Del problema a producción: diseño y construyo software de punta a punta.",
     "descriptionText": "Me hago cargo de la solución técnica entre interfaces, APIs y datos; adapto el lenguaje y las herramientas al equipo y al producto.",
-    "locationText": "Porto, Portugal",
+    "locationText": "Portugal",
     "currentText": "En Jampp · Creador de Mibo AI",
     "recentWorkEyebrow": "Experiencia reciente",
     "recentWorkTitle": "Equipos y productos donde trabajé",

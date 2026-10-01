@@ -61,7 +61,7 @@ src/
 
 ### i18n
 
-- 3 languages: `en`, `es`, `pt` (default: `es`)
+- 3 languages: `en`, `es`, `pt` (default: `en`)
 - Each language has its own route (`/en/`, `/es/`, `/pt/`)
 - `data.json` has language-agnostic data; translations live in `i18n/*.json`
 

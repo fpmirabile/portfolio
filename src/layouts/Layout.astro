@@ -9,6 +9,8 @@ export interface Props {
 }
 
 const { title, description, lang, redirectTo } = Astro.props;
+const canonical = new URL(redirectTo ?? Astro.url.pathname, Astro.site).href;
+const languageAlternates = ["es", "en", "pt"];
 ---
 
 <!doctype html>
@@ -22,8 +24,24 @@ const { title, description, lang, redirectTo } = Astro.props;
     <meta name="theme-color" content="#f8f7f3" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {!redirectTo &&
+      languageAlternates.map((language) => (
+        <link
+          rel="alternate"
+          hreflang={language}
+          href={new URL(`/${language}/`, Astro.site).href}
+        />
+      ))}
+    {!redirectTo && (
+      <link
+        rel="alternate"
+        hreflang="x-default"
+        href={new URL("/en/", Astro.site).href}
+      />
+    )}
     {redirectTo && (
-      <meta http-equiv="refresh" content={`0; url=${redirectTo || "/en"}`} />
+      <meta http-equiv="refresh" content={`0; url=${redirectTo}`} />
     )}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
     <meta name="generator" content={Astro.generator} />
